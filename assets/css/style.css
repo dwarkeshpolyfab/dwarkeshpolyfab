@@ -1,133 +1,21 @@
-/* ============================================================ */
-/*  DWARKESH POLYFAB — style.css                               */
-/*  Complete stylesheet — clean version                        */
-/*  Brand: #112a46 (navy) | #c9a64b (gold)                    */
-/* ============================================================ */
+/* ================================================ */
+/* PRODUCT PAGE CSS                                 */
+/* assets/css/product-page.css                     */
+/* ================================================ */
 
 
-/* ============================================================ */
-/* 1. GOOGLE FONTS                                              */
-/* ============================================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lato:wght@300;400;600;700&display=swap');
-
-
-/* ============================================================ */
-/* 2. RESET & BASE                                              */
-/* ============================================================ */
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Lato', Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  color: #333333;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-
-/* ============================================================ */
-/* 3. UTILITY CLASSES                                           */
-/* ============================================================ */
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.section-heading h2 {
-  font-size: 30px;
-  color: #112a46;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-.section-heading p {
-  font-size: 16px;
-  color: #666;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.75;
-}
-
-.btn-primary {
-  display: inline-block;
-  background: #112a46;
-  color: #ffffff;
-  padding: 13px 35px;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background: #c9a64b;
-  color: #112a46;
-}
-
-.btn-gold {
-  display: inline-block;
-  background: #c9a64b;
-  color: #112a46;
-  padding: 13px 35px;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.btn-gold:hover {
-  background: #112a46;
-  color: #c9a64b;
-}
-
-
-/* ============================================================ */
-/* 4. BREADCRUMB                                                */
-/* ============================================================ */
-
+/* BREADCRUMB */
 .breadcrumb {
   background: #f5f7fb;
-  padding: 10px 50px;
-  font-size: 13px;
+  padding: 12px 50px;
+  font-size: 14px;
   color: #666;
-  border-bottom: 1px solid #e8ecf2;
 }
 
 .breadcrumb a {
   color: #112a46;
+  text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s;
 }
 
 .breadcrumb a:hover {
@@ -135,1529 +23,391 @@ ul {
 }
 
 .breadcrumb span {
-  margin: 0 6px;
-  color: #bbb;
+  margin: 0 8px;
+}
+
+.breadcrumb .current {
+  color: #c9a64b;
+  font-weight: 700;
 }
 
 
-/* ============================================================ */
-/* 5. HERO SECTION                                              */
-/* ============================================================ */
-
-/* MAIN HEADING ABOVE SLIDER */
-.hero-heading {
-  text-align: center;
-  padding: 40px 30px 15px 30px;
+/* PRODUCT HERO SECTION */
+.product-hero-section {
+  display: flex;
+  gap: 50px;
+  padding: 60px 50px;
   background: #ffffff;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.hero-heading h1 {
-  font-size: 28px;
-  color: #112a46;
-  font-weight: 800;
-  line-height: 1.4;
-  max-width: 800px;
-  margin: 0 auto;
+
+/* PRODUCT IMAGE LEFT */
+.product-hero-image {
+  flex: 1;
+  min-width: 280px;
+  max-width: 480px;
 }
 
-/* HERO WRAPPER */
-.hero {
-  background: #f5f7fb;
-  padding: 30px 20px 10px 20px;
-  text-align: center;
-}
-
-/* SLIDER BOX */
-.hero-slider {
-  max-width: 620px;
-  margin: 0 auto;
-}
-
-.slides {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(17, 42, 70, 0.18);
-  cursor: pointer;
-}
-
-/* SLIDE */
-.slide {
-  display: none;
-}
-
-.slide.active {
-  display: block;
-}
-
-.slide a {
-  display: block;
-  position: relative;
-}
-
-.slide a::after {
-  content: "View Product →";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(17, 42, 70, 0.75);
-  color: #c9a64b;
-  text-align: center;
-  padding: 12px;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.slide a:hover::after {
-  opacity: 1;
-}
-
-.slide img {
+.product-hero-image img {
   width: 100%;
-  height: 380px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(17,42,70,0.15);
 }
 
-.slide img:hover {
-  transform: scale(1.03);
+
+/* PRODUCT INFO RIGHT */
+.product-hero-info {
+  flex: 1;
+  min-width: 280px;
 }
 
-/* SLIDE TITLE & HINT */
-.slide-title {
-  margin-top: 16px;
-  font-size: 20px;
-  font-weight: 700;
+.product-title {
+  font-size: 32px;
   color: #112a46;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.slide-hint {
-  font-size: 13px;
-  color: #999;
-  margin-top: 6px;
-}
-
-/* DOTS */
-.slider-dots {
-  margin-top: 14px;
-  text-align: center;
-}
-
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.dot.active {
-  background: #c9a64b;
-}
-
-/* HERO CTA BUTTON */
-.hero-cta {
-  margin-top: 22px;
-  text-align: center;
-}
-
-.btn-view-all {
-  display: inline-block;
-  background: #112a46;
-  color: #ffffff;
-  padding: 13px 35px;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.btn-view-all:hover {
-  background: #c9a64b;
-  color: #112a46;
-}
-
-/* CALCULATOR PROMO BUTTON */
-.btn-calculator-promo {
-  display: inline-block;
-  background: #c9a64b;
-  color: #112a46;
-  padding: 14px 30px;
-  border-radius: 6px;
-  font-size: 15px;
   font-weight: 800;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(201, 166, 75, 0.35);
+  margin-bottom: 14px;
 }
 
-.btn-calculator-promo:hover {
-  background: #112a46;
-  color: #c9a64b;
-}
-
-.calc-promo-text {
-  margin-top: 8px;
-  font-size: 13px;
-  color: #888;
-}
-
-/* SUBTITLE BELOW SLIDER */
-.hero-subtitle {
-  text-align: center;
-  padding: 25px 30px 30px 30px;
-  background: #f5f7fb;
-}
-
-.hero-subtitle p {
+.product-subtitle {
   font-size: 16px;
   color: #555;
   line-height: 1.75;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* GOLDEN TICKER STRIP */
-.ticker-bar {
-  background: #c9a64b;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 11px 0;
-}
-
-.ticker-track {
-  display: inline-block;
-  animation: ticker 30s linear infinite;
-}
-
-@keyframes ticker {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.ticker-track span {
-  font-size: 13px;
-  font-weight: 700;
-  color: #112a46;
-  margin: 0 14px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 
-/* ============================================================ */
-/* 6. PRODUCTS SECTION                                          */
-/* ============================================================ */
-
-.products-section {
-  background: #ffffff;
-  padding: 70px 50px;
-}
-
-/* PRODUCT GRID — 4 columns */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-/* PRODUCT CARD */
-.product-card {
-  background: #f9f9f9;
-  border-radius: 10px;
-  text-decoration: none;
-  color: inherit;
-  overflow: hidden;
+/* QUICK INFO TABLE */
+.product-quick-info {
   border: 1px solid #eeeeee;
-  transition: all 0.3s ease;
-  display: block;
-}
-
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(17, 42, 70, 0.12);
-  border-color: #c9a64b;
-}
-
-/* IMAGE BOX */
-.product-img-box {
-  position: relative;
+  border-radius: 8px;
   overflow: hidden;
+  margin-bottom: 25px;
 }
 
-.product-img-box img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.product-card:hover .product-img-box img {
-  transform: scale(1.05);
-}
-
-/* OVERLAY */
-.product-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(17, 42, 70, 0.82);
-  color: #c9a64b;
-  text-align: center;
-  padding: 10px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.product-card:hover .product-overlay {
-  opacity: 1;
-}
-
-/* PRODUCT INFO */
-.product-info {
-  padding: 18px;
-}
-
-.product-info h3 {
-  font-size: 16px;
-  color: #112a46;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.product-info p {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-
-/* TAGS */
-.product-tags {
+.info-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  border-bottom: 1px solid #eeeeee;
 }
 
-.product-tags span {
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
   background: #112a46;
   color: #c9a64b;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-}
-
-/* PRODUCTS CTA */
-.products-cta {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.btn-view-all-products {
-  display: inline-block;
-  background: #112a46;
-  color: #ffffff;
-  padding: 14px 40px;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.btn-view-all-products:hover {
-  background: #c9a64b;
-  color: #112a46;
-}
-
-.products-cta-text {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #999;
-}
-
-
-/* ============================================================ */
-/* 7. INDUSTRIES SECTION                                        */
-/* ============================================================ */
-
-.industries-section {
-  background: #f5f7fb;
-  padding: 70px 50px;
-}
-
-/* INDUSTRY GRID — 3 columns */
-.industry-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* INDUSTRY CARD */
-.industry-card {
-  background: #ffffff;
-  border-radius: 10px;
-  text-decoration: none;
-  color: inherit;
-  overflow: hidden;
-  border: 1px solid #eeeeee;
-  transition: all 0.3s ease;
-  display: block;
-}
-
-.industry-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(17, 42, 70, 0.12);
-  border-color: #c9a64b;
-}
-
-/* INDUSTRY IMAGE */
-.industry-img-box {
-  position: relative;
-  overflow: hidden;
-}
-
-.industry-img-box img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.industry-card:hover .industry-img-box img {
-  transform: scale(1.05);
-}
-
-/* HOVER OVERLAY */
-.industry-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(17, 42, 70, 0.82);
-  color: #c9a64b;
-  text-align: center;
-  padding: 10px;
+  padding: 11px 16px;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  width: 160px;
+  min-width: 160px;
 }
 
-.industry-card:hover .industry-overlay {
-  opacity: 1;
-}
-
-/* INDUSTRY INFO */
-.industry-info {
-  padding: 20px;
-}
-
-.industry-icon {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.industry-info h3 {
-  font-size: 17px;
-  color: #112a46;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.industry-info p {
+.info-value {
+  padding: 11px 16px;
   font-size: 13px;
-  color: #666;
-  line-height: 1.65;
-  margin: 0;
+  color: #333;
+  background: #fafafa;
 }
 
-/* BOTTOM CTA BAR */
-.industries-cta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #112a46;
-  border-radius: 12px;
-  padding: 30px 40px;
-  margin-top: 50px;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.industries-cta-text h3 {
-  font-size: 20px;
-  color: #c9a64b;
-  font-weight: 800;
-  margin-bottom: 6px;
-}
-
-.industries-cta-text p {
-  font-size: 14px;
-  color: #ccc;
-  margin: 0;
-}
-
-.industries-cta-btns {
+/* BUTTONS */
+.product-btns {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
 }
 
-.btn-industry-wa {
+.btn-whatsapp-product {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: #25D366;
   color: white;
-  padding: 12px 22px;
+  padding: 13px 22px;
   border-radius: 6px;
-  font-size: 14px;
+  text-decoration: none;
+  font-size: 15px;
   font-weight: 700;
   transition: all 0.3s;
-  text-decoration: none;
 }
 
-.btn-industry-wa img {
+.btn-whatsapp-product img {
   width: 18px;
   height: 18px;
 }
 
-.btn-industry-wa:hover {
+.btn-whatsapp-product:hover {
   background: #1ebd5a;
 }
 
-.btn-industry-contact {
+.btn-inquiry {
   display: inline-block;
-  background: #c9a64b;
-  color: #112a46;
-  padding: 12px 22px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 700;
-  transition: all 0.3s;
-  text-decoration: none;
-}
-
-.btn-industry-contact:hover {
-  background: #ffffff;
-  color: #112a46;
-}
-
-
-/* ============================================================ */
-/* 8. FAQ SECTION (Homepage)                                    */
-/* ============================================================ */
-
-.faq-section {
-  background: #ffffff;
-  padding: 70px 50px;
-}
-
-.faq-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.faq-col {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.faq-item-home {
-  border: 1px solid #eee;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.faq-question {
-  width: 100%;
-  background: #f9f9f9;
-  border: none;
-  padding: 16px 20px;
-  text-align: left;
-  font-size: 15px;
-  font-weight: 700;
-  color: #112a46;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  transition: background 0.2s;
-  font-family: 'Lato', Arial, sans-serif;
-}
-
-.faq-question:hover,
-.faq-question.active {
   background: #112a46;
-  color: #c9a64b;
-}
-
-.faq-icon {
-  font-size: 20px;
-  font-weight: 400;
-  min-width: 20px;
-  text-align: center;
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.2s ease;
-  padding: 0 20px;
-}
-
-.faq-answer p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.75;
-  margin: 0;
-  padding: 14px 0;
-}
-
-
-/* ============================================================ */
-/* 9. FOOTER                                                    */
-/* ============================================================ */
-
-.site-footer {
-  background: #112a46;
-  color: white;
-}
-
-/* FOOTER TOP GRID */
-.footer-top {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-  gap: 40px;
-  padding: 60px 50px 50px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-/* BRAND BLOCK — matches header style */
-.footer-brand-top {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-.footer-logo-wrap {
-  flex-shrink: 0;
-}
-
-.footer-logo {
-  height: 46px;
-  width: auto;
-  border-radius: 4px;
-  filter: drop-shadow(0 0 6px rgba(201, 166, 75, 0.4));
-  display: block;
-}
-
-.footer-brand-divider {
-  width: 1px;
-  height: 38px;
-  background: linear-gradient(to bottom, transparent, #c9a64b 40%, #c9a64b 60%, transparent);
-  opacity: 0.7;
-  flex-shrink: 0;
-}
-
-.footer-brand-text {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.footer-brand-name {
-  font-family: 'Cinzel', Georgia, serif;
-  font-size: 18px;
-  font-weight: 900;
-  color: #c9a64b;
-  letter-spacing: 2.5px;
-  white-space: nowrap;
-  line-height: 1;
-  text-shadow: 0 0 20px rgba(201, 166, 75, 0.2);
-}
-
-.footer-brand-tagline {
-  font-size: 9.5px;
-  font-weight: 400;
-  color: #7fa3bf;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  white-space: nowrap;
-  line-height: 1;
-}
-
-.footer-desc {
-  font-size: 13px;
-  color: #aaa;
-  line-height: 1.8;
-  margin-bottom: 18px;
-}
-
-/* WHATSAPP BUTTON IN FOOTER */
-.footer-wa-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #25D366;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 700;
-  transition: background 0.2s;
-}
-
-.footer-wa-btn:hover {
-  background: #1ebd5a;
-}
-
-.footer-wa-btn img {
-  width: 16px;
-}
-
-/* FOOTER COLUMN TITLE */
-.footer-col-title {
-  font-size: 14px;
-  color: #c9a64b;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 16px;
-}
-
-/* FOOTER LINKS */
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  margin-bottom: 9px;
-}
-
-.footer-links a {
-  color: #bbb;
-  text-decoration: none;
-  font-size: 13px;
-  transition: color 0.2s;
-}
-
-.footer-links a:hover {
-  color: #c9a64b;
-}
-
-/* FOOTER CONTACT LIST */
-.footer-contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-contact-list li {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  margin-bottom: 12px;
-  font-size: 13px;
-  color: #bbb;
-}
-
-.fc-icon {
-  font-size: 16px;
-  min-width: 20px;
-}
-
-.footer-contact-list a {
-  color: #c9a64b;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* GOLDEN ADDRESS */
-.footer-address {
-  color: #c9a64b !important;
-  font-size: 13px;
-  line-height: 1.8;
-  font-weight: 500;
-}
-
-/* FOOTER BOTTOM */
-.footer-bottom {
-  border-top: 1px solid #1e3d5a;
-  padding: 20px 50px;
-}
-
-.footer-bottom-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.footer-bottom p {
-  font-size: 13px;
-  color: #777;
-  margin-bottom: 5px;
-}
-
-.footer-keywords {
-  font-size: 12px;
-  color: #555;
-}
-
-
-/* ============================================================ */
-/* 10. PRODUCT PAGE (products/pp-woven-bags.html etc.)          */
-/* ============================================================ */
-
-.product-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 40px;
-}
-
-.product-page-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: start;
-  margin-bottom: 60px;
-}
-
-.product-page-img {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(17, 42, 70, 0.12);
-}
-
-.product-page-img img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  display: block;
-}
-
-.product-page-info h1 {
-  font-size: 30px;
-  color: #112a46;
-  font-weight: 800;
-  margin-bottom: 16px;
-  line-height: 1.3;
-}
-
-.product-page-info p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.spec-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 24px;
-}
-
-.spec-table td {
-  padding: 10px 14px;
-  font-size: 14px;
-  border-bottom: 1px solid #eee;
-}
-
-.spec-table td:first-child {
-  font-weight: 700;
-  color: #112a46;
-  width: 40%;
-  background: #f9f9f9;
-}
-
-.btn-enquire {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #25D366;
   color: white;
   padding: 13px 28px;
   border-radius: 6px;
+  text-decoration: none;
   font-size: 15px;
   font-weight: 700;
-  text-decoration: none;
   transition: all 0.3s;
 }
 
-.btn-enquire:hover {
-  background: #1ebd5a;
-  transform: translateY(-2px);
-}
-
-
-/* ============================================================ */
-/* 11. BLOG SECTION / CARDS                                     */
-/* ============================================================ */
-
-.blog-section {
-  background: #ffffff;
-  padding: 70px 50px;
-}
-
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.blog-card {
-  background: #f9f9f9;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #eeeeee;
-  transition: all 0.3s ease;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
-.blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(17, 42, 70, 0.12);
-  border-color: #c9a64b;
-}
-
-.blog-card-img {
-  overflow: hidden;
-}
-
-.blog-card-img img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.blog-card:hover .blog-card-img img {
-  transform: scale(1.05);
-}
-
-.blog-card-body {
-  padding: 20px;
-}
-
-.blog-tag {
-  display: inline-block;
-  background: #112a46;
-  color: #c9a64b;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  margin-bottom: 10px;
-}
-
-.blog-card-body h3 {
-  font-size: 16px;
-  color: #112a46;
-  font-weight: 700;
-  margin-bottom: 8px;
-  line-height: 1.45;
-}
-
-.blog-card-body p {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.65;
-}
-
-.blog-card-footer {
-  padding: 12px 20px;
-  border-top: 1px solid #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
-  color: #999;
-}
-
-.read-more-link {
-  color: #112a46;
-  font-weight: 700;
-  font-size: 13px;
-}
-
-.read-more-link:hover {
-  color: #c9a64b;
-}
-
-
-/* ============================================================ */
-/* 12. CONTACT PAGE                                             */
-/* ============================================================ */
-
-.contact-section {
-  padding: 70px 50px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: start;
-}
-
-.contact-info h2 {
-  font-size: 28px;
-  color: #112a46;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.contact-item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.contact-icon {
-  font-size: 22px;
-  min-width: 30px;
-}
-
-.contact-item h4 {
-  font-size: 14px;
-  color: #112a46;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.contact-item p,
-.contact-item a {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
-}
-
-.contact-item a {
-  color: #c9a64b;
-  font-weight: 600;
-}
-
-/* CONTACT FORM */
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
-  width: 100%;
-  padding: 12px 16px;
-  margin-bottom: 16px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
-  font-family: 'Lato', Arial, sans-serif;
-  transition: border-color 0.2s;
-  outline: none;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form select:focus {
-  border-color: #c9a64b;
-}
-
-.contact-form textarea {
-  height: 130px;
-  resize: vertical;
-}
-
-.btn-submit {
-  display: inline-block;
-  background: #112a46;
-  color: #ffffff;
-  padding: 13px 35px;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Lato', Arial, sans-serif;
-}
-
-.btn-submit:hover {
+.btn-inquiry:hover {
   background: #c9a64b;
   color: #112a46;
 }
 
 
-/* ============================================================ */
-/* 13. ABOUT PAGE                                               */
-/* ============================================================ */
-
-.about-section {
-  padding: 70px 50px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.about-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-  margin-bottom: 60px;
-}
-
-.about-hero img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(17, 42, 70, 0.12);
-}
-
-.about-text h1 {
-  font-size: 30px;
-  color: #112a46;
-  font-weight: 800;
-  margin-bottom: 16px;
-  line-height: 1.3;
-}
-
-.about-text p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
-/* STATS ROW */
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  background: #112a46;
-  border-radius: 12px;
-  padding: 35px 30px;
-  margin-bottom: 60px;
-  text-align: center;
-}
-
-.stat-item h3 {
-  font-size: 32px;
-  color: #c9a64b;
-  font-weight: 900;
-  margin-bottom: 6px;
-}
-
-.stat-item p {
-  font-size: 13px;
-  color: #9ab;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* VALUES GRID */
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.value-card {
+/* PRODUCT DETAILS SECTION */
+.product-details-section {
+  padding: 60px 50px;
   background: #f5f7fb;
+}
+
+.detail-block {
+  background: #ffffff;
   border-radius: 10px;
-  padding: 28px 24px;
-  border: 1px solid #e8ecf2;
-  transition: all 0.3s;
+  padding: 35px;
+  margin-bottom: 30px;
 }
 
-.value-card:hover {
-  border-color: #c9a64b;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(17, 42, 70, 0.09);
-}
-
-.value-icon {
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-
-.value-card h3 {
-  font-size: 16px;
-  color: #112a46;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.value-card p {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.65;
-}
-
-
-/* ============================================================ */
-/* 14. CALCULATOR PAGE                                          */
-/* ============================================================ */
-
-.calculator-section {
-  padding: 50px 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.calc-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: start;
-}
-
-.calc-box {
-  background: #f9f9f9;
-  border-radius: 12px;
-  padding: 30px;
-  border: 1px solid #e8ecf2;
-}
-
-.calc-box h2 {
-  font-size: 20px;
+.detail-block h2 {
+  font-size: 22px;
   color: #112a46;
   font-weight: 800;
   margin-bottom: 20px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid #c9a64b;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #c9a64b;
+  display: inline-block;
 }
 
-.calc-field {
-  margin-bottom: 16px;
+
+/* FEATURE LIST */
+.feature-list {
+  padding-left: 20px;
 }
 
-.calc-field label {
-  display: block;
-  font-size: 13px;
-  font-weight: 700;
-  color: #112a46;
-  margin-bottom: 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-}
-
-.calc-field input,
-.calc-field select {
-  width: 100%;
-  padding: 10px 14px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
-  font-family: 'Lato', Arial, sans-serif;
-  outline: none;
-  transition: border-color 0.2s;
-  background: white;
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a64b' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  padding-right: 34px;
-}
-
-.calc-field input:focus,
-.calc-field select:focus {
-  border-color: #c9a64b;
-}
-
-.btn-calculate {
-  width: 100%;
-  background: #c9a64b;
-  color: #112a46;
-  border: none;
-  padding: 13px;
-  border-radius: 6px;
+.feature-list li {
   font-size: 15px;
-  font-weight: 800;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-family: 'Lato', Arial, sans-serif;
-  transition: all 0.3s;
-  margin-top: 6px;
-  letter-spacing: 0.5px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 6px;
 }
 
-.btn-calculate:hover {
-  background: #112a46;
+.feature-list li::marker {
   color: #c9a64b;
 }
 
-/* RESULT BOX */
-.calc-result {
-  background: #112a46;
-  border-radius: 10px;
-  padding: 24px;
-  margin-top: 20px;
-  display: none;
+
+/* APPLICATION GRID */
+.application-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
-.calc-result.show {
-  display: block;
-}
-
-.result-row {
+.application-item {
+  background: #f5f7fb;
+  border-radius: 8px;
+  padding: 16px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #112a46;
 }
 
-.result-row:last-child {
+.app-icon {
+  font-size: 22px;
+}
+
+
+/* SPECS TABLE */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.spec-table th {
+  background: #112a46;
+  color: #c9a64b;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.spec-table td {
+  padding: 11px 16px;
+  border-bottom: 1px solid #eeeeee;
+  color: #444;
+}
+
+.spec-table tr:nth-child(even) td {
+  background: #f9f9f9;
+}
+
+
+/* FAQ */
+.faq-item {
+  border-bottom: 1px solid #eeeeee;
+  padding: 16px 0;
+}
+
+.faq-item:last-child {
   border-bottom: none;
 }
 
-.result-label {
-  font-size: 13px;
-  color: #9ab;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
+.faq-item h3 {
+  font-size: 15px;
+  color: #112a46;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
-.result-value {
-  font-size: 18px;
-  color: #c9a64b;
+.faq-item p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+}
+
+
+/* RELATED PRODUCTS */
+.related-products {
+  padding: 60px 50px;
+  background: #ffffff;
+}
+
+.related-products h2 {
+  font-size: 24px;
+  color: #112a46;
   font-weight: 800;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.related-card {
+  text-decoration: none;
+  color: #112a46;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+  transition: all 0.3s;
+  display: block;
+  text-align: center;
+}
+
+.related-card:hover {
+  border-color: #c9a64b;
+  transform: translateY(-4px);
+}
+
+.related-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.related-card span {
+  display: block;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 
-/* ============================================================ */
-/* 15. RESPONSIVE — TABLET (≤1100px)                            */
-/* ============================================================ */
+/* FOOTER */
+.footer {
+  background: #112a46;
+  color: white;
+  padding: 50px 50px 0 50px;
+}
 
-@media (max-width: 1100px) {
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding-bottom: 40px;
+}
 
-  .footer-top {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.footer-col h4 {
+  color: #c9a64b;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
+.footer-col p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.8;
+}
 
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.footer-col a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
 
-  .stats-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.footer-col a:hover {
+  color: #c9a64b;
+}
 
+.footer-bottom {
+  border-top: 1px solid #1e3d5a;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 13px;
+  color: #888;
 }
 
 
-/* ============================================================ */
-/* 16. RESPONSIVE — TABLET (≤900px)                             */
-/* ============================================================ */
-
-@media (max-width: 900px) {
-
-  .industry-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-hero,
-  .product-page-hero,
-  .contact-grid,
-  .calc-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .values-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .blog-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-
-/* ============================================================ */
-/* 17. RESPONSIVE — MOBILE (≤768px)                             */
-/* ============================================================ */
-
+/* MOBILE */
 @media (max-width: 768px) {
 
-  html, body {
-    overflow-x: hidden;
-  }
-
-  .breadcrumb {
-    font-size: 12px;
-    padding: 8px 14px !important;
-  }
-
-  .products-section,
-  .industries-section,
-  .faq-section,
-  .blog-section {
-    padding: 40px 20px;
-  }
-
-  .section-heading h2 {
-    font-size: 22px;
-  }
-
-  .hero-heading h1 {
-    font-size: 20px;
-  }
-
-  .slide img {
-    height: 240px;
-  }
-
-  .slide-title {
-    font-size: 16px;
-  }
-
-  .btn-view-all {
-    padding: 11px 25px;
-    font-size: 14px;
-  }
-
-  .faq-container {
-    grid-template-columns: 1fr;
-  }
-
-  /* Footer */
-  .footer-top {
-    grid-template-columns: 1fr 1fr;
-    padding: 40px 20px 30px;
-    gap: 25px;
-  }
-
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
-
-  .footer-bottom {
-    padding: 16px 20px;
-  }
-
-  /* About */
-  .about-section,
-  .contact-section {
-    padding: 40px 20px;
-  }
-
-  .industries-cta {
+  .product-hero-section {
     flex-direction: column;
-    text-align: center;
-    padding: 25px 20px;
-    margin-top: 30px;
+    padding: 30px 20px;
   }
 
-  .industries-cta-btns {
-    justify-content: center;
+  .product-hero-image {
+    max-width: 100%;
   }
 
-}
-
-
-/* ============================================================ */
-/* 18. RESPONSIVE — SMALL MOBILE (≤640px)                       */
-/* ============================================================ */
-
-@media (max-width: 640px) {
-
-  .blog-grid {
-    grid-template-columns: 1fr;
+  .product-title {
+    font-size: 24px;
   }
 
-  .product-page-img img {
-    height: 250px;
-  }
-
-  .stats-row {
+  .application-grid {
     grid-template-columns: repeat(2, 1fr);
-    padding: 25px 16px;
   }
 
-  .values-grid {
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner {
     grid-template-columns: 1fr;
   }
 
-  .calc-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-
-/* ============================================================ */
-/* 19. RESPONSIVE — EXTRA SMALL (≤480px)                        */
-/* ============================================================ */
-
-@media (max-width: 480px) {
-
-  .product-grid,
-  .industry-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .footer-top {
-    grid-template-columns: 1fr;
-  }
-
-  .stats-row {
-    grid-template-columns: 1fr 1fr;
+  .product-details-section,
+  .related-products,
+  .footer {
+    padding: 30px 20px;
   }
 
 }
