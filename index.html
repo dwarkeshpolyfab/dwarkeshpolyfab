@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PP Woven Bags Manufacturer in Gujarat India | Dwarkesh Polyfab Morbi</title>
+  <meta name="description" content="Dwarkesh Polyfab is a PP woven bags and BOPP laminated polybags manufacturer in Morbi, Gujarat. Supplying rice bags, fertilizer bags, cement bags and custom printed polybags pan India.">
+  <meta name="keywords" content="PP woven bags manufacturer, polybags manufacturer Gujarat, BOPP laminated bags, rice packaging bags, fertilizer bags, cement bags, polypropylene bags India, Morbi">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header-placeholder" style="position:sticky;top:0;z-index:9999;"></div>
+
+  <!-- HERO -->
+  <div id="hero-placeholder"></div>
+
+  <!-- PRODUCTS -->
+  <div id="products-placeholder"></div>
+
+  <!-- INDUSTRIES -->
+  <div id="industries-placeholder"></div>
+
+  <!-- FAQ -->
+  <div id="faq-placeholder"></div>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+
+  <script>
+  // ============================================
+  // COMPONENT LOADER
+  // ============================================
+  function loadComponent(file, placeholderId) {
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById(placeholderId).innerHTML = html;
+      })
+      .catch(err => console.error('Error loading ' + file, err));
+  }
+
+  loadComponent('components/header.html',     'header-placeholder');
+  loadComponent('components/hero.html',       'hero-placeholder');
+  loadComponent('components/products.html',   'products-placeholder');
+  loadComponent('components/industries.html', 'industries-placeholder');
+  loadComponent('components/footer.html',     'footer-placeholder');
+
+  // FAQ loads separately — accordion JS runs AFTER HTML is inserted
+  fetch('components/faq.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('faq-placeholder').innerHTML = html;
+      initFaq();
+    });
+
+
+  // ============================================
+  // FAQ ACCORDION
+  // ============================================
+  function initFaq() {
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var answer = btn.nextElementSibling;
+        var icon   = btn.querySelector('.faq-icon');
+        var isOpen = btn.classList.contains('active');
+
+        // Close all
+        document.querySelectorAll('.faq-answer').forEach(function(a) {
+          a.style.maxHeight = '0px';
+          a.style.padding   = '0 20px';
+        });
+        document.querySelectorAll('.faq-icon').forEach(function(i) {
+          i.textContent = '+';
+        });
+        document.querySelectorAll('.faq-question').forEach(function(b) {
+          b.classList.remove('active');
+        });
+
+        // Open this one if it was closed
+        if (!isOpen) {
+          answer.style.maxHeight = answer.scrollHeight + 30 + 'px';
+          answer.style.padding   = '15px 20px';
+          icon.textContent       = '−';
+          btn.classList.add('active');
+        }
+      });
+    });
+  }
+
+
+  // ============================================
+  // HERO SLIDER — runs after all components load
+  // ============================================
+  window.addEventListener('load', function () {
+    setTimeout(initSlider, 300);
+  });
+
+  function initSlider() {
+    var slides = document.querySelectorAll('.slide');
+    var dots   = document.querySelectorAll('.dot');
+    var titleEl = document.getElementById('slide-title');
+    if (!slides.length) return;
+
+    var current = 0;
+    var interval;
+
+    var titles = [];
+    slides.forEach(function(s) {
+      titles.push(s.getAttribute('data-title') || '');
+    });
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      if (dots[current]) dots[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      if (dots[current]) dots[current].classList.add('active');
+      if (titleEl) titleEl.textContent = titles[current];
+    }
+
+    function startAuto() {
+      interval = setInterval(function () { goTo(current + 1); }, 3500);
+    }
+
+    function stopAuto() { clearInterval(interval); }
+
+    // Expose for dot clicks
+    window.goToSlide = function(n) { stopAuto(); goTo(n); startAuto(); };
+
+    startAuto();
+  }
+  </script>
+
+</body>
+</html>

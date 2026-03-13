@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PP Bag Cost Calculator | Polybag Price Estimator | Dwarkesh Polyfab</title>
+  <meta name="description" content="Use Dwarkesh Polyfab free PP bag cost calculator to estimate polypropylene bag price based on size, GSM, lamination and printing requirements.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/product-page.css">
+  <style>
+
+    /* ============================================ */
+    /* CALCULATOR PAGE CSS                          */
+    /* ============================================ */
+
+    .calc-page {
+      background: #f0f2f5;
+      padding: 50px 30px;
+    }
+
+    .calc-page-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .calc-page-heading h1 {
+      font-size: 30px;
+      color: #112a46;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .calc-page-heading p {
+      font-size: 16px;
+      color: #666;
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    /* CALCULATOR BOX */
+    .dp-calculator {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      overflow: hidden;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    /* CALCULATOR HEADER */
+    .dp-header {
+      background: #112a46;
+      padding: 20px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .dp-header img {
+      height: 50px;
+      width: auto;
+      border-radius: 4px;
+    }
+
+    .dp-header h2 {
+      color: #c9a64b;
+      margin: 0;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .dp-header p {
+      color: #aaa;
+      margin: 4px 0 0 0;
+      font-size: 14px;
+    }
+
+    /* CALCULATOR BODY */
+    .dp-body {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px;
+      gap: 30px;
+    }
+
+    /* LEFT INPUTS */
+    .dp-inputs {
+      flex: 1 1 420px;
+    }
+
+    .dp-inputs h3 {
+      font-size: 16px;
+      color: #112a46;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #c9a64b;
+      display: inline-block;
+    }
+
+    /* INPUT GROUP */
+    .dp-input-group {
+      margin-bottom: 18px;
+    }
+
+    .dp-input-group label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .dp-input-group label span {
+      background: #112a46;
+      color: #c9a64b;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-right: 6px;
+    }
+
+    .dp-input-group select,
+    .dp-input-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      box-sizing: border-box;
+      background: #fafafa;
+      color: #333;
+      transition: border 0.3s;
+    }
+
+    .dp-input-group select:focus,
+    .dp-input-group input:focus {
+      outline: none;
+      border-color: #c9a64b;
+    }
+
+    /* RIGHT RESULTS */
+    .dp-results {
+      flex: 1 1 260px;
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 12px;
+      border: 2px solid #e9ecef;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dp-results h3 {
+      font-size: 16px;
+      color: #112a46;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #c9a64b;
+      display: inline-block;
+    }
+
+    /* CALCULATE BUTTON */
+    .dp-btn-calc {
+      background: #112a46;
+      color: #c9a64b;
+      border: none;
+      padding: 16px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 800;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+    }
+
+    .dp-btn-calc:hover {
+      background: #c9a64b;
+      color: #112a46;
+    }
+
+    /* RESULT BOXES */
+    .dp-result-box {
+      text-align: center;
+      margin-bottom: 16px;
+      padding: 16px;
+      border-radius: 10px;
+    }
+
+    .dp-weight-box {
+      background: #fff8e1;
+      border: 2px solid #ffe082;
+    }
+
+    .dp-cost-box {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+    }
+
+    .dp-result-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #666;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .dp-result-value {
+      font-size: 32px;
+      font-weight: 900;
+      color: #112a46;
+      margin: 0;
+    }
+
+    /* WHATSAPP ORDER BUTTON */
+    .dp-btn-wa {
+      background: #25D366;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      width: 100%;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: auto;
+      transition: all 0.3s;
+    }
+
+    .dp-btn-wa:hover {
+      background: #1ebd5a;
+    }
+
+    /* HOW TO USE */
+    .calc-howto {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: white;
+      border-radius: 12px;
+      padding: 35px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    }
+
+    .calc-howto h2 {
+      font-size: 22px;
+      color: #112a46;
+      font-weight: 800;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #c9a64b;
+      display: inline-block;
+    }
+
+    .howto-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .howto-item {
+      background: #f5f7fb;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .howto-num {
+      display: inline-block;
+      background: #112a46;
+      color: #c9a64b;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 35px;
+      margin-bottom: 12px;
+    }
+
+    .howto-item p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    /* NOTE BOX */
+    .calc-note {
+      max-width: 900px;
+      margin: 20px auto 0;
+      background: #fff8e1;
+      border-left: 4px solid #c9a64b;
+      padding: 16px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .calc-note strong {
+      color: #112a46;
+    }
+
+    /* MOBILE */
+    @media (max-width: 650px) {
+      .dp-body { padding: 20px 15px; gap: 20px; }
+      .dp-header { flex-direction: column; gap: 8px; text-align: center; padding: 15px; }
+      .dp-header h2 { font-size: 20px; }
+      .dp-result-value { font-size: 26px; }
+      .howto-grid { grid-template-columns: 1fr; }
+      .calc-page { padding: 30px 15px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- HEADER                                      -->
+  <!-- ============================================ -->
+  <header class="header">
+    <div class="logo-area">
+      <img src="../assets/images/logo.png" alt="Dwarkesh Polyfab Logo">
+      <span class="company-name">DWARKESH POLYFAB</span>
+    </div>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../products/index.html">Products</a>
+      <a href="index.html">Calculators</a>
+      <a href="../industries/index.html">Industries</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../pages/contact.html">Contact</a>
+    </nav>
+    <div class="header-contact">
+      <a class="whatsapp-btn" href="https://wa.me/918320525550" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        <span>+91 8320525550</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <span class="current">PP Bag Calculator</span>
+  </div>
+
+
+  <!-- ============================================ -->
+  <!-- CALCULATOR PAGE                             -->
+  <!-- ============================================ -->
+  <div class="calc-page">
+
+    <!-- PAGE HEADING -->
+    <div class="calc-page-heading">
+      <h1>PP Bag Cost Calculator</h1>
+      <p>
+        Estimate the cost of your polypropylene woven bags instantly.
+        Enter your bag size, GSM, lamination and printing requirements
+        to get an estimated price per bag from Dwarkesh Polyfab.
+      </p>
+    </div>
+
+
+    <!-- CALCULATOR BOX -->
+    <div class="dp-calculator">
+
+      <!-- CALCULATOR HEADER -->
+      <div class="dp-header">
+        <img src="../assets/images/logo.png" alt="Dwarkesh Polyfab Logo">
+        <div>
+          <h2>Dwarkesh Polyfab</h2>
+          <p>PP Woven Bag Cost Estimator</p>
+        </div>
+      </div>
+
+      <!-- CALCULATOR BODY -->
+      <div class="dp-body">
+
+        <!-- LEFT — INPUTS -->
+        <div class="dp-inputs">
+
+          <h3>Enter Bag Specifications</h3>
+
+          <!-- WIDTH -->
+          <div class="dp-input-group">
+            <label><span>1</span> Select Standard Width (Inches)</label>
+            <select id="calc-width">
+              <option value="19">19 Inches</option>
+              <option value="22">22 Inches</option>
+              <option value="24">24 Inches</option>
+              <option value="26">26 Inches</option>
+              <option value="28" selected>28 Inches</option>
+              <option value="30">30 Inches</option>
+              <option value="32">32 Inches</option>
+              <option value="34">34 Inches</option>
+              <option value="36">36 Inches</option>
+            </select>
+          </div>
+
+          <!-- LENGTH -->
+          <div class="dp-input-group">
+            <label><span>2</span> Enter Bag Length (Inches)</label>
+            <input type="number" id="calc-length" value="30" min="10" max="60" placeholder="Enter length in inches">
+          </div>
+
+          <!-- GSM -->
+          <div class="dp-input-group">
+            <label><span>3</span> Select GSM (Fabric Thickness)</label>
+            <select id="calc-gsm">
+              <option value="2.5">2.5 GSM — Light</option>
+              <option value="3" selected>3.0 GSM — Standard</option>
+              <option value="3.5">3.5 GSM — Medium</option>
+              <option value="4">4.0 GSM — Heavy</option>
+              <option value="4.5">4.5 GSM — Extra Heavy</option>
+            </select>
+          </div>
+
+          <!-- QUALITY -->
+          <div class="dp-input-group">
+            <label><span>4</span> Select Quality Type</label>
+            <select id="calc-quality">
+              <option value="100">Janta — Economy</option>
+              <option value="105" selected>Silver — Standard</option>
+              <option value="110">Gold — Premium</option>
+              <option value="125">Natural — Best Quality</option>
+            </select>
+          </div>
+
+          <!-- LAMINATION -->
+          <div class="dp-input-group">
+            <label><span>5</span> Select Lamination Type</label>
+            <select id="calc-lam">
+              <option value="0">Unlaminated — No Lamination</option>
+              <option value="92">Natural Lamination</option>
+              <option value="125">Milky Lamination</option>
+            </select>
+          </div>
+
+          <!-- PRINTING -->
+          <div class="dp-input-group">
+            <label><span>6</span> Printing Requirements</label>
+            <select id="calc-print">
+              <option value="0">Not Required — Plain Bag</option>
+              <option value="0.5">One Side Printing</option>
+              <option value="1">Two Side Printing</option>
+            </select>
+          </div>
+
+        </div>
+        <!-- END INPUTS -->
+
+
+        <!-- RIGHT — RESULTS -->
+        <div class="dp-results">
+
+          <h3>Your Estimate</h3>
+
+          <!-- CALCULATE BUTTON -->
+          <button class="dp-btn-calc" onclick="calculateBag()">
+            ⚙️ Calculate Estimate
+          </button>
+
+          <!-- WEIGHT RESULT -->
+          <div class="dp-result-box dp-weight-box">
+            <div class="dp-result-title">Estimated Weight Per Bag</div>
+            <div class="dp-result-value"><span id="out-weight">0.00</span> g</div>
+          </div>
+
+          <!-- COST RESULT -->
+          <div class="dp-result-box dp-cost-box">
+            <div class="dp-result-title">Estimated Cost Per Bag</div>
+            <div class="dp-result-value">₹ <span id="out-cost">0.00</span></div>
+          </div>
+
+          <!-- WHATSAPP ORDER BUTTON -->
+          <button class="dp-btn-wa" onclick="sendWhatsApp()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 0C5.385 0 0 5.386 0 12.031c0 2.126.551 4.195 1.595 6.014L.014 24l6.09-1.597c1.786.953 3.79 1.458 5.926 1.458 6.646 0 12.032-5.386 12.032-12.031C24.062 5.386 18.677 0 12.031 0zm3.837 17.203c-.611 1.733-3.155 2.138-4.341 1.838-1.428-.359-3.235-1.41-4.832-3.006-1.596-1.596-2.646-3.403-3.005-4.831-.3-.1.106-2.628 1.839-4.342.34-.34.805-.443 1.18-.323.332.106.602.35.807.674.337.525.808 1.472 1.054 1.968.163.33.106.726-.145.98-.172.172-.375.318-.57.49-.12.112-.26.242-.142.457.126.223.57 1.002 1.284 1.716.713.714 1.493 1.158 1.716 1.283.216.118.346-.021.458-.142.171-.194.318-.398.49-.57.253-.25.65-.308.979-.144.496.246 1.443.717 1.968 1.053.324.205.568.475.674.807.12.375.018.84-.322 1.18z"/>
+            </svg>
+            Order on WhatsApp
+          </button>
+
+        </div>
+        <!-- END RESULTS -->
+
+      </div>
+      <!-- END BODY -->
+
+    </div>
+    <!-- END CALCULATOR BOX -->
+
+
+    <!-- HOW TO USE SECTION -->
+    <div class="calc-howto">
+
+      <h2>How to Use This Calculator</h2>
+
+      <div class="howto-grid">
+
+        <div class="howto-item">
+          <div class="howto-num">1</div>
+          <p>Select your bag <strong>width and length</strong> in inches from the dropdown options</p>
+        </div>
+
+        <div class="howto-item">
+          <div class="howto-num">2</div>
+          <p>Choose your required <strong>GSM</strong> (fabric thickness) and <strong>quality type</strong></p>
+        </div>
+
+        <div class="howto-item">
+          <div class="howto-num">3</div>
+          <p>Select <strong>lamination type</strong> and <strong>printing requirements</strong> for your bags</p>
+        </div>
+
+        <div class="howto-item">
+          <div class="howto-num">4</div>
+          <p>Click <strong>Calculate Estimate</strong> button to get estimated weight and price per bag</p>
+        </div>
+
+        <div class="howto-item">
+          <div class="howto-num">5</div>
+          <p>Click <strong>Order on WhatsApp</strong> to send your complete specifications directly to us</p>
+        </div>
+
+        <div class="howto-item">
+          <div class="howto-num">6</div>
+          <p>Our team will confirm the <strong>final price and MOQ</strong> based on your requirements</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- IMPORTANT NOTE -->
+    <div class="calc-note">
+      <strong>Important Note:</strong>
+      This calculator provides an estimated price per bag for reference purposes only.
+      Final pricing depends on order quantity, material availability and current market rates.
+      For exact pricing and bulk order quotation, please contact us on WhatsApp at
+      <strong>+91 8320525550</strong>.
+    </div>
+
+  </div>
+  <!-- END CALC PAGE -->
+
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                      -->
+  <!-- ============================================ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Dwarkesh Polyfab</h4>
+        <p>Manufacturer of PP woven bags, BOPP laminated bags, industrial polybags and polymer packaging solutions.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a href="../products/pp-woven-bags.html">PP Woven Bags</a>
+        <a href="../products/bopp-laminated-bags.html">BOPP Laminated Bags</a>
+        <a href="../products/printed-pp-bags.html">Printed Polybags</a>
+        <a href="../products/rice-packaging-bags.html">Rice Packaging Bags</a>
+        <a href="../products/fertilizer-bags.html">Fertilizer Bags</a>
+        <a href="../products/cement-bags.html">Cement Bags</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>📞 +91 8320525550</p>
+        <p><a href="https://wa.me/918320525550">💬 WhatsApp Chat</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Dwarkesh Polyfab. All Rights Reserved.</div>
+  </footer>
+
+
+  <!-- ============================================ -->
+  <!-- CALCULATOR JAVASCRIPT                       -->
+  <!-- ============================================ -->
+  <script>
+
+    function calculateBag() {
+
+      // Get all input values
+      let width      = parseFloat(document.getElementById('calc-width').value);
+      let length     = parseFloat(document.getElementById('calc-length').value);
+      let gsm        = parseFloat(document.getElementById('calc-gsm').value);
+      let qualityRate = parseFloat(document.getElementById('calc-quality').value);
+      let lamRate    = parseFloat(document.getElementById('calc-lam').value);
+      let printRate  = parseFloat(document.getElementById('calc-print').value);
+
+      // Apply rate modifiers based on GSM and width
+      let finalFabricRate = qualityRate;
+      if (gsm === 3 || gsm === 3.5) finalFabricRate -= 1;
+      if (gsm === 4 || gsm === 4.5) finalFabricRate -= 2;
+      if (width === 19) finalFabricRate += 1;
+
+      // Calculate fabric weight
+      let fabricWeight = (((width * gsm * (length + 1)) / 39.37) + 1);
+
+      // Calculate lamination weight (only if laminated)
+      let lamWeight = 0;
+      if (lamRate > 0) {
+        lamWeight = ((width * 0.5 * (length + 1)) / 39.37);
+      }
+
+      // Total weight
+      let totalWeight = fabricWeight + lamWeight;
+
+      // Total cost calculation
+      let totalCost = ((fabricWeight * finalFabricRate) / 1000)
+                    + ((lamWeight * lamRate) / 1000)
+                    + printRate
+                    + 1.60;
+
+      // Show results on screen
+      document.getElementById('out-weight').innerText = totalWeight.toFixed(2);
+      document.getElementById('out-cost').innerText   = totalCost.toFixed(2);
+    }
+
+
+    function sendWhatsApp() {
+
+      // Get selected option text for each field
+      let w_el      = document.getElementById('calc-width');
+      let width     = w_el.options[w_el.selectedIndex].text;
+
+      let length    = document.getElementById('calc-length').value;
+
+      let g_el      = document.getElementById('calc-gsm');
+      let gsm       = g_el.options[g_el.selectedIndex].text;
+
+      let q_el      = document.getElementById('calc-quality');
+      let quality   = q_el.options[q_el.selectedIndex].text;
+
+      let l_el      = document.getElementById('calc-lam');
+      let lamination = l_el.options[l_el.selectedIndex].text;
+
+      let p_el      = document.getElementById('calc-print');
+      let print     = p_el.options[p_el.selectedIndex].text;
+
+      let finalCost   = document.getElementById('out-cost').innerText;
+      let finalWeight = document.getElementById('out-weight').innerText;
+
+      // Check if user calculated first
+      if (finalCost === "0.00") {
+        alert("Please click Calculate Estimate first before ordering!");
+        return;
+      }
+
+      // Build WhatsApp message
+      let message =
+        `Hello Dwarkesh Polyfab!%0A%0A` +
+        `I would like to place an inquiry based on my calculator estimate:%0A%0A` +
+        `*Bag Specifications:*%0A` +
+        `- Width: ${width}%0A` +
+        `- Length: ${length} Inches%0A` +
+        `- GSM: ${gsm}%0A` +
+        `- Quality: ${quality}%0A` +
+        `- Lamination: ${lamination}%0A` +
+        `- Printing: ${print}%0A%0A` +
+        `*Calculated Details:*%0A` +
+        `- Estimated Weight: ${finalWeight} g per bag%0A` +
+        `- Estimated Cost: Rs ${finalCost} per bag%0A%0A` +
+        `Please confirm final price and minimum order quantity.`;
+
+      // Open WhatsApp with pre-filled message
+      window.open(`https://wa.me/918320525550?text=${message}`, '_blank');
+    }
+
+  </script>
+
+</body>
+</html>
