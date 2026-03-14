@@ -12,7 +12,11 @@
 
   <!-- HEADER -->
   <div id="header-placeholder" style="position:sticky;top:0;z-index:9999;"></div>
-
+fetch('components/header.html')
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById('header-placeholder').innerHTML = html;
+  });
   <!-- HERO -->
   <div id="hero-placeholder"></div>
 
