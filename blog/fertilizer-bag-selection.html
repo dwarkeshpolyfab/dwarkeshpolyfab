@@ -34,19 +34,21 @@
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="logo-area"><img src="../assets/images/logo.png" alt="Dwarkesh Polyfab Logo"><span class="company-name">DWARKESH POLYFAB</span></div>
-    <nav class="main-nav">
-      <a href="../index.html">Home</a><a href="../products/index.html">Products</a>
-      <a href="../calculators/index.html">Calculators</a><a href="../industries/index.html">Industries</a>
-      <a href="index.html">Blog</a><a href="../pages/contact.html">Contact</a>
-    </nav>
-    <div class="header-contact">
-      <a class="whatsapp-btn" href="https://wa.me/918320525550" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"><span>+91 8320525550</span>
-      </a>
-    </div>
-  </header>
+ <div id="header-placeholder" style="position:sticky;top:0;z-index:9999;"></div>
+<script>
+fetch('../components/header.html')
+  .then(r => r.text())
+  .then(html => {
+    const p = document.getElementById('header-placeholder');
+    p.innerHTML = html;
+    p.querySelectorAll('script').forEach(s => {
+      const ns = document.createElement('script');
+      ns.textContent = s.textContent;
+      document.body.appendChild(ns);
+      s.remove();
+    });
+  });
+</script>
   <div class="breadcrumb">
     <a href="../index.html">Home</a> <span>›</span><a href="index.html">Blog</a> <span>›</span>
     <span class="current">Fertilizer Bag Selection Guide</span>
