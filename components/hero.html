@@ -64,16 +64,69 @@
     <!-- CALCULATOR PROMO BUTTON -->
 <div class="hero-cta">
 
+  <div class="calc-breaking-badge">⚡ INDUSTRY TOOL — FREE</div>
+
   <a href="calculators/index.html" class="btn-calculator-promo">
-    ₹ Calculate Your Bag Price Instantly — Free Tool
+    🧮 Calculate Your PP Bag Price — Instant Result
   </a>
 
   <p class="calc-promo-text">
-    Enter size, GSM &amp; lamination — get instant price estimate
+    Enter size, GSM &amp; lamination — get instant price estimate. No login needed.
   </p>
 
 </div>
 
+<style>
+.calc-breaking-badge {
+  display: inline-block;
+  background: #e8000d;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 5px 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  animation: badge-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.7; }
+}
+
+.btn-calculator-promo {
+  display: inline-block;
+  background: #e8000d !important;
+  color: #ffffff !important;
+  padding: 16px 36px !important;
+  border-radius: 4px !important;
+  font-size: 17px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 3px rgba(232,0,13,0.3), 0 6px 25px rgba(232,0,13,0.4) !important;
+  animation: btn-glow 2s ease-in-out infinite;
+}
+
+@keyframes btn-glow {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(232,0,13,0.3), 0 6px 25px rgba(232,0,13,0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(232,0,13,0.15), 0 8px 35px rgba(232,0,13,0.6); }
+}
+
+.btn-calculator-promo:hover {
+  background: #c0000a !important;
+  transform: translateY(-3px) !important;
+}
+
+.calc-promo-text {
+  color: #777 !important;
+  font-size: 12px !important;
+  margin-top: 8px !important;
+}
+</style>
   </div>
 
 </section>
