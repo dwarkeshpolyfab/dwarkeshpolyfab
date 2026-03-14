@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.dwarkeshpolyfab.com/sitemap.xml
+
+# Block unnecessary files from crawling
+Disallow: /assets/css/
+Disallow: /assets/js/
