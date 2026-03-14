@@ -18,6 +18,20 @@ fetch('components/whatsapp-float.html')
     document.getElementById('wa-float-placeholder').innerHTML = html;
   });
 </script>
+  <script>
+fetch('components/header.html')
+  .then(r => r.text())
+  .then(html => {
+    const p = document.getElementById('header-placeholder');
+    p.innerHTML = html;
+    p.querySelectorAll('script').forEach(s => {
+      const ns = document.createElement('script');
+      ns.textContent = s.textContent;
+      document.body.appendChild(ns);
+      s.remove();
+    });
+  });
+</script>
 <body>
 
   <!-- HEADER -->
