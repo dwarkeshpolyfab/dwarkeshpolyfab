@@ -34,21 +34,18 @@ fetch('components/header.html')
 </script>
 <body>
 
-  <!-- HEADER -->
   <div id="header-placeholder" style="position:sticky;top:0;z-index:9999;"></div>
 <script>
 fetch('components/header.html')
   .then(r => r.text())
   .then(html => {
-    const placeholder = document.getElementById('header-placeholder');
-    placeholder.innerHTML = html;
-
-    // This re-runs scripts inside loaded HTML
-    placeholder.querySelectorAll('script').forEach(oldScript => {
-      const newScript = document.createElement('script');
-      newScript.textContent = oldScript.textContent;
-      document.body.appendChild(newScript);
-      oldScript.remove();
+    const p = document.getElementById('header-placeholder');
+    p.innerHTML = html;
+    p.querySelectorAll('script').forEach(s => {
+      const ns = document.createElement('script');
+      ns.textContent = s.textContent;
+      document.body.appendChild(ns);
+      s.remove();
     });
   });
 </script>
