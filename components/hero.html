@@ -61,73 +61,119 @@
       <span class="dot" onclick="goToSlide(3)"></span>
     </div>
 
-    <!-- CALCULATOR PROMO BUTTON -->
+   <!-- CALCULATOR PROMO BUTTON -->
 <div class="hero-cta">
 
   <div class="calc-breaking-badge">✨ Something Special For You</div>
 
   <a href="calculators/index.html" class="btn-calculator-promo">
-    Bag price in 10 second
+    🧮 Calculate Now — Get Bag Price in 10 Seconds
   </a>
 
   <p class="calc-promo-text">
-    Enter size, GSM &amp; lamination — get instant price estimate. No login needed.
+    Free tool · No login · Instant result
   </p>
 
 </div>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@700;900&display=swap');
+
+/* BADGE */
 .calc-breaking-badge {
   display: inline-block;
-  background: #e8000d;
-  color: #ffffff;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  padding: 5px 16px;
-  margin-bottom: 10px;
+  background: transparent;
+  color: #c9a64b;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding: 5px 0px;
+  margin-bottom: 12px;
   text-transform: uppercase;
-  animation: badge-pulse 1.5s ease-in-out infinite;
+  border-bottom: 1px solid rgba(201,166,75,0.3);
+  animation: badge-fade 2s ease-in-out infinite;
 }
 
-@keyframes badge-pulse {
+@keyframes badge-fade {
   0%, 100% { opacity: 1; }
-  50%       { opacity: 0.7; }
+  50%       { opacity: 0.5; }
 }
 
+/* MAIN BUTTON */
 .btn-calculator-promo {
-  display: inline-block;
-  background: #e8000d !important;
-  color: #ffffff !important;
-  padding: 16px 36px !important;
-  border-radius: 4px !important;
-  font-size: 17px !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 0 3px rgba(232,0,13,0.3), 0 6px 25px rgba(232,0,13,0.4) !important;
-  animation: btn-glow 2s ease-in-out infinite;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, #112a46 0%, #1a3d5c 50%, #112a46 100%) !important;
+  background-size: 200% !important;
+  color: #c9a64b !important;
+  padding: 18px 40px !important;
+  border-radius: 6px !important;
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  border: 2px solid #c9a64b !important;
+  transition: all 0.3s ease !important;
+  box-shadow:
+    0 0 0 0 rgba(201,166,75,0),
+    0 8px 30px rgba(17,42,70,0.35) !important;
+  animation: btn-glow 2.5s ease-in-out infinite !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* SHIMMER SWEEP */
+.btn-calculator-promo::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(201,166,75,0.15), transparent);
+  animation: shimmer-sweep 3s ease-in-out infinite;
+}
+
+@keyframes shimmer-sweep {
+  0%   { left: -100%; }
+  60%  { left: 150%; }
+  100% { left: 150%; }
 }
 
 @keyframes btn-glow {
-  0%, 100% { box-shadow: 0 0 0 3px rgba(232,0,13,0.3), 0 6px 25px rgba(232,0,13,0.4); }
-  50%       { box-shadow: 0 0 0 6px rgba(232,0,13,0.15), 0 8px 35px rgba(232,0,13,0.6); }
+  0%, 100% { box-shadow: 0 0 0 0px rgba(201,166,75,0.2), 0 8px 30px rgba(17,42,70,0.35); }
+  50%       { box-shadow: 0 0 0 6px rgba(201,166,75,0.1), 0 10px 40px rgba(17,42,70,0.5); }
 }
 
 .btn-calculator-promo:hover {
-  background: #c0000a !important;
-  transform: translateY(-3px) !important;
+  background: #c9a64b !important;
+  color: #112a46 !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 40px rgba(201,166,75,0.5) !important;
+  letter-spacing: 3px !important;
 }
 
+/* SUBTEXT */
 .calc-promo-text {
-  color: #777 !important;
-  font-size: 12px !important;
-  margin-top: 8px !important;
+  color: #999 !important;
+  font-size: 11px !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  margin-top: 10px !important;
+  font-family: 'Lato', Arial, sans-serif !important;
 }
-</style>
-  </div>
+
+@media (max-width: 768px) {
+  .btn-calculator-promo {
+    font-size: 18px !important;
+    padding: 15px 24px !important;
+    letter-spacing: 1.5px !important;
+  }
+}
+</style>  </div>
 
 </section>
 
