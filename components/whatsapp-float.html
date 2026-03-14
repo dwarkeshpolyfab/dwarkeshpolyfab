@@ -1,0 +1,113 @@
+<!-- components/whatsapp-float.html — Dwarkesh Polyfab -->
+<!-- Floating WhatsApp button — bottom right corner on all pages -->
+
+<style>
+/* ── FLOATING WHATSAPP BUTTON ── */
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* BUBBLE TOOLTIP */
+.wa-float-tooltip {
+  background: #ffffff;
+  color: #112a46;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.wa-float:hover .wa-float-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* MAIN BUTTON */
+.wa-float-btn {
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+.wa-float-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6);
+}
+
+.wa-float-btn img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+/* PULSE RING ANIMATION */
+.wa-float-btn::before {
+  content: '';
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.4);
+  animation: wa-pulse 2s ease-out infinite;
+}
+
+@keyframes wa-pulse {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  70%  { transform: scale(1.6); opacity: 0;   }
+  100% { transform: scale(1.6); opacity: 0;   }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .wa-float {
+    bottom: 20px;
+    right: 16px;
+  }
+  .wa-float-btn {
+    width: 52px;
+    height: 52px;
+  }
+  .wa-float-btn img {
+    width: 28px;
+    height: 28px;
+  }
+  .wa-float-btn::before {
+    width: 52px;
+    height: 52px;
+  }
+}
+</style>
+
+
+<div class="wa-float">
+  <span class="wa-float-tooltip">💬 Chat with us on WhatsApp!</span>
+  <a class="wa-float-btn"
+     href="https://wa.me/918320525550?text=Hello%20Dwarkesh%20Polyfab%2C%20I%20am%20interested%20in%20your%20PP%20Woven%20Bags.%20Please%20share%20details."
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+</div>
