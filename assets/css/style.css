@@ -1183,3 +1183,38 @@ Enter size, GSM & lamination — get instant price estimate
   .faq-section { padding: 40px 20px; }
   .faq-container { grid-template-columns: 1fr; }
 }
+/* ============================================================ */
+/* MOBILE PRODUCT GRID FIX                                      */
+/* ============================================================ */
+
+@media (max-width: 768px) {
+
+  /* Products grid — 2 columns on tablet */
+  .product-grid,
+  .products-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+    padding: 0 12px !important;
+  }
+
+  /* Product card text fix */
+  .product-info h3 {
+    font-size: 14px !important;
+  }
+
+  .product-info p {
+    font-size: 12px !important;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  /* Products grid — 1 column on small mobile */
+  .product-grid,
+  .products-grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 16px !important;
+  }
+
+}
