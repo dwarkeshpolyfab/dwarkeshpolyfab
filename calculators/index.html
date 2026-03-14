@@ -328,6 +328,15 @@
 
   </style>
 </head>
+  <!-- Floating WhatsApp Button -->
+<div id="wa-float-placeholder"></div>
+<script>
+fetch('components/whatsapp-float.html')
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById('wa-float-placeholder').innerHTML = html;
+  });
+</script>
 <body>
 
   <!-- ============================================ -->
