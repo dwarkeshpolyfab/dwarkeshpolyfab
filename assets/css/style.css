@@ -1218,3 +1218,85 @@ Enter size, GSM & lamination — get instant price estimate
   }
 
 }
+/* ============================================================ */
+/* MOBILE — ALL PRODUCTS VISIBLE IN ONE SCREEN                  */
+/* ============================================================ */
+
+@media (max-width: 768px) {
+
+  .products-section {
+    padding: 20px 10px !important;
+  }
+
+  .section-heading {
+    margin-bottom: 16px !important;
+  }
+
+  .section-heading h2 {
+    font-size: 18px !important;
+  }
+
+  .section-heading p {
+    font-size: 12px !important;
+  }
+
+  /* 2 columns, tight grid */
+  .product-grid,
+  .products-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    padding: 0 4px !important;
+  }
+
+  /* Smaller card */
+  .product-card {
+    border-radius: 6px !important;
+  }
+
+  /* Much smaller image */
+  .product-img-box img {
+    height: 90px !important;
+    object-fit: cover !important;
+  }
+
+  /* Compact text */
+  .product-info {
+    padding: 8px 10px !important;
+  }
+
+  .product-info h3 {
+    font-size: 11px !important;
+    margin-bottom: 4px !important;
+    line-height: 1.3 !important;
+  }
+
+  .product-info p {
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 6px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  /* Hide tags on mobile to save space */
+  .product-tags {
+    display: none !important;
+  }
+
+  /* Smaller CTA button */
+  .products-cta {
+    margin-top: 16px !important;
+  }
+
+  .btn-view-all-products {
+    padding: 10px 20px !important;
+    font-size: 12px !important;
+  }
+
+  .products-cta-text {
+    font-size: 11px !important;
+  }
+
+}
