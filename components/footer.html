@@ -1,19 +1,191 @@
-<!-- ================================================ -->
-<!-- FOOTER COMPONENT - components/footer.html        -->
-<!-- Dwarkesh Polyfab                                 -->
-<!-- ================================================ -->
+<!-- components/footer.html — Dwarkesh Polyfab — FIXED -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lato:wght@400;600;700&display=swap');
+
+/* ── FOOTER BASE ── */
+.site-footer { background: #112a46; color: white; font-family: 'Lato', Arial, sans-serif; }
+
+/* ── TOP GRID ── */
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 40px 50px 35px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ── BRAND BLOCK — matches header exactly ── */
+.footer-brand-top {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 12px;
+}
+
+.footer-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  border-radius: 4px;
+  filter: drop-shadow(0 0 5px rgba(201,166,75,0.4));
+  display: block;
+}
+
+.footer-brand-divider {
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(to bottom, transparent, #c9a64b, transparent);
+  flex-shrink: 0;
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* SAME FONT AS HEADER */
+.footer-brand-name {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 16px;
+  font-weight: 900;
+  color: #c9a64b;
+  letter-spacing: 1.8px;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.footer-brand-tagline {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  color: #7fa3bf;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.footer-desc {
+  font-size: 12.5px;
+  color: #aaa;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+/* WHATSAPP BUTTON */
+.footer-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #25D366;
+  color: white;
+  padding: 9px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+.footer-wa-btn:hover { background: #1ebd5a; }
+.footer-wa-btn img { width: 15px; }
+
+/* ── COLUMN TITLES ── */
+.footer-col-title {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 12px;
+  color: #c9a64b;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(201,166,75,0.2);
+}
+
+/* ── LINKS ── */
+.footer-links { list-style: none; padding: 0; margin: 0; }
+.footer-links li { margin-bottom: 7px; }
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 12.5px;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer-links a::before {
+  content: '›';
+  color: #c9a64b;
+  font-size: 14px;
+}
+.footer-links a:hover { color: #c9a64b; padding-left: 3px; }
+
+/* ── CONTACT LIST ── */
+.footer-contact-list { list-style: none; padding: 0; margin: 0; }
+.footer-contact-list li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-size: 12.5px;
+  color: #bbb;
+}
+.fc-icon { font-size: 14px; min-width: 18px; margin-top: 1px; }
+.footer-contact-list a { color: #c9a64b; text-decoration: none; font-weight: 600; }
+.footer-contact-list a:hover { text-decoration: underline; }
+
+/* GOLDEN ADDRESS */
+.footer-address {
+  color: #c9a64b;
+  font-size: 12px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* ── FOOTER BOTTOM ── */
+.footer-bottom {
+  border-top: 1px solid #1e3d5a;
+  padding: 14px 50px;
+}
+.footer-bottom-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-bottom p { font-size: 12px; color: #666; margin-bottom: 3px; }
+.footer-keywords { font-size: 11px; color: #4a5f70; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .footer-top { grid-template-columns: repeat(3,1fr); padding: 35px 30px 28px; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 768px) {
+  .footer-top { grid-template-columns: 1fr 1fr; padding: 28px 20px 22px; gap: 20px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-bottom { padding: 12px 20px; }
+}
+
+@media (max-width: 400px) {
+  .footer-top { grid-template-columns: 1fr; }
+}
+</style>
+
 
 <footer class="site-footer">
 
-  <!-- TOP FOOTER -->
   <div class="footer-top">
 
-    <!-- COL 1 — BRAND -->
+    <!-- COL 1 — BRAND (matches header) -->
     <div class="footer-col footer-brand">
       <div class="footer-brand-top">
-        <div class="footer-logo-wrap">
-          <img src="assets/images/logo.png" alt="Dwarkesh Polyfab Logo" class="footer-logo">
-        </div>
+        <img src="https://www.dwarkeshpolyfab.com/assets/images/logo.png"
+             alt="Dwarkesh Polyfab Logo" class="footer-logo">
         <div class="footer-brand-divider"></div>
         <div class="footer-brand-text">
           <span class="footer-brand-name">Dwarkesh Polyfab</span>
@@ -21,9 +193,8 @@
         </div>
       </div>
       <p class="footer-desc">
-        Manufacturer of polypropylene woven bags, BOPP laminated polybags
-        and industrial polymer packaging solutions. Based in Morbi, Gujarat.
-        Supplying pan India and export markets.
+        Manufacturer of PP woven bags, BOPP laminated polybags and industrial
+        polymer packaging solutions. Based in Morbi, Gujarat. Supplying pan India and export markets.
       </p>
       <a href="https://wa.me/918320525550" target="_blank" class="footer-wa-btn">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
@@ -35,14 +206,14 @@
     <div class="footer-col">
       <h4 class="footer-col-title">Our Products</h4>
       <ul class="footer-links">
-        <li><a href="products/pp-woven-bags.html">PP Woven Bags</a></li>
-        <li><a href="products/bopp-laminated-bags.html">BOPP Laminated Bags</a></li>
-        <li><a href="products/printed-pp-bags.html">Printed Polybags</a></li>
-        <li><a href="products/rice-packaging-bags.html">Rice Packaging Bags</a></li>
-        <li><a href="products/fertilizer-bags.html">Fertilizer Bags</a></li>
-        <li><a href="products/cement-bags.html">Cement Valve Bags</a></li>
-        <li><a href="products/anti-slip-bags.html">Anti Slip Bags</a></li>
-        <li><a href="products/jumbo-bags.html">PP Jumbo Bags</a></li>
+        <li><a href="/products/pp-woven-bags.html">PP Woven Bags</a></li>
+        <li><a href="/products/bopp-laminated-bags.html">BOPP Laminated Bags</a></li>
+        <li><a href="/products/printed-pp-bags.html">Printed Polybags</a></li>
+        <li><a href="/products/rice-packaging-bags.html">Rice Packaging Bags</a></li>
+        <li><a href="/products/fertilizer-bags.html">Fertilizer Bags</a></li>
+        <li><a href="/products/cement-bags.html">Cement Valve Bags</a></li>
+        <li><a href="/products/anti-slip-bags.html">Anti Slip Bags</a></li>
+        <li><a href="/products/jumbo-bags.html">PP Jumbo Bags</a></li>
       </ul>
     </div>
 
@@ -50,12 +221,12 @@
     <div class="footer-col">
       <h4 class="footer-col-title">Industries</h4>
       <ul class="footer-links">
-        <li><a href="industries/rice-packaging.html">Rice &amp; Food Grain</a></li>
-        <li><a href="industries/fertilizer-packaging.html">Fertilizer Industry</a></li>
-        <li><a href="industries/cement-packaging.html">Cement &amp; Construction</a></li>
-        <li><a href="industries/animal-feed-packaging.html">Animal Feed</a></li>
-        <li><a href="industries/chemical-packaging.html">Chemical Industry</a></li>
-        <li><a href="industries/export-packaging.html">Export Packaging</a></li>
+        <li><a href="/industries/rice-packaging.html">Rice &amp; Food Grain</a></li>
+        <li><a href="/industries/fertilizer-packaging.html">Fertilizer Industry</a></li>
+        <li><a href="/industries/cement-packaging.html">Cement &amp; Construction</a></li>
+        <li><a href="/industries/animal-feed-packaging.html">Animal Feed</a></li>
+        <li><a href="/industries/chemical-packaging.html">Chemical Industry</a></li>
+        <li><a href="/industries/export-packaging.html">Export Packaging</a></li>
       </ul>
     </div>
 
@@ -63,13 +234,13 @@
     <div class="footer-col">
       <h4 class="footer-col-title">Quick Links</h4>
       <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products/index.html">All Products</a></li>
-        <li><a href="calculators/index.html">Bag Calculator</a></li>
-        <li><a href="industries/index.html">Industries</a></li>
-        <li><a href="blog/index.html">Blog</a></li>
-        <li><a href="pages/about.html">About Us</a></li>
-        <li><a href="pages/contact.html">Contact Us</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/products/index.html">All Products</a></li>
+        <li><a href="/calculators/index.html">Bag Calculator</a></li>
+        <li><a href="/industries/index.html">Industries</a></li>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/pages/about.html">About Us</a></li>
+        <li><a href="/pages/contact.html">Contact Us</a></li>
       </ul>
     </div>
 
@@ -89,14 +260,13 @@
           <span class="fc-icon">📍</span>
           <span class="footer-address">
             Morbi-Halwad Road,<br>
-            Nichimandal,<br>
-            Morbi - Gujarat,<br>
-            India - 363641
+            Nichimandal, Morbi,<br>
+            Gujarat - 363641
           </span>
         </li>
         <li>
-          <span class="fc-icon">⚙️</span>
-          <a href="calculators/index.html">Bag Price Calculator</a>
+          <span class="fc-icon">🧮</span>
+          <a href="/calculators/index.html">Bag Price Calculator</a>
         </li>
       </ul>
     </div>
@@ -108,7 +278,7 @@
     <div class="footer-bottom-inner">
       <p>© 2026 Dwarkesh Polyfab. All Rights Reserved. | PP Woven Bags Manufacturer in India</p>
       <p class="footer-keywords">
-        PP Woven Bags · BOPP Laminated Bags · Rice Bags · Fertilizer Bags · Cement Bags · Polybags · Polypack · Gujarat
+        PP Woven Bags · BOPP Laminated Bags · Rice Bags · Fertilizer Bags · Cement Bags · Polybags · Gujarat
       </p>
     </div>
   </div>
