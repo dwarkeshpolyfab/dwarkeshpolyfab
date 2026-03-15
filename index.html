@@ -9,45 +9,36 @@
     <link rel="icon" type="image/png" href="/assets/images/logo.png">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-  <!-- Floating WhatsApp Button -->
-<div id="wa-float-placeholder"></div>
-<script>
-fetch('components/whatsapp-float.html')
-  .then(r => r.text())
-  .then(html => {
-    document.getElementById('wa-float-placeholder').innerHTML = html;
-  });
-</script>
-<script>
-fetch('components/header.html')
-  .then(r => r.text())
-  .then(html => {
-    const p = document.getElementById('header-placeholder');
-    p.innerHTML = html;
-    p.querySelectorAll('script').forEach(s => {
-      const ns = document.createElement('script');
-      ns.textContent = s.textContent;
-      document.body.appendChild(ns);
-      s.remove();
-    });
-  });
-</script>
 <body>
 
-  <div id="header-placeholder" style="position:sticky;top:0;z-index:9999;"></div>
-<script>
-fetch('components/header.html')
-  .then(r => r.text())
-  .then(html => {
-    const p = document.getElementById('header-placeholder');
-    p.innerHTML = html;
-    p.querySelectorAll('script').forEach(s => {
-      const ns = document.createElement('script');
-      ns.textContent = s.textContent;
-      document.body.appendChild(ns);
-      s.remove();
+  <!-- Floating WhatsApp -->
+  <div id="wa-float-placeholder"></div>
+  <script>
+  fetch('components/whatsapp-float.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('wa-float-placeholder').innerHTML = html;
     });
-  });
+  </script>
+
+  <!-- Header -->
+  <div id="header-placeholder" style="position:sticky;top:0;z-index:9999;"></div>
+  <script>
+  fetch('components/header.html')
+    .then(r => r.text())
+    .then(html => {
+      const p = document.getElementById('header-placeholder');
+      p.innerHTML = html;
+      p.querySelectorAll('script').forEach(s => {
+        const ns = document.createElement('script');
+        ns.textContent = s.textContent;
+        document.body.appendChild(ns);
+        s.remove();
+      });
+    });
+  </script>
+</body>
+</html>
 </script>
   <!-- HERO -->
   <div id="hero-placeholder"></div>
