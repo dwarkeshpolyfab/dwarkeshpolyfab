@@ -125,13 +125,13 @@ fetch('../components/header.html')
 
   </div>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-col"><h4>Dwarkesh Polyfab</h4><p>Manufacturer of PP woven bags, BOPP laminated bags, industrial polybags and polymer packaging solutions.</p></div>
-      <div class="footer-col"><h4>Products</h4><a href="../products/pp-woven-bags.html">PP Woven Bags</a><a href="../products/bopp-laminated-bags.html">BOPP Laminated Bags</a><a href="../products/rice-packaging-bags.html">Rice Packaging Bags</a><a href="../products/fertilizer-bags.html">Fertilizer Bags</a></div>
-      <div class="footer-col"><h4>Contact Us</h4><p>📞 +91 8320525550</p><p><a href="https://wa.me/918320525550">💬 WhatsApp Chat</a></p></div>
-    </div>
-    <div class="footer-bottom">© 2026 Dwarkesh Polyfab. All Rights Reserved.</div>
-  </footer>
+<div id="footer-placeholder"></div>
+<script>
+fetch('../components/footer.html')
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById('footer-placeholder').innerHTML = html;
+  });
+</script>
 </body>
 </html>
