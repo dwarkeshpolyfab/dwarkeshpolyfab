@@ -171,8 +171,32 @@
   .footer-bottom { padding: 12px 20px; }
 }
 
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 16px 16px;
+    gap: 16px;
+  }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-desc { display: none; }
+  .footer-bottom { padding: 10px 16px; }
+  .footer-brand-name { font-size: 14px; }
+  .footer-brand-tagline { font-size: 7px; }
+  .footer-logo { height: 32px; width: 32px; }
+  .footer-col-title { font-size: 11px; margin-bottom: 8px; }
+  .footer-links a { font-size: 11px; }
+  .footer-contact-list li { font-size: 11px; }
+  .footer-wa-btn { font-size: 11px; padding: 7px 12px; }
+  .footer-bottom p { font-size: 10px; }
+  .footer-keywords { display: none; }
+}
+
 @media (max-width: 400px) {
-  .footer-top { grid-template-columns: 1fr; }
+  .footer-top {
+    grid-template-columns: 1fr;
+    padding: 16px 14px 12px;
+    gap: 12px;
+  }
 }
 </style>
 
