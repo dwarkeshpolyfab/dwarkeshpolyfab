@@ -43,12 +43,14 @@ const RATES = {
   maxi_roll_modifier: +10,
 
   /* ── FIXED COST PER BAG ── */
-  fixed_cost: 1.60,
-
+  
+fixed_cost: 1.60,
+jumbo_extra_cost: 3.00,   // extra per bag for jumbo sizes (width >= 36)
+jumbo_min_width: 36,      // width from which jumbo pricing applies
   /* ── STRENGTH RATINGS ── */
   strength: {
-    silver: { 2.5:35, 3.0:42, 3.5:48, 4.0:52, 5.0:60 },
-    gold:   { 2.5:45, 3.0:55, 3.25:58, 3.5:60, 4.0:70, 4.5:80, 5.0:82 }
+    silver: { 2.5:35, 3.0:42, 3.5:48, 4.0:52, 4.5:55, 5.0:60 },
+    gold:   { 2.5:45, 3.0:55,, 3.5:60, 4.0:70, 4.5:80, 5.0:82 }
   },
 
   strength_max: 82
