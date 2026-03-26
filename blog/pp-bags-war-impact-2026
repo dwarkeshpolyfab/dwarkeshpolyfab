@@ -29,7 +29,7 @@ fetch('../components/header.html')
 
 <!-- HERO IMAGE -->
 <div style="text-align:center;margin:20px 0;">
-  <img src="../assets/images/blogs/crude-oil-impact.jpg" 
+  <img src="../assets/images/blog/crude-oil-impact.jpg" 
        alt="Crude oil price impact on polypropylene PP bags industry India" 
        loading="lazy"
        style="width:100%;max-width:750px;border-radius:10px;">
@@ -65,7 +65,7 @@ Polypropylene (PP) is made from petroleum products. This means:
 
 <!-- IMAGE -->
 <div style="text-align:center;margin:25px 0;">
-  <img src="../assets/images/blogs/pp-raw-material.jpg" 
+  <img src="../assets/images/blog/pp-raw-material.jpg" 
        alt="Polypropylene raw material granules from crude oil" 
        loading="lazy"
        style="width:100%;max-width:600px;border-radius:8px;">
@@ -91,7 +91,7 @@ This is affecting manufacturers in Morbi, Gujarat — one of India’s major ind
 
 <!-- IMAGE -->
 <div style="text-align:center;margin:25px 0;">
-  <img src="../assets/images/blogs/shipping-crisis.jpg" 
+  <img src="../assets/images/blog/shipping-crisis.jpg" 
        alt="Shipping disruption Red Sea crisis impact on India trade" 
        loading="lazy"
        style="width:100%;max-width:600px;border-radius:8px;">
@@ -110,7 +110,7 @@ This is affecting manufacturers in Morbi, Gujarat — one of India’s major ind
 
 <!-- OPTIONAL IMAGE -->
 <div style="text-align:center;margin:25px 0;">
-  <img src="../assets/images/blogs/pp-bag-manufacturing.jpg" 
+  <img src="../assets/images/blog/pp-bag-manufacturing.jpg" 
        alt="PP woven bag manufacturing in Morbi Gujarat India" 
        loading="lazy"
        style="width:100%;max-width:600px;border-radius:8px;">
