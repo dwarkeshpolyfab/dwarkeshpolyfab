@@ -1,174 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- MAIN PAGES -->
+  <!-- HOME -->
   <url>
     <loc>https://www.dwarkeshpolyfab.com/</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- CORE PAGES -->
   <url>
     <loc>https://www.dwarkeshpolyfab.com/pages/about.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.dwarkeshpolyfab.com/pages/contact.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- CALCULATOR -->
   <url>
     <loc>https://www.dwarkeshpolyfab.com/calculators/index.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
   <!-- PRODUCTS -->
   <url>
     <loc>https://www.dwarkeshpolyfab.com/products/index.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/products/pp-woven-bags.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/products/bopp-laminated-bags.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/products/printed-pp-bags.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/products/rice-packaging-bags.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/products/fertilizer-bags.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/products/cement-bags.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/products/anti-slip-bags.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/products/jumbo-bags.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
+  <url><loc>https://www.dwarkeshpolyfab.com/products/pp-woven-bags.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/products/bopp-laminated-bags.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/products/printed-pp-bags.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/products/rice-packaging-bags.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/products/fertilizer-bags.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/products/cement-bags.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/products/anti-slip-bags.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/products/jumbo-bags.html</loc></url>
 
   <!-- INDUSTRIES -->
   <url>
     <loc>https://www.dwarkeshpolyfab.com/industries/index.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/industries/rice-packaging.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/industries/fertilizer-packaging.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/industries/cement-packaging.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/industries/animal-feed-packaging.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/industries/chemical-packaging.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/industries/export-packaging.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
+  <url><loc>https://www.dwarkeshpolyfab.com/industries/rice-packaging.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/industries/fertilizer-packaging.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/industries/cement-packaging.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/industries/animal-feed-packaging.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/industries/chemical-packaging.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/industries/export-packaging.html</loc></url>
 
   <!-- BLOG -->
   <url>
     <loc>https://www.dwarkeshpolyfab.com/blog/index.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/blog/what-is-gsm-in-pp-bags.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/blog/pp-vs-bopp-bags.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/blog/rice-packaging-guide.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/blog/how-to-order-custom-printed-bags.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/blog/fertilizer-bag-selection.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dwarkeshpolyfab.com/blog/anti-slip-bags-for-export.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
+  <!-- BLOG POSTS -->
+  <url><loc>https://www.dwarkeshpolyfab.com/blog/pp-bags-war-impact-2026.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/blog/what-is-gsm-in-pp-bags.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/blog/pp-vs-bopp-bags.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/blog/rice-packaging-guide.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/blog/how-to-order-custom-printed-bags.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/blog/fertilizer-bag-selection.html</loc></url>
+  <url><loc>https://www.dwarkeshpolyfab.com/blog/anti-slip-bags-for-export.html</loc></url>
 
 </urlset>
