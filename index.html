@@ -3,44 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>PP Woven Bags Manufacturer in Gujarat India | Dwarkesh Polyfab Morbi</title>
+
   <meta name="description" content="Dwarkesh Polyfab is a PP woven bags and BOPP laminated polybags manufacturer in Morbi, Gujarat. Supplying rice bags, fertilizer bags, cement bags and custom printed polybags pan India.">
   <meta name="keywords" content="PP woven bags manufacturer, polybags manufacturer Gujarat, BOPP laminated bags, rice packaging bags, fertilizer bags, cement bags, polypropylene bags India, Morbi">
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png">  
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!-- Google Search Logo -->
-<meta property="og:image" content="https://www.dwarkeshpolyfab.com/assets/images/og-logo.png">
-<meta property="og:image:width" content="400">
-<meta property="og:image:height" content="400">
-<meta property="og:title" content="PP Woven Bags Manufacturer | Dwarkesh Polyfab">
-<meta property="og:description" content="PP Woven Bags & BOPP Laminated Bags manufacturer in Morbi Gujarat. Rice bags, fertilizer bags, cement bags. Call +91 8320525550">
-<meta property="og:url" content="https://www.dwarkeshpolyfab.com/">
-<meta property="og:type" content="website">
 
-<!-- Schema — tells Google your official logo -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Dwarkesh Polyfab",
-  "url": "https://www.dwarkeshpolyfab.com",
-  "logo": "https://www.dwarkeshpolyfab.com/assets/images/og-logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91-8320525550",
-    "contactType": "sales"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Morbi-Halwad Road, Nichimandal",
-    "addressLocality": "Morbi",
-    "addressRegion": "Gujarat",
-    "postalCode": "363641",
-    "addressCountry": "IN"
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="shortcut icon" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+
+  <!-- ✅ Branding -->
+  <meta name="application-name" content="Dwarkesh Polyfab">
+  <meta property="og:site_name" content="Dwarkesh Polyfab">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Google Search Logo -->
+  <meta property="og:image" content="https://www.dwarkeshpolyfab.com/assets/images/og-logo.png">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta property="og:title" content="PP Woven Bags Manufacturer | Dwarkesh Polyfab">
+  <meta property="og:description" content="PP Woven Bags & BOPP Laminated Bags manufacturer in Morbi Gujarat. Rice bags, fertilizer bags, cement bags. Call +91 8320525550">
+  <meta property="og:url" content="https://www.dwarkeshpolyfab.com/">
+  <meta property="og:type" content="website">
+
+  <!-- ✅ Schema — Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Dwarkesh Polyfab",
+    "url": "https://www.dwarkeshpolyfab.com",
+    "logo": "https://www.dwarkeshpolyfab.com/assets/images/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-8320525550",
+      "contactType": "sales"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Morbi-Halwad Road, Nichimandal",
+      "addressLocality": "Morbi",
+      "addressRegion": "Gujarat",
+      "postalCode": "363641",
+      "addressCountry": "IN"
+    }
   }
-}
-</script>
+  </script>
+
+  <!-- ✅ Schema — Website (IMPORTANT FOR NAME DISPLAY) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Dwarkesh Polyfab",
+    "url": "https://www.dwarkeshpolyfab.com/"
+  }
+  </script>
+
 </head>
+
 <body>
 
   <!-- Floating WhatsApp -->
@@ -69,9 +93,7 @@
       });
     });
   </script>
-</body>
-</html>
-</script>
+
   <!-- HERO -->
   <div id="hero-placeholder"></div>
 
@@ -86,7 +108,6 @@
 
   <!-- FOOTER -->
   <div id="footer-placeholder"></div>
-
 
   <script>
   // ============================================
@@ -107,14 +128,13 @@
   loadComponent('components/industries.html', 'industries-placeholder');
   loadComponent('components/footer.html',     'footer-placeholder');
 
-  // FAQ loads separately — accordion JS runs AFTER HTML is inserted
+  // FAQ loads separately
   fetch('components/faq.html')
     .then(res => res.text())
     .then(html => {
       document.getElementById('faq-placeholder').innerHTML = html;
       initFaq();
     });
-
 
   // ============================================
   // FAQ ACCORDION
@@ -126,7 +146,6 @@
         var icon   = btn.querySelector('.faq-icon');
         var isOpen = btn.classList.contains('active');
 
-        // Close all
         document.querySelectorAll('.faq-answer').forEach(function(a) {
           a.style.maxHeight = '0px';
           a.style.padding   = '0 20px';
@@ -138,7 +157,6 @@
           b.classList.remove('active');
         });
 
-        // Open this one if it was closed
         if (!isOpen) {
           answer.style.maxHeight = answer.scrollHeight + 30 + 'px';
           answer.style.padding   = '15px 20px';
@@ -149,9 +167,8 @@
     });
   }
 
-
   // ============================================
-  // HERO SLIDER — runs after all components load
+  // HERO SLIDER
   // ============================================
   window.addEventListener('load', function () {
     setTimeout(initSlider, 300);
@@ -186,7 +203,6 @@
 
     function stopAuto() { clearInterval(interval); }
 
-    // Expose for dot clicks
     window.goToSlide = function(n) { stopAuto(); goTo(n); startAuto(); };
 
     startAuto();
