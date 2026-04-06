@@ -103,6 +103,9 @@
   <!-- INDUSTRIES -->
   <div id="industries-placeholder"></div>
 
+  <!-- BLOG PREVIEW -->
+<div id="blog-preview-placeholder"></div>
+ 
   <!-- FAQ -->
   <div id="faq-placeholder"></div>
 
@@ -127,7 +130,7 @@
   loadComponent('components/products.html',   'products-placeholder');
   loadComponent('components/industries.html', 'industries-placeholder');
   loadComponent('components/footer.html',     'footer-placeholder');
-
+loadComponent('components/blog-preview.html', 'blog-preview-placeholder');
   // FAQ loads separately
   fetch('components/faq.html')
     .then(res => res.text())
