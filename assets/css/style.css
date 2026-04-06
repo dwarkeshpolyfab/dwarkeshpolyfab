@@ -1300,57 +1300,115 @@ Enter size, GSM & lamination — get instant price estimate
   }
 
 }
+/* BLOG PREVIEW SECTION */
 .blog-preview {
-  padding: 60px 20px;
-  background: #f5f7fb;
+  padding: 40px 15px;
+  background: #f8f9fb;
 }
 
+/* Heading */
 .blog-preview-heading {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .blog-preview-heading h2 {
-  font-size: 28px;
+  font-size: 24px;
   color: #112a46;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .blog-preview-heading p {
+  font-size: 14px;
   color: #666;
-  font-size: 15px;
 }
 
+/* GRID SMALL BOX */
 .blog-preview-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  max-width: 1100px;
+  gap: 15px;
+  max-width: 1000px;
   margin: auto;
 }
 
+/* BLOG CARD SMALL */
+.blog-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+/* SMALL IMAGE */
+.blog-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.blog-card-body {
+  padding: 12px;
+}
+
+.blog-card-body h3 {
+  font-size: 15px;
+  color: #112a46;
+  margin: 5px 0;
+}
+
+.blog-card-body p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* TAG */
+.blog-tag {
+  font-size: 11px;
+  color: #28a745;
+  font-weight: 600;
+}
+
+/* READ MORE */
+.blog-read-more {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+/* BUTTON */
 .blog-preview-btn {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .view-all-btn {
-  display: inline-block;
-  padding: 12px 25px;
+  padding: 10px 20px;
   background: #112a46;
-  color: #fff;
+  color: white;
+  border-radius: 5px;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+  font-size: 14px;
 }
 
-@media (max-width: 900px) {
+/* MOBILE */
+@media (max-width: 768px) {
   .blog-preview-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 480px) {
   .blog-preview-grid {
     grid-template-columns: 1fr;
   }
