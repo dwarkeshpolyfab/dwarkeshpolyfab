@@ -1300,3 +1300,58 @@ Enter size, GSM & lamination — get instant price estimate
   }
 
 }
+.blog-preview {
+  padding: 60px 20px;
+  background: #f5f7fb;
+}
+
+.blog-preview-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog-preview-heading h2 {
+  font-size: 28px;
+  color: #112a46;
+  font-weight: 800;
+}
+
+.blog-preview-heading p {
+  color: #666;
+  font-size: 15px;
+}
+
+.blog-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.blog-preview-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #112a46;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .blog-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .blog-preview-grid {
+    grid-template-columns: 1fr;
+  }
+}
