@@ -1,0 +1,186 @@
+<!-- ================================================ -->
+<!-- BLOG PREVIEW - components/blog-preview.html      -->
+<!-- Dwarkesh Polyfab                                  -->
+<!-- ================================================ -->
+
+<section class="blog-preview-section">
+
+  <div class="bp-inner">
+
+    <!-- HEADING -->
+    <div class="bp-heading">
+      <div>
+        <p class="bp-label">Buyers Guide</p>
+        <h2>Learn Before You Buy</h2>
+        <p class="bp-desc">Expert articles to help you choose the right packaging for your business.</p>
+      </div>
+      <a href="/blog/index.html" class="bp-view-all">All Articles →</a>
+    </div>
+
+    <!-- 3 BLOG CARDS -->
+    <div class="bp-grid">
+
+      <a href="/blog/how-to-choose-gsm-pp-woven-bag.html" class="bp-card">
+        <div class="bp-thumb">📦</div>
+        <div class="bp-body">
+          <span class="bp-tag">Buyers Guide</span>
+          <h3>How to Choose the Right GSM for Your PP Woven Bag</h3>
+          <p>GSM determines strength and durability. Learn which GSM range suits agricultural, industrial or food use.</p>
+          <span class="bp-read">Read Article →</span>
+        </div>
+      </a>
+
+      <a href="/blog/virgin-vs-recycled-pp-granules.html" class="bp-card">
+        <div class="bp-thumb">🌿</div>
+        <div class="bp-body">
+          <span class="bp-tag">Buyers Guide</span>
+          <h3>Virgin vs Recycled PP Granules — What is the Difference?</h3>
+          <p>Understanding raw material difference helps you pick the right bag for food-grade or industrial use.</p>
+          <span class="bp-read">Read Article →</span>
+        </div>
+      </a>
+
+      <a href="/blog/custom-printed-vs-plain-pp-bags.html" class="bp-card">
+        <div class="bp-thumb">🎨</div>
+        <div class="bp-body">
+          <span class="bp-tag">Buyers Guide</span>
+          <h3>Custom Printed Bags vs Plain Bags — Which Grows Your Brand?</h3>
+          <p>Custom printing adds brand value. Discover when it makes business sense and what to consider.</p>
+          <span class="bp-read">Read Article →</span>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+.blog-preview-section {
+  background: #f5f7fb;
+  padding: 70px 50px;
+}
+.bp-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* HEADING ROW */
+.bp-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.bp-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c9a64b;
+  margin-bottom: 8px;
+}
+.bp-heading h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #112a46;
+  margin-bottom: 8px;
+}
+.bp-desc {
+  font-size: 14px;
+  color: #666;
+}
+.bp-view-all {
+  display: inline-block;
+  background: #112a46;
+  color: #c9a64b;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.bp-view-all:hover { background: #1a3d65; }
+
+/* GRID */
+.bp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* CARD */
+.bp-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(17,42,70,0.08);
+  text-decoration: none;
+  transition: all 0.3s;
+  display: block;
+  box-shadow: 0 2px 10px rgba(17,42,70,0.06);
+}
+.bp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(17,42,70,0.13);
+  border-color: rgba(201,166,75,0.3);
+}
+
+/* THUMBNAIL */
+.bp-thumb {
+  height: 130px;
+  background: linear-gradient(135deg, #112a46, #1a3d65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+}
+
+/* BODY */
+.bp-body { padding: 20px; }
+.bp-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #c9a64b;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.bp-body h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #112a46;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.bp-body p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.bp-read {
+  font-size: 12px;
+  font-weight: 700;
+  color: #c9a64b;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .bp-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .blog-preview-section { padding: 40px 20px; }
+  .bp-grid { grid-template-columns: 1fr; }
+  .bp-heading { flex-direction: column; align-items: flex-start; }
+}
+</style>
