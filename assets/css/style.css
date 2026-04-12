@@ -6,7 +6,12 @@ padding:0;
 background:#ffffff;
 
 }
-
+/* GLOBAL IMAGE SETTINGS — prevents CLS and ensures responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 /* ================================= */
 /* HEADER */
 /* ================================= */
@@ -1407,7 +1412,15 @@ Enter size, GSM & lamination — get instant price estimate
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
+/* Mobile image optimization */
+@media (max-width: 768px) {
+  .product-img-box img,
+  .blog-card img,
+  .industry-img-box img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+}
 @media (max-width: 480px) {
   .blog-preview-grid {
     grid-template-columns: 1fr;
