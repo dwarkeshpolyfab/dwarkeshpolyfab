@@ -3,7 +3,11 @@
 /* assets/css/product-page.css                     */
 /* ================================================ */
 
-
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 /* BREADCRUMB */
 .breadcrumb {
   background: #f5f7fb;
@@ -410,4 +414,24 @@
     padding: 30px 20px;
   }
 
+}
+/* Smooth lazy-loading fade effect */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+/* Prevent layout shift for hero image */
+.product-hero-image img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Prevent layout shift for related product images */
+.related-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
