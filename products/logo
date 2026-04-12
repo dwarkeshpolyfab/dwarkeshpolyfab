@@ -40,7 +40,7 @@ fetch('../components/header.html')
 
       <a href="pp-woven-bags.html" class="product-card">
         <div class="product-img-box">
-          <img src="../assets/images/products/pp-woven-bags.jpg" alt="PP Woven Bags">
+          <img src="../assets/images/products/pp-woven-bags.webp" alt="PP Woven Bags">
           <div class="product-overlay">View Product →</div>
         </div>
         <div class="product-info">
@@ -52,7 +52,7 @@ fetch('../components/header.html')
 
       <a href="bopp-laminated-bags.html" class="product-card">
         <div class="product-img-box">
-          <img src="../assets/images/products/bopp-laminated-bags.jpg" alt="BOPP Laminated Bags">
+          <img src="../assets/images/products/bopp-laminated-bags.webp" alt="BOPP Laminated Bags">
           <div class="product-overlay">View Product →</div>
         </div>
         <div class="product-info">
@@ -64,7 +64,7 @@ fetch('../components/header.html')
 
       <a href="printed-pp-bags.html" class="product-card">
         <div class="product-img-box">
-          <img src="../assets/images/products/printed-pp-bags.jpg" alt="Printed Polybags">
+          <img src="../assets/images/products/printed-pp-bags.webp" alt="Printed Polybags">
           <div class="product-overlay">View Product →</div>
         </div>
         <div class="product-info">
@@ -76,7 +76,7 @@ fetch('../components/header.html')
 
       <a href="rice-packaging-bags.html" class="product-card">
         <div class="product-img-box">
-          <img src="../assets/images/products/rice-packaging-bags.jpg" alt="Rice Packaging Bags">
+          <img src="../assets/images/products/rice-packaging-bags.webp" alt="Rice Packaging Bags">
           <div class="product-overlay">View Product →</div>
         </div>
         <div class="product-info">
@@ -88,7 +88,7 @@ fetch('../components/header.html')
 
       <a href="fertilizer-bags.html" class="product-card">
         <div class="product-img-box">
-          <img src="../assets/images/products/fertilizer-bags.jpg" alt="Fertilizer Bags">
+          <img src="../assets/images/products/fertilizer-bags.webp" alt="Fertilizer Bags">
           <div class="product-overlay">View Product →</div>
         </div>
         <div class="product-info">
@@ -100,7 +100,7 @@ fetch('../components/header.html')
 
       <a href="cement-bags.html" class="product-card">
         <div class="product-img-box">
-          <img src="../assets/images/products/cement-bags.jpg" alt="Cement Bags">
+          <img src="../assets/images/products/cement-bags.webp" alt="Cement Bags">
           <div class="product-overlay">View Product →</div>
         </div>
         <div class="product-info">
@@ -112,7 +112,7 @@ fetch('../components/header.html')
 
       <a href="anti-slip-bags.html" class="product-card">
         <div class="product-img-box">
-          <img src="../assets/images/products/anti-slip-bags.jpg" alt="Anti Slip Bags">
+          <img src="../assets/images/products/anti-slip-bags.webp" alt="Anti Slip Bags">
           <div class="product-overlay">View Product →</div>
         </div>
         <div class="product-info">
@@ -124,7 +124,7 @@ fetch('../components/header.html')
 
       <a href="jumbo-bags.html" class="product-card">
         <div class="product-img-box">
-          <img src="../assets/images/products/jumbo-bags.jpg" alt="Jumbo Box Bags for Plastic Products">
+          <img src="../assets/images/products/jumbo-bags.webp" alt="Jumbo Box Bags for Plastic Products">
           <div class="product-overlay">View Product →</div>
         </div>
         <div class="product-info">
