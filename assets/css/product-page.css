@@ -435,19 +435,3 @@ img[loading="lazy"].loaded {
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
-/* Responsive Product Grid */
-.responsive-product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Shows 2 columns on mobile */
-  gap: 15px; /* Smaller gap for mobile screens */
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-/* For Tablets and Desktop Computers */
-@media (min-width: 768px) {
-  .responsive-product-grid {
-    grid-template-columns: repeat(4, 1fr); /* Switches back to 4 columns on large screens */
-    gap: 25px; /* Restores the original larger gap */
-  }
-}
