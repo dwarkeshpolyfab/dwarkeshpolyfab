@@ -1,16 +1,16 @@
 const RATES = {
 
   quality: {
-    janta:   140,
-    silver:  150,
-    gold:    165,
-    natural: 185
+    janta:   120,
+    silver:  125,
+    gold:    140,
+    natural: 180
   },
 
   lamination: {
     none:    0,
-    natural: 160,
-    milky:   130
+    natural: 180,
+    milky:   135
   },
 
   printing: {
