@@ -48,7 +48,9 @@
       { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "BOPP Laminated Bags" } },
       { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Rice Packaging Bags" } },
       { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Fertilizer Bags" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Cement Bags" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Cement Bags" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Anti Slip Bags" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Jumbo Box Bags" } }
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -90,7 +92,7 @@
       {
         "@type": "Question",
         "name": "What products does Dwarkesh Polyfab manufacture?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Dwarkesh Polyfab manufactures PP woven bags, BOPP laminated bags, rice bags, fertilizer bags, cement bags, laminated bags, custom printed polybags, anti-slip bags and jumbo box bags." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Dwarkesh Polyfab manufactures PP woven bags, BOPP laminated bags, rice packaging bags, fertilizer bags, cement bags, anti slip bags and jumbo box bags." }
       },
       {
         "@type": "Question",
@@ -118,6 +120,7 @@
     }
 
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: 'Lato', Arial, sans-serif;
@@ -238,9 +241,7 @@
     .btn-outline { border: 1.5px solid var(--gold); color: var(--gold); background: transparent; }
     .btn-outline:hover { background: var(--gold); color: var(--navy); transform: translateY(-2px); }
 
-    .hero-visual {
-      position: relative;
-    }
+    .hero-visual { position: relative; }
     .factory-card {
       position: relative;
       border-radius: 22px;
@@ -251,41 +252,15 @@
     }
     .factory-card img {
       width: 100%;
-      height: 410px;
+      height: 430px;
       object-fit: cover;
-    }
-    .factory-card::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 45%, rgba(17,42,70,.92) 100%);
-      pointer-events: none;
-    }
-    .factory-caption {
-      position: absolute;
-      left: 22px;
-      right: 22px;
-      bottom: 20px;
-      z-index: 2;
-      color: #fff;
-    }
-    .factory-caption strong {
-      display: block;
-      color: var(--gold-2);
-      font-size: 16px;
-      margin-bottom: 4px;
-    }
-    .factory-caption span {
-      color: rgba(255,255,255,.75);
-      font-size: 13px;
-      line-height: 1.55;
     }
     .floating-trust {
       position: absolute;
       left: -22px;
       bottom: -22px;
       z-index: 3;
-      width: 210px;
+      width: 230px;
       background: #fff;
       border: 1px solid rgba(201,166,75,.4);
       border-radius: 16px;
@@ -390,13 +365,7 @@
       background: #fff;
     }
     .split-image img { width: 100%; height: 470px; object-fit: cover; }
-    .image-note {
-      padding: 14px 18px;
-      background: #fff;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 13px;
-    }
+
     .proof-list {
       display: grid;
       gap: 13px;
@@ -427,6 +396,18 @@
     }
     .proof-line b { color: var(--navy); font-size: 14px; }
     .proof-line span { display:block; color: var(--muted); font-size: 13px; line-height: 1.6; margin-top: 2px; }
+
+    .ai-summary {
+      background: #fff;
+      border: 1px solid rgba(201,166,75,.38);
+      border-left: 5px solid var(--gold);
+      border-radius: 16px;
+      box-shadow: var(--shadow-soft);
+      padding: 24px;
+      margin-top: 26px;
+    }
+    .ai-summary h3 { margin: 0 0 9px; color: var(--navy); font-size: 17px; }
+    .ai-summary p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
 
     .metrics-grid {
       display: grid;
@@ -493,31 +474,32 @@
       gap: 18px;
     }
     .gallery-main, .gallery-side-card {
-      position: relative;
       overflow: hidden;
       border-radius: 18px;
       border: 1px solid rgba(201,166,75,.24);
-      background: #0c2037;
+      background: #fff;
       box-shadow: var(--shadow-soft);
     }
-    .gallery-main img { height: 520px; width: 100%; object-fit: cover; opacity: .92; }
+    .gallery-main img { height: 520px; width: 100%; object-fit: cover; }
     .gallery-side { display: grid; gap: 18px; }
-    .gallery-side-card img { height: 251px; width: 100%; object-fit: cover; opacity: .92; }
-    .gallery-label {
-      position: absolute;
-      left: 16px;
-      bottom: 16px;
-      right: 16px;
-      z-index: 2;
-      background: rgba(17,42,70,.88);
-      border: 1px solid rgba(201,166,75,.28);
-      color: #fff;
-      border-radius: 12px;
-      padding: 13px 15px;
-      backdrop-filter: blur(6px);
+    .gallery-side-card img { height: 251px; width: 100%; object-fit: cover; }
+
+    .image-trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
     }
-    .gallery-label b { color: var(--gold-2); display: block; font-size: 14px; margin-bottom: 3px; }
-    .gallery-label span { display: block; color: rgba(255,255,255,.72); font-size: 12px; line-height: 1.45; }
+    .image-trust-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--gold);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 4px 14px rgba(17,42,70,.05);
+    }
+    .image-trust-card b { display:block; color: var(--navy); font-size: 14px; margin-bottom: 4px; }
+    .image-trust-card span { display:block; color: var(--muted); font-size: 12px; line-height: 1.55; }
 
     .morbi-panel {
       display: grid;
@@ -548,10 +530,10 @@
       color: rgba(255,255,255,.78);
       font-size: 13px;
     }
+    .map-point:last-child { margin-bottom: 0; }
     .map-point b { color: var(--gold-2); display: block; font-size: 15px; margin-bottom: 4px; }
 
     .process-track {
-      position: relative;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
@@ -705,24 +687,9 @@
     .contact-image {
       min-height: 420px;
       background: var(--navy);
-      position: relative;
       overflow: hidden;
     }
-    .contact-image img { width: 100%; height: 100%; object-fit: cover; opacity: .92; }
-    .contact-stamp {
-      position: absolute;
-      left: 24px;
-      right: 24px;
-      bottom: 24px;
-      background: rgba(17,42,70,.9);
-      color: #fff;
-      border: 1px solid rgba(201,166,75,.32);
-      border-radius: 16px;
-      padding: 18px;
-      backdrop-filter: blur(8px);
-    }
-    .contact-stamp b { color: var(--gold-2); display: block; margin-bottom: 5px; }
-    .contact-stamp span { color: rgba(255,255,255,.72); font-size: 13px; line-height: 1.55; display: block; }
+    .contact-image img { width: 100%; height: 100%; object-fit: cover; }
 
     .faq-wrap { max-width: 900px; margin: 0 auto; }
     .faq-item { border: 1px solid var(--line); border-radius: 14px; margin-bottom: 12px; background: #fff; overflow: hidden; }
@@ -765,21 +732,9 @@
     .final-cta p { color: rgba(255,255,255,.68); margin: 0 0 28px; font-size: 15px; line-height: 1.8; }
     .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 13px; }
 
-    .ai-summary {
-      background: #fff;
-      border: 1px solid rgba(201,166,75,.38);
-      border-left: 5px solid var(--gold);
-      border-radius: 16px;
-      box-shadow: var(--shadow-soft);
-      padding: 24px;
-      margin-top: 26px;
-    }
-    .ai-summary h3 { margin: 0 0 9px; color: var(--navy); font-size: 17px; }
-    .ai-summary p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
-
     @media (max-width: 1060px) {
       .about-hero-inner, .split-grid, .morbi-panel, .quality-layout, .contact-panel { grid-template-columns: 1fr; }
-      .quick-strip-inner, .metrics-grid, .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .quick-strip-inner, .metrics-grid, .product-grid, .image-trust-row { grid-template-columns: repeat(2, 1fr); }
       .trust-wall, .process-track { grid-template-columns: repeat(2, 1fr); }
       .quote-flow { grid-template-columns: repeat(3, 1fr); }
       .factory-card img, .split-image img, .quality-image img { height: 360px; }
@@ -789,7 +744,7 @@
       .breadcrumb { padding: 10px 20px; }
       .about-hero, .section, .final-cta { padding: 44px 20px; }
       .hero-actions a, .cta-actions a { width: 100%; }
-      .quick-strip-inner, .metrics-grid, .trust-wall, .process-track, .product-grid, .quote-flow { grid-template-columns: 1fr; }
+      .quick-strip-inner, .metrics-grid, .trust-wall, .process-track, .product-grid, .quote-flow, .image-trust-row { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: 1fr; }
       .gallery-main img, .gallery-side-card img { height: 240px; }
       .factory-card img { height: 300px; }
@@ -850,11 +805,7 @@
 
       <div class="hero-visual">
         <div class="factory-card">
-          <img src="/assets/images/blog/dwarkesh-polyfab-factory.webp" alt="Dwarkesh Polyfab PP woven bag factory in Morbi Gujarat" width="600" height="410" loading="eager">
-          <div class="factory-caption">
-            <strong>Real manufacturing. Real accountability.</strong>
-            <span>Use this image slot for your factory exterior, weaving floor or production line photo in WebP format.</span>
-          </div>
+          <img src="/assets/images/blog/dwarkesh-polyfab-factory.webp" alt="Dwarkesh Polyfab PP woven bag factory in Morbi Gujarat" width="600" height="430" loading="eager">
         </div>
         <div class="floating-trust">
           <small>Buyer Confidence</small>
@@ -880,7 +831,6 @@
     <div class="inner split-grid">
       <div class="split-image">
         <img src="/assets/images/blog/pp-bag-manufacturing-unit.webp" alt="PP bag manufacturing unit with woven fabric rolls and machines" width="570" height="470" loading="lazy">
-        <div class="image-note">Suggested image: production floor, fabric roll storage, cutting table or packed bale area.</div>
       </div>
       <div class="split-copy">
         <span class="label">Who We Are</span>
@@ -911,12 +861,12 @@
       <div class="section-head">
         <span class="label">Factory Snapshot</span>
         <h2>Numbers That Build <span>Buyer Confidence</span></h2>
-        <p>Keep these figures accurate to your real business capacity. Trust improves when buyers see clear operational strength and practical production ability.</p>
+        <p>Clear operational facts help buyers understand your capacity, product range and manufacturing focus before they send an inquiry.</p>
       </div>
       <div class="metrics-grid">
         <div class="metric-card"><div class="icon">🏭</div><div class="num">160<span>+</span></div><div class="text">Loom Capacity / Ecosystem Strength</div></div>
         <div class="metric-card"><div class="icon">⚖️</div><div class="num">250<span>T</span></div><div class="text">Monthly Fabric Output Capability</div></div>
-        <div class="metric-card"><div class="icon">📦</div><div class="num">8<span>+</span></div><div class="text">Packaging Product Categories</div></div>
+        <div class="metric-card"><div class="icon">📦</div><div class="num">7<span>+</span></div><div class="text">Packaging Product Categories</div></div>
         <div class="metric-card"><div class="icon">✅</div><div class="num">100<span>%</span></div><div class="text">Virgin PP Material Options</div></div>
         <div class="metric-card"><div class="icon">🎨</div><div class="num">6<span>+</span></div><div class="text">Printing Color Options</div></div>
         <div class="metric-card"><div class="icon">🌍</div><div class="num">India</div><div class="text">Pan-India B2B Dispatch</div></div>
@@ -930,25 +880,27 @@
   <section class="section white">
     <div class="inner">
       <div class="section-head">
-        <span class="label">Visual Proof</span>
-        <h2>Show Buyers Your <span>Factory Reality</span></h2>
-        <p>Replace these WebP placeholders with your real factory photos. This section is designed to make buyers trust you before they call.</p>
+        <span class="label">Visual Trust</span>
+        <h2>Real Factory Images. <span>No Stock Presentation.</span></h2>
+        <p>Clean factory visuals build trust faster than long claims. This section now shows images only — no unnecessary text boxes covering your photos.</p>
       </div>
       <div class="gallery-grid">
         <div class="gallery-main">
           <img src="/assets/images/blog/factory-production-floor.webp" alt="Dwarkesh Polyfab production floor for PP woven bags" width="760" height="520" loading="lazy">
-          <div class="gallery-label"><b>Production Floor</b><span>Use a wide photo of looms, tape line, printing area or finished material movement.</span></div>
         </div>
         <div class="gallery-side">
           <div class="gallery-side-card">
             <img src="/assets/images/blog/pp-fabric-rolls.webp" alt="PP woven fabric rolls at Dwarkesh Polyfab" width="430" height="251" loading="lazy">
-            <div class="gallery-label"><b>Fabric Rolls</b><span>Show GSM, width and material readiness.</span></div>
           </div>
           <div class="gallery-side-card">
             <img src="/assets/images/blog/printed-pp-bags-stack.webp" alt="Custom printed PP bags stack ready for dispatch" width="430" height="251" loading="lazy">
-            <div class="gallery-label"><b>Finished Bags</b><span>Show packed bales, printed bags and dispatch-ready stock.</span></div>
           </div>
         </div>
+      </div>
+      <div class="image-trust-row">
+        <div class="image-trust-card"><b>Production Floor</b><span>Shows manufacturing capability, machinery setup and operational scale.</span></div>
+        <div class="image-trust-card"><b>Fabric Rolls</b><span>Shows material readiness, fabric stock and production discipline.</span></div>
+        <div class="image-trust-card"><b>Finished Bags</b><span>Shows packed output, dispatch readiness and buyer confidence.</span></div>
       </div>
     </div>
   </section>
@@ -980,7 +932,7 @@
       <div class="section-head">
         <span class="label">Trust Factors</span>
         <h2>Why Buyers Feel Safe Working With <span>Dwarkesh Polyfab</span></h2>
-        <p>Trust is not created by big words. It is created by clear specifications, real photos, proper communication, samples, predictable dispatch and consistent quality checks.</p>
+        <p>Trust is created by clear specifications, real photos, proper communication, samples, predictable dispatch and consistent quality checks.</p>
       </div>
       <div class="trust-wall">
         <div class="trust-card"><div class="trust-ico">🏭</div><h3>Direct Manufacturer</h3><p>No trader chain. Buyers speak directly with the team that understands fabric, GSM, printing, lamination and dispatch planning.</p></div>
@@ -1020,14 +972,14 @@
       <div class="section-head">
         <span class="label">What We Manufacture</span>
         <h2>Complete PP Packaging Range <span>From One Manufacturer</span></h2>
-        <p>Use internal links below to connect this About page with your product pages. This helps SEO and helps buyers move directly to inquiry.</p>
+        <p>Related products help buyers move directly from company trust to product inquiry.</p>
       </div>
       <div class="product-grid">
         <a class="product-card" href="../products/pp-woven-bags.html">
           <div class="product-img"><img src="/assets/images/products/pp-woven-bags.webp" alt="PP woven bags manufacturer" width="300" height="150" loading="lazy"></div>
           <div class="product-info"><h3>PP Woven Bags</h3><p>Plain and printed bags for agriculture, food and industrial packaging.</p></div>
         </a>
-        <a class="product-card" href="../products/bopp-laminated-bags.html.html">
+        <a class="product-card" href="../products/bopp-laminated-bags.html">
           <div class="product-img"><img src="/assets/images/products/bopp-laminated-bags.webp" alt="BOPP laminated bags manufacturer" width="300" height="150" loading="lazy"></div>
           <div class="product-info"><h3>BOPP Laminated Bags</h3><p>Premium printed bags with glossy, matte, gold or silver finish.</p></div>
         </a>
@@ -1069,7 +1021,7 @@
         <div class="check-row"><span class="check-mark">✓</span><div><b>Packing count:</b> bundles and bales counted before dispatch for easier buyer verification.</div></div>
       </div>
       <div class="quality-image">
-        <img src="/assets/images/about/quality-check-pp-bags.webp" alt="Quality checking of PP woven bags before dispatch" width="570" height="470" loading="lazy">
+        <img src="/assets/images/blog/quality-check-pp-bags.webp" alt="Quality checking of PP woven bags before dispatch" width="570" height="470" loading="lazy">
       </div>
     </div>
   </section>
@@ -1113,8 +1065,7 @@
         </div>
       </div>
       <div class="contact-image">
-        <img src="/assets/images/about/dwarkesh-polyfab-contact-team.webp" alt="Dwarkesh Polyfab sales and production coordination team" width="530" height="420" loading="lazy">
-        <div class="contact-stamp"><b>Trust Tip</b><span>Add your real team/factory image here. Buyers trust real faces and real production more than stock photography.</span></div>
+        <img src="/assets/images/blog/dwarkesh-polyfab-contact-team.webp" alt="Dwarkesh Polyfab sales and production coordination team" width="530" height="420" loading="lazy">
       </div>
     </div>
   </section>
@@ -1129,7 +1080,7 @@
       </div>
       <div class="faq-wrap">
         <div class="faq-item"><button class="faq-q">Who is Dwarkesh Polyfab? <span class="faq-icon">+</span></button><div class="faq-a"><p>Dwarkesh Polyfab is a PP woven bag and BOPP laminated bag manufacturer based in Morbi, Gujarat, supplying custom polypropylene packaging solutions for B2B buyers across India.</p></div></div>
-        <div class="faq-item"><button class="faq-q">What products do you manufacture? <span class="faq-icon">+</span></button><div class="faq-a"><p>We manufacture PP woven bags, BOPP laminated bags, rice packaging bags, fertilizer bags, cement bags, laminated bags, custom printed polybags, anti-slip bags and jumbo box bags.</p></div></div>
+        <div class="faq-item"><button class="faq-q">What products do you manufacture? <span class="faq-icon">+</span></button><div class="faq-a"><p>We manufacture PP woven bags, BOPP laminated bags, rice packaging bags, fertilizer bags, cement bags, anti-slip bags and jumbo box bags.</p></div></div>
         <div class="faq-item"><button class="faq-q">What details are needed for a quotation? <span class="faq-icon">+</span></button><div class="faq-a"><p>Share bag size, GSM or bag weight, quantity, fabric color, lamination type, printing colors, liner requirement, product filling weight and delivery city.</p></div></div>
         <div class="faq-item"><button class="faq-q">Do you provide custom printing? <span class="faq-icon">+</span></button><div class="faq-a"><p>Yes. We provide custom printing for PP woven bags and BOPP laminated bags based on buyer artwork, color requirement and packaging purpose.</p></div></div>
         <div class="faq-item"><button class="faq-q">Where is Dwarkesh Polyfab located? <span class="faq-icon">+</span></button><div class="faq-a"><p>Dwarkesh Polyfab is located in Morbi, Gujarat, India — a major polypropylene packaging manufacturing hub.</p></div></div>
