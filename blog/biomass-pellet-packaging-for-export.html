@@ -822,6 +822,97 @@
       .article-content { padding: 22px; }
       .city-pin { font-size: 10px; padding: 5px 7px; }
     }
+    /* ─────────────────────────────────────────────
+   DESKTOP LAYOUT FIX — cleaner blog reading view
+   ───────────────────────────────────────────── */
+@media (min-width: 1081px) {
+  body {
+    background: #f5f7fb;
+  }
+
+  .hero-inner {
+    max-width: 1440px;
+    grid-template-columns: minmax(0, 0.95fr) minmax(430px, 0.9fr);
+  }
+
+  .layout {
+    width: min(100%, 1500px);
+    max-width: 1500px;
+    padding: 56px 36px;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 32px;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .article-card {
+    min-width: 0;
+    border-radius: 22px;
+    box-shadow: 0 16px 46px rgba(17,42,70,0.08);
+  }
+
+  .article-content {
+    padding: 46px 52px;
+  }
+
+  .article-content > p,
+  .article-content > ul,
+  .intro-box,
+  .map-note {
+    max-width: 960px;
+  }
+
+  .article-content h2 {
+    margin-top: 48px;
+    letter-spacing: 0.2px;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 104px;
+    align-self: start;
+    display: grid;
+    gap: 16px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background: rgba(201,166,75,0.45);
+    border-radius: 999px;
+  }
+
+  .side-card {
+    border-radius: 18px;
+  }
+
+  .punjab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-card {
+    width: 100%;
+  }
+
+  .map-placeholder {
+    min-height: 330px;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1500px) {
+  .layout {
+    grid-template-columns: minmax(0, 1060px) 360px;
+  }
+}
   </style>
 </head>
 <body>
