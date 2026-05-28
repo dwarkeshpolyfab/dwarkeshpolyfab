@@ -1719,3 +1719,60 @@ button:focus-visible {
     gap: 25px;
   }
 }
+/* Accessibility final fixes */
+
+.wa-btn {
+  min-height: 48px;
+}
+
+.wa-real-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.wa-float-btn .wa-real-icon {
+  width: 34px;
+  height: 34px;
+  font-size: 18px;
+}
+
+.industry-icon {
+  display: none;
+}
+
+.main-nav a,
+.mobile-nav a,
+.footer-links a,
+.footer-contact-list a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links li {
+  margin-bottom: 2px;
+}
+
+.footer-links a {
+  padding: 8px 0;
+}
+
+.footer-contact-list li {
+  min-height: 44px;
+  align-items: center;
+}
+
+.footer-contact-list a {
+  padding: 8px 0;
+}
+
+.footer-col-title {
+  line-height: 1.3;
+}
