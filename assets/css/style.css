@@ -1776,3 +1776,41 @@ button:focus-visible {
 .footer-col-title {
   line-height: 1.3;
 }
+.wa-icon-only {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  justify-content: center;
+  border-radius: 8px;
+  background: #22c55e;
+  border: 2px solid #34d06b;
+  box-shadow: 0 8px 20px rgba(34,197,94,0.25);
+}
+
+.wa-icon-only:hover {
+  background: #16a34a;
+  transform: translateY(-1px);
+}
+
+.wa-icon-only .wa-svg {
+  width: 25px;
+  height: 25px;
+  color: #ffffff;
+  fill: currentColor;
+}
+
+@media (max-width: 768px) {
+  .header-contact {
+    display: block;
+  }
+
+  .wa-icon-only {
+    width: 54px;
+    height: 54px;
+  }
+
+  .wa-icon-only .wa-svg {
+    width: 27px;
+    height: 27px;
+  }
+}
