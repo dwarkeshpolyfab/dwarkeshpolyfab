@@ -1419,3 +1419,264 @@ img {
     gap: 25px; /* Restores the original larger gap */
   }
 }
+
+/* ================================================ */
+/* HOMEPAGE FIXES - ADD AT VERY BOTTOM              */
+/* Accessibility + blog cards + stable controls     */
+/* ================================================ */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+/* Better keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #f0d97a;
+  outline-offset: 3px;
+}
+
+/* Improve weak text contrast */
+.section-heading p,
+.product-info p,
+.industry-info p,
+.hero-subtitle p,
+.faq-answer p,
+.calc-promo-text,
+.slide-hint,
+.products-cta-text,
+.breadcrumb,
+.bp-desc,
+.bp-body p,
+.blog-post-info p,
+.blog-read-time {
+  color: #374151;
+}
+
+.wa-label {
+  color: rgba(255,255,255,0.9);
+}
+
+.brand-tagline,
+.footer-brand-tagline {
+  color: #b7cfe0;
+}
+
+.footer-desc,
+.footer-links a,
+.footer-contact-list li {
+  color: #d1d5db;
+}
+
+.footer-bottom p,
+.footer-keywords {
+  color: #cbd5e1;
+}
+
+.footer-address,
+.footer-contact-list a,
+.footer-col-title {
+  color: #f0d97a;
+}
+
+/* Slider dots are buttons in new index.html */
+.dot {
+  border: 0;
+  padding: 0;
+  appearance: none;
+  background: #6b7280;
+}
+
+.dot.active {
+  background: #112a46;
+}
+
+/* Text WhatsApp icon used in optimized index.html */
+.wa-text-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #128c3f;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.wa-icon.wa-text-icon {
+  width: 19px;
+  height: 19px;
+  min-width: 19px;
+  font-size: 13px;
+}
+
+.footer-wa-btn .wa-text-icon {
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+}
+
+/* Stable image spaces */
+.slide,
+.product-img-box,
+.industry-img-box,
+.blog-img-box {
+  background: #eef2f6;
+}
+
+.slide img {
+  aspect-ratio: 31 / 19;
+}
+
+.product-img-box img,
+.industry-img-box img,
+.blog-img-box img {
+  aspect-ratio: 37 / 20;
+  object-fit: cover;
+}
+
+/* Blog preview classes used by new index.html */
+.blog-preview-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.blog-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.blog-post-card {
+  background: #ffffff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: block;
+}
+
+.blog-post-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(17,42,70,0.12);
+  border-color: #c9a64b;
+}
+
+.blog-img-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-img-box img {
+  width: 100%;
+  height: 200px;
+  transition: transform 0.4s ease;
+}
+
+.blog-post-card:hover .blog-img-box img {
+  transform: scale(1.05);
+}
+
+.blog-post-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(17,42,70,0.88);
+  color: #f0d97a;
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blog-post-card:hover .blog-post-overlay {
+  opacity: 1;
+}
+
+.blog-post-info {
+  padding: 18px;
+}
+
+.blog-post-tag {
+  display: inline-block;
+  background: #112a46;
+  color: #f0d97a;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.blog-post-info h3 {
+  font-size: 15px;
+  color: #112a46;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+
+.blog-post-info p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.blog-post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.blog-read-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: #7a5d12;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.blog-preview-cta {
+  text-align: center;
+  margin-top: 45px;
+}
+
+@media (max-width: 900px) {
+  .blog-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-preview-section {
+    padding: 40px 20px;
+  }
+
+  .blog-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
