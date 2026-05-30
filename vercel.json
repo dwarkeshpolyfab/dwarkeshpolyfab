@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/products/laminated-pp-bags.html",
+      "destination": "/products/bopp-laminated-bags.html",
+      "permanent": true
+    }
+  ]
+}
