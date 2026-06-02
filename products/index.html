@@ -64,6 +64,63 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which PP woven bag is best for 50 kg packaging?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 50 kg packaging, buyers usually choose PP woven bags with suitable GSM, strong stitching, optional lamination and product-specific strength. Rice, fertilizer, cement and animal feed may need different specifications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Dwarkesh Polyfab manufacture BOPP laminated bags?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Dwarkesh Polyfab manufactures BOPP laminated bags with glossy or matte finish, multicolor printing and custom sizes for rice, fertilizer, animal feed, retail and export packaging."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What details are required for a PP bag quotation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To get an accurate PP bag quotation, share bag size, GSM, quantity, product weight, lamination requirement, printing requirement and delivery city."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which bags are used for cement packaging?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cement and construction material buyers commonly use PP woven valve bags or BOPP laminated bags depending on filling method, dust control, stacking strength and branding requirement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can PP woven bags be printed with company logo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. PP woven bags and BOPP bags can be customized with company logo, product name, design, size, color, GSM, lamination and printing options."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which industries use Dwarkesh Polyfab bags?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dwarkesh Polyfab bags are used by rice mills, fertilizer companies, cement plants, animal feed brands, chemical suppliers, tile adhesive manufacturers and export packaging buyers."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     #header-placeholder {
       min-height: 67px;
@@ -249,9 +306,14 @@
       letter-spacing: 0.4px;
     }
 
-    .product-help-section {
+    .product-help-section,
+    .product-faq-section {
       background: #ffffff;
       padding: 54px 50px;
+    }
+
+    .product-faq-section {
+      background: #f5f7fb;
     }
 
     .product-help-grid {
@@ -262,24 +324,40 @@
       margin: 0 auto;
     }
 
-    .product-help-card {
+    .product-help-card,
+    .product-faq-item {
       border: 1px solid #e2e8f0;
       border-radius: 8px;
       padding: 22px;
       background: #ffffff;
     }
 
-    .product-help-card h3 {
+    .product-help-card h3,
+    .product-faq-item h3 {
       color: #112a46;
       font-size: 18px;
       margin-bottom: 10px;
       line-height: 1.35;
     }
 
-    .product-help-card p {
+    .product-faq-item h3 {
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    .product-help-card p,
+    .product-faq-item p {
       color: #374151;
       font-size: 14px;
       line-height: 1.75;
+    }
+
+    .product-faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      max-width: 1180px;
+      margin: 0 auto;
     }
 
     .product-quote-panel {
@@ -356,11 +434,13 @@
         min-height: auto;
       }
 
-      .product-help-section {
+      .product-help-section,
+      .product-faq-section {
         padding: 36px 16px;
       }
 
-      .product-help-grid {
+      .product-help-grid,
+      .product-faq-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -598,6 +678,45 @@
         <div class="product-help-card">
           <h3>For Retail &amp; Export</h3>
           <p>BOPP laminated bags help brands improve shelf appeal with multicolor printing, glossy or matte finish and export-friendly presentation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-faq-section" aria-labelledby="product-faq-heading">
+      <div class="section-heading">
+        <h2 id="product-faq-heading">Buyer Questions About PP Woven Bags</h2>
+        <p>Specific answers for buyers comparing PP woven bags, BOPP laminated bags and industrial packaging options.</p>
+      </div>
+
+      <div class="product-faq-grid">
+        <div class="product-faq-item">
+          <h3>Which PP woven bag is best for 50 kg packaging?</h3>
+          <p>For 50 kg packaging, choose PP woven bags with suitable GSM, strong stitching, optional lamination and product-specific strength. Rice, fertilizer, cement and animal feed may need different specifications.</p>
+        </div>
+
+        <div class="product-faq-item">
+          <h3>Does Dwarkesh Polyfab manufacture BOPP laminated bags?</h3>
+          <p>Yes. We manufacture BOPP laminated bags with glossy or matte finish, multicolor printing and custom sizes for rice, fertilizer, animal feed, retail and export packaging.</p>
+        </div>
+
+        <div class="product-faq-item">
+          <h3>What details are required for a PP bag quotation?</h3>
+          <p>Share your bag size, GSM, quantity, product weight, lamination requirement, printing requirement and delivery city. These details help us suggest the right bag and price range.</p>
+        </div>
+
+        <div class="product-faq-item">
+          <h3>Which bags are used for cement packaging?</h3>
+          <p>Cement and construction material buyers commonly use PP woven valve bags or BOPP laminated bags depending on filling method, dust control, stacking strength and branding requirement.</p>
+        </div>
+
+        <div class="product-faq-item">
+          <h3>Can PP woven bags be printed with company logo?</h3>
+          <p>Yes. PP woven bags and BOPP bags can be customized with company logo, product name, design, size, color, GSM, lamination and printing options.</p>
+        </div>
+
+        <div class="product-faq-item">
+          <h3>Which industries use Dwarkesh Polyfab bags?</h3>
+          <p>Our packaging bags are used by rice mills, fertilizer companies, cement plants, animal feed brands, chemical suppliers, tile adhesive manufacturers and export packaging buyers.</p>
         </div>
       </div>
     </section>
