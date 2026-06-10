@@ -1,6 +1,17 @@
 {
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "dwarkeshpolyfab.com"
+        }
+      ],
+      "destination": "https://www.dwarkeshpolyfab.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
