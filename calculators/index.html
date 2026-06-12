@@ -106,15 +106,6 @@
       border-right: 1px solid #eee;
       display: flex; flex-direction: column; gap: 10px;
     }
-    .dp-btn-calc {
-      width: 100%; background: #112a46; color: #c9a64b;
-      border: none; padding: 12px; border-radius: 7px;
-      font-size: 13px; font-weight: 900; text-transform: uppercase;
-      letter-spacing: 1px; cursor: pointer; transition: all 0.25s;
-      display: flex; align-items: center; justify-content: center; gap: 7px;
-      font-family: 'Lato', Arial, sans-serif;
-    }
-    .dp-btn-calc:hover { background: #c9a64b; color: #112a46; transform: translateY(-1px); }
     .dp-result-boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .dp-result-box { text-align: center; padding: 12px 8px; border-radius: 8px; }
     .dp-weight-box { background: #fff8e1; border: 1.5px solid #ffe082; }
@@ -157,7 +148,7 @@
     .strength-special h4 { font-size: 12px; font-weight: 900; margin-bottom: 4px; }
     .strength-special p  { font-size: 10px; line-height: 1.5; }
 
-    /* ── BOPP COMING SOON ── */
+    /* ── OTHER CALCULATORS ── */
     .bopp-coming {
       max-width: 1050px; margin: 16px auto 0;
       background: #ffffff; border-radius: 12px;
@@ -175,11 +166,14 @@
     .bopp-coming-desc  { font-size: 12px; color: #888; }
     .bopp-coming-btn {
       display: inline-flex; align-items: center; gap: 8px;
-      background: #f5f7fb; border: 2px dashed #c9a64b;
-      color: #112a46; padding: 11px 22px; border-radius: 8px;
+      background: #112a46; border: 2px solid #112a46;
+      color: #c9a64b; padding: 11px 22px; border-radius: 8px;
       font-size: 13px; font-weight: 900; letter-spacing: 1px;
-      text-transform: uppercase; cursor: not-allowed; opacity: 0.85;
+      text-transform: uppercase; text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
     }
+    .bopp-coming-btn:hover { background: #c9a64b; color: #112a46; }
 
     /* ── NOTE ── */
     .calc-note {
@@ -259,28 +253,7 @@
     <a href="/">Home</a> <span>›</span>
     <span style="color:#c9a64b;">PP Bag Calculator</span>
   </div>
-<section style="text-align:center; padding:40px; background:#f5f5f5;">
-  
-  <h1>PP Bag Price Calculator – Instant Cost & Weight</h1>
-  
-  <p style="font-size:18px;">
-    Calculate your bag weight and price in seconds. 
-    No manual calculation needed.
-  </p>
 
-  <a href="#calculator" style="
-    display:inline-block;
-    margin-top:15px;
-    padding:12px 25px;
-    background:#28a745;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-  ">
-    Start Calculation
-  </a>
-
-</section>
  <div class="calc-page" id="calculator">
 
     <!-- MAIN CARD -->
@@ -388,10 +361,6 @@
         <div class="calc-results">
           <span class="calc-section-title">Price Estimate</span>
 
-          <button class="dp-btn-calc" onclick="calculateBag()">
-            🧮 Calculate Now
-          </button>
-
           <div class="dp-result-boxes">
             <div class="dp-result-box dp-weight-box">
               <div class="dp-result-title">Weight / Bag</div>
@@ -474,14 +443,14 @@
     <!-- END MAIN CARD -->
 
 
-    <!-- BOPP COMING SOON -->
+    <!-- OTHER CALCULATORS -->
     <div class="bopp-coming">
       <div class="bopp-coming-left">
-        <div class="bopp-coming-label">Coming Soon</div>
-        <div class="bopp-coming-title">✨ BOPP Laminated Bag Calculator</div>
-        <div class="bopp-coming-desc">Calculate price for BOPP laminated polybags — launching soon</div>
+        <div class="bopp-coming-label">Available Now</div>
+        <div class="bopp-coming-title">BOPP Bag Costing</div>
+        <div class="bopp-coming-desc">Estimate both-side BOPP laminated bag cost with liner, gusset and glossy or matt film options.</div>
       </div>
-      <div class="bopp-coming-btn">🚧 Coming Soon</div>
+      <a class="bopp-coming-btn" href="bopp-bag-calculator.html">Open BOPP Costing</a>
     </div>
 
 
@@ -501,7 +470,7 @@
         <div class="howto-item"><div class="howto-num">2</div><p>Enter <strong>length</strong> in inches</p></div>
         <div class="howto-item"><div class="howto-num">3</div><p>Choose <strong>GSM &amp; quality</strong> — strength meter updates live</p></div>
         <div class="howto-item"><div class="howto-num">4</div><p>Select <strong>lamination</strong> and <strong>printing</strong></p></div>
-        <div class="howto-item"><div class="howto-num">5</div><p>Click <strong>Calculate Now</strong> to get price</p></div>
+        <div class="howto-item"><div class="howto-num">5</div><p>Review the <strong>live weight and price</strong> as inputs change</p></div>
         <div class="howto-item"><div class="howto-num">6</div><p>Click <strong>Order on WhatsApp</strong> to send specs</p></div>
       </div>
     </div>
@@ -618,6 +587,7 @@
     function onWidthChange(){
       const w = parseFloat(document.getElementById('calc-width').value);
       const badge = document.getElementById('maxi-badge');
+      if(!badge) return;
       if(w >= 36){ badge.classList.add('show'); }
       else        { badge.classList.remove('show'); }
     }
@@ -626,7 +596,7 @@
     /* ════════════════════════════════ */
     /* PRICE CALCULATOR                 */
     /* ════════════════════════════════ */
-    function calculateBag(){
+    function calculateBag(showAlert){
       const width    = parseFloat(document.getElementById('calc-width').value);
       const length   = parseFloat(document.getElementById('calc-length').value);
       const gsm      = parseFloat(document.getElementById('calc-gsm').value);
@@ -635,7 +605,10 @@
       const printKey = document.getElementById('calc-print').value;
 
       if(!length || length < 10){
-        alert('Please enter a valid bag length (min 10 inches)!'); return;
+        document.getElementById('out-weight').textContent = '—';
+        document.getElementById('out-cost').textContent = '—';
+        if(showAlert) alert('Please enter a valid bag length (min 10 inches)!');
+        return false;
       }
 
       /* Get rates from rates.js */
@@ -679,6 +652,8 @@ const totalCost  = ((fabricWeight * finalFabricRate) / 1000)
         box.style.transform  = 'scale(1.05)';
         setTimeout(function(){ box.style.transform = 'scale(1)'; }, 200);
       });
+
+      return true;
     }
 
 
@@ -691,11 +666,13 @@ const totalCost  = ((fabricWeight * finalFabricRate) / 1000)
       const q_el  = document.getElementById('calc-quality');
       const l_el  = document.getElementById('calc-lam');
       const p_el  = document.getElementById('calc-print');
-      const finalCost   = document.getElementById('out-cost').textContent;
-      const finalWeight = document.getElementById('out-weight').textContent;
+      let finalCost   = document.getElementById('out-cost').textContent;
+      let finalWeight = document.getElementById('out-weight').textContent;
 
       if(finalCost === '—' || finalCost === '0.00'){
-        alert('Please click Calculate Now first!'); return;
+        if(!calculateBag(true)) return;
+        finalCost = document.getElementById('out-cost').textContent;
+        finalWeight = document.getElementById('out-weight').textContent;
       }
 
       const isMaxi = parseFloat(w_el.value) >= 36 ? ' (Maxi Roll)' : '';
@@ -718,10 +695,26 @@ const totalCost  = ((fabricWeight * finalFabricRate) / 1000)
       window.open('https://wa.me/918320525550?text=' + msg, '_blank');
     }
 
+    document.querySelectorAll('#calc-width, #calc-length, #calc-gsm, #calc-quality, #calc-lam, #calc-print').forEach(function(element){
+      element.addEventListener('input', function(){
+        onWidthChange();
+        updateStrength();
+        calculateBag(false);
+      });
+      element.addEventListener('change', function(){
+        onWidthChange();
+        updateStrength();
+        calculateBag(false);
+      });
+    });
+
     /* Init */
+    onWidthChange();
     updateStrength();
+    calculateBag(false);
 
   </script>
 
 </body>
 </html>
+
