@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOPP Bag Cost Calculator | Price Estimate | Dwarkesh Polyfab</title>
+  <meta name="description" content="Estimate BOPP bag cost, weight and price for both-side BOPP laminated bags with GSM, glossy or matt film, liner, bottom stitching and gusset options. MOQ 10,000 bags.">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the cost of a BOPP bag?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BOPP bag cost depends on bag size, fabric GSM, BOPP film finish, liner gram, bottom stitching, gusset and quantity. This calculator gives an estimated per bag cost before final quotation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which fabric quality is best for BOPP laminated bags?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gold fabric quality is recommended for BOPP laminated bags because branded packaging should not compromise on strength, finish or product presentation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is 12 micron BOPP film in bags?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "12 micron BOPP film is the printed film layer laminated on the PP woven fabric. It improves branding, print clarity, surface finish and shelf appeal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the MOQ for BOPP bags?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The usual MOQ for BOPP laminated bags is 10,000 bags, depending on bag size, print design and production planning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who provides the BOPP printing cylinder?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The BOPP design cylinder is usually provided by the party or charged separately after artwork and cylinder requirements are confirmed."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --navy: #112a46;
+      --navy-dark: #081b30;
+      --gold: #c9a64b;
+      --gold-soft: #fff7df;
+      --green: #1f8f56;
+      --green-soft: #eaf8ef;
+      --red: #d64545;
+      --bg: #eef2f6;
+      --card: #ffffff;
+      --line: #dce3eb;
+      --text: #172f48;
+      --muted: #647487;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #f7f9fc 0%, var(--bg) 100%);
+      color: var(--text);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 20px 14px 42px;
+    }
+
+    .breadcrumb {
+      max-width: 1120px;
+      margin: 14px auto 0;
+      padding: 0 14px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .breadcrumb a {
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .breadcrumb span {
+      margin: 0 5px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .hero-points span {
+      background: #f7f1df;
+      color: var(--navy);
+      border: 1px solid #e8d69a;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .artwork-panel {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .artwork-copy h1,
+    .artwork-copy p {
+      margin: 0;
+    }
+
+    .artwork-copy h1 {
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1.15;
+    }
+
+    .artwork-copy p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-top: 10px;
+      max-width: 690px;
+    }
+
+    .hero-media {
+      min-height: 210px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #f6f8fb;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .tool {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 18px;
+      margin-top: 18px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(17, 42, 70, 0.08);
+      overflow: hidden;
+    }
+
+    .panel-head {
+      padding: 16px 18px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .panel-head h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .input-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 18px;
+    }
+
+    .calculator-visual {
+      margin: 0 18px 18px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f8fafc;
+    }
+
+    .calculator-visual img {
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .calculator-visual-copy {
+      padding: 14px 15px;
+    }
+
+    .calculator-visual-copy h3,
+    .calculator-visual-copy p {
+      margin: 0;
+    }
+
+    .calculator-visual-copy h3 {
+      color: var(--navy);
+      font-size: 16px;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .calculator-visual-copy p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .visual-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 10px;
+    }
+
+    .visual-tags span {
+      background: #fff7df;
+      border: 1px solid #ead28e;
+      color: var(--navy);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 6px 9px;
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    select,
+    input {
+      width: 100%;
+      border: 1.5px solid var(--line);
+      background: #fbfcfe;
+      color: var(--text);
+      border-radius: 7px;
+      padding: 11px 12px;
+      font-size: 15px;
+      font-weight: 800;
+      outline: none;
+      font-family: inherit;
+    }
+
+    select:focus,
+    input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201, 166, 75, 0.13);
+    }
+
+    input:disabled {
+      background: #f2f4f7;
+      color: #8b95a1;
+    }
+
+    .result-stack {
+      display: grid;
+      gap: 12px;
+      padding: 18px;
+    }
+
+    .result-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .result-box {
+      border-radius: 9px;
+      padding: 15px;
+      text-align: center;
+      border: 1.5px solid;
+    }
+
+    .weight-box {
+      background: var(--gold-soft);
+      border-color: #ead28e;
+    }
+
+    .price-box {
+      background: var(--green-soft);
+      border-color: #a9dcb9;
+    }
+
+    .result-label {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    .result-value {
+      color: var(--navy);
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .result-unit {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .strength-card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbfe 100%);
+      border-radius: 10px;
+      padding: 16px 14px 15px;
+      text-align: center;
+    }
+
+    .strength-card h3 {
+      margin: 0 0 2px;
+      color: var(--navy);
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .strength-card > p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .gauge-wrap {
+      position: relative;
+      max-width: 315px;
+      margin: 4px auto 0;
+    }
+
+    .gauge {
+      width: 100%;
+      display: block;
+    }
+
+    .gauge-value {
+      font-weight: 900;
+      fill: var(--navy);
+      font-size: 38px;
+    }
+
+    .gauge-unit {
+      font-weight: 800;
+      fill: #7a8794;
+      font-size: 13px;
+    }
+
+    .gauge-end-label {
+      fill: #185fa5;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .strength-name {
+      display: inline-block;
+      min-width: 154px;
+      padding: 7px 20px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 900;
+      color: #fff;
+      margin: -2px 0 7px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+    }
+
+    .strength-desc {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+      margin: 0 auto;
+      max-width: 300px;
+    }
+
+    .strength-scale {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+      margin-top: 10px;
+    }
+
+    .strength-scale span {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 6px 5px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 800;
+      background: #fff;
+    }
+
+    .summary {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      overflow: hidden;
+    }
+
+    .summary li {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    .summary li:last-child {
+      border-bottom: 0;
+    }
+
+    .summary span:first-child {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .summary span:last-child {
+      color: var(--navy);
+      font-weight: 900;
+      text-align: right;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 8px;
+      padding: 13px 12px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .btn-wa {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: var(--navy);
+      color: var(--gold);
+    }
+
+    .note {
+      background: #fff9e8;
+      border-left: 4px solid var(--gold);
+      border-radius: 7px;
+      color: #6c6042;
+      font-size: 12px;
+      line-height: 1.55;
+      padding: 12px 14px;
+      margin-top: 18px;
+    }
+
+    .seo-section {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+      margin-top: 18px;
+      align-items: stretch;
+    }
+
+    .seo-image,
+    .seo-copy {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(17, 42, 70, 0.08);
+      overflow: hidden;
+    }
+
+    .seo-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .seo-copy {
+      padding: 22px;
+    }
+
+    .seo-copy h2,
+    .seo-copy h3,
+    .seo-copy p {
+      margin: 0;
+    }
+
+    .seo-copy h2 {
+      color: var(--navy);
+      font-size: 24px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .seo-copy h3 {
+      color: var(--navy);
+      font-size: 16px;
+      margin: 18px 0 8px;
+    }
+
+    .seo-copy p {
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .seo-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0;
+    }
+
+    .seo-list li {
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 10px;
+    }
+
+    .content-section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(17, 42, 70, 0.08);
+      margin-top: 18px;
+      padding: 22px;
+    }
+
+    .content-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .content-head h2,
+    .content-head p {
+      margin: 0;
+    }
+
+    .content-head h2 {
+      color: var(--navy);
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .content-head p {
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 700px;
+      font-size: 14px;
+    }
+
+    .material-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .material-card,
+    .faq-item,
+    .benefit-card {
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 15px;
+    }
+
+    .material-card h3,
+    .benefit-card h3,
+    .faq-item h3 {
+      margin: 0 0 7px;
+      color: var(--navy);
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    .material-card p,
+    .benefit-card p,
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .quality-note {
+      margin-top: 12px;
+      background: #fff7df;
+      border: 1px solid #ead28e;
+      border-left: 4px solid var(--gold);
+      border-radius: 9px;
+      padding: 14px;
+      color: #5d4a18;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .visual-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .visual-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #f8fafc;
+      overflow: hidden;
+    }
+
+    .visual-card img {
+      width: 100%;
+      min-height: 255px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .visual-card div {
+      padding: 14px;
+    }
+
+    .visual-card h3,
+    .visual-card p {
+      margin: 0;
+    }
+
+    .visual-card h3 {
+      color: var(--navy);
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .visual-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .formula-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .formula-step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 11px;
+      align-items: start;
+    }
+
+    .formula-step span {
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--navy);
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .formula-step strong {
+      color: var(--navy);
+      display: block;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .formula-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .mobile-quote-bar {
+      display: none;
+    }
+
+    @media (max-width: 820px) {
+      .artwork-panel,
+      .tool,
+      .seo-section,
+      .visual-grid,
+      .input-grid,
+      .result-row,
+      .material-grid,
+      .benefit-grid,
+      .faq-grid,
+      .actions {
+        grid-template-columns: 1fr;
+      }
+
+      .content-head {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .artwork-copy h1 {
+        font-size: 24px;
+      }
+
+      .seo-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding-bottom: 86px;
+      }
+
+      .page {
+        padding: 10px 10px 28px;
+      }
+
+      .artwork-copy h1 {
+        font-size: 23px;
+      }
+
+      .artwork-copy p {
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .hero-media,
+      .hero-media img {
+        min-height: 170px;
+      }
+
+      .panel {
+        border-radius: 8px;
+      }
+
+      .panel-head {
+        padding: 13px 14px;
+      }
+
+      .input-grid,
+      .result-stack {
+        padding: 14px;
+      }
+
+      .calculator-visual {
+        margin: 0 14px 14px;
+      }
+
+      .calculator-visual img {
+        height: 210px;
+      }
+
+      select,
+      input {
+        min-height: 46px;
+        font-size: 16px;
+        padding: 10px 11px;
+      }
+
+      .result-value {
+        font-size: 25px;
+      }
+
+      .gauge {
+        max-width: 205px;
+      }
+
+      .summary li {
+        align-items: flex-start;
+        font-size: 12px;
+        padding: 9px 10px;
+      }
+
+      .seo-copy {
+        padding: 17px;
+      }
+
+      .content-section {
+        padding: 17px;
+      }
+
+      .content-head h2,
+      .seo-copy h2 {
+        font-size: 21px;
+      }
+
+      .strength-scale {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .seo-image img {
+        min-height: 230px;
+      }
+
+      .visual-card img {
+        min-height: 210px;
+      }
+
+      .mobile-quote-bar {
+        position: fixed;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        z-index: 40;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        align-items: center;
+        background: var(--navy);
+        color: #fff;
+        border: 1px solid rgba(201, 166, 75, 0.45);
+        border-radius: 12px;
+        padding: 10px;
+        box-shadow: 0 12px 32px rgba(8, 27, 48, 0.32);
+      }
+
+      .mobile-quote-values {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .mobile-quote-values span {
+        display: block;
+        color: rgba(255, 255, 255, 0.68);
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+      }
+
+      .mobile-quote-values strong {
+        display: block;
+        color: var(--gold);
+        font-size: 15px;
+        line-height: 1.2;
+        margin-top: 2px;
+      }
+
+      .mobile-quote-bar button {
+        border: 0;
+        background: #25d366;
+        color: #fff;
+        border-radius: 9px;
+        padding: 12px 13px;
+        font-family: inherit;
+        font-size: 12px;
+        font-weight: 900;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- FLOATING WHATSAPP -->
+  <div id="wa-float-placeholder"></div>
+  <script>
+  fetch('../components/whatsapp-float.html')
+    .then(function (r) { return r.text(); })
+    .then(function (html) { document.getElementById('wa-float-placeholder').innerHTML = html; });
+  </script>
+
+  <!-- HEADER -->
+  <div id="header-placeholder" style="position:sticky;top:0;z-index:9999;"></div>
+  <script>
+  fetch('../components/header.html')
+    .then(function (r) { return r.text(); })
+    .then(function (html) {
+      var placeholder = document.getElementById('header-placeholder');
+      placeholder.innerHTML = html;
+      placeholder.querySelectorAll('script').forEach(function (script) {
+        var newScript = document.createElement('script');
+        newScript.textContent = script.textContent;
+        document.body.appendChild(newScript);
+        script.remove();
+      });
+    });
+  </script>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/calculators/index.html">Calculators</a> <span>›</span>
+    <span style="color:#c9a64b;">BOPP Bag Costing</span>
+  </div>
+
+  <main class="page">
+    <section class="tool">
+      <form class="panel" id="bopp-form">
+        <div class="panel-head">
+          <h2>Bag Specification</h2>
+        </div>
+        <div class="input-grid">
+          <div class="field">
+            <label for="width">Width</label>
+            <select id="width">
+              <option value="15">15 inch</option>
+              <option value="17">17 inch</option>
+              <option value="19">19 inch</option>
+              <option value="22" selected>22 inch</option>
+              <option value="24">24 inch</option>
+              <option value="26">26 inch</option>
+              <option value="28">28 inch</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="length">Length</label>
+            <input id="length" type="number" min="10" step="0.1" value="36">
+          </div>
+
+          <div class="field">
+            <label for="gsm">Fabric Gram</label>
+            <select id="gsm">
+              <option value="2.5">2.5 GSM</option>
+              <option value="3">3 GSM</option>
+              <option value="3.5" selected>3.5 GSM</option>
+              <option value="4">4 GSM</option>
+              <option value="4.5">4.5 GSM</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="finish">BOPP Finish</label>
+            <select id="finish">
+              <option value="glossy" selected>Glossy BOPP</option>
+              <option value="matt">Matt BOPP</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="linerType">Liner Type</label>
+            <select id="linerType">
+              <option value="none">No Liner</option>
+              <option value="natural">Natural Liner</option>
+              <option value="semiNatural">Semi Natural Liner</option>
+              <option value="milky" selected>Milky Liner</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="linerGram">Liner Gram</label>
+            <input id="linerGram" type="number" min="0" step="0.1" value="18">
+          </div>
+
+          <div class="field" id="linerStitchingField">
+            <label for="linerStitching">Liner / Bottom Stitch</label>
+            <select id="linerStitching">
+              <option value="linerWithBottomStitch" selected>Liner with Bottom Stitch</option>
+              <option value="linerWithoutBottomStitch">Liner without Bottom Stitch</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="gusset">Gusset</label>
+            <select id="gusset">
+              <option value="none" selected>No Gusset</option>
+              <option value="sideGusset">Side Gusset</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="calculator-visual">
+          <img src="https://www.dwarkeshpolyfab.com/assets/images/blog/adheshive-matt-glossy.webp" alt="BOPP roto gravure printing and laminated bag artwork process">
+          <div class="calculator-visual-copy">
+            <h3>BOPP Printing Artwork and Film</h3>
+            <p>Both-side BOPP bags use printed film for branding, product identity and premium shelf presentation. Design cylinder is provided by party or charged after artwork approval.</p>
+            <div class="visual-tags">
+              <span>12 micron film</span>
+              <span>Gold fabric suggested</span>
+              <span>MOQ 10,000 bags</span>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <aside class="panel">
+        <div class="panel-head">
+          <h2>Estimate</h2>
+        </div>
+        <div class="result-stack">
+          <div class="result-row">
+            <div class="result-box weight-box">
+              <div class="result-label">Estimated Weight</div>
+              <div class="result-value"><span id="outWeight">0.00</span></div>
+              <div class="result-unit">grams per bag</div>
+            </div>
+            <div class="result-box price-box">
+              <div class="result-label">Estimated Price</div>
+              <div class="result-value">Rs. <span id="outPrice">0.00</span></div>
+              <div class="result-unit">per bag</div>
+            </div>
+          </div>
+
+          <div class="strength-card">
+            <h3>Bag Strength Meter</h3>
+            <p>Live fabric strength indication based on selected GSM.</p>
+            <div class="gauge-wrap">
+              <svg class="gauge" viewBox="0 0 320 210" aria-hidden="true">
+                <path id="gaugeTrack" d="" fill="none" stroke="#e8edf2" stroke-width="25" stroke-linecap="round"></path>
+                <path id="gaugeSegLight" d="" fill="none" stroke="#f59f1f" stroke-width="25" stroke-linecap="round"></path>
+                <path id="gaugeSegMedium" d="" fill="none" stroke="#dfecc9" stroke-width="25" stroke-linecap="round"></path>
+                <path id="gaugeSegHeavy" d="" fill="none" stroke="#cfe0f1" stroke-width="25" stroke-linecap="round"></path>
+                <circle id="gaugeDotOne" cx="0" cy="0" r="4" fill="#fff"></circle>
+                <circle id="gaugeDotTwo" cx="0" cy="0" r="4" fill="#fff"></circle>
+                <line id="gaugeNeedle" x1="160" y1="160" x2="160" y2="54" stroke="#112a46" stroke-width="6" stroke-linecap="round"></line>
+                <circle cx="160" cy="160" r="12" fill="#112a46"></circle>
+                <circle cx="160" cy="160" r="6" fill="#fff"></circle>
+                <text id="gaugeValue" class="gauge-value" x="160" y="119" text-anchor="middle">0</text>
+                <text id="gaugeMax" class="gauge-unit" x="160" y="139" text-anchor="middle">/ 82 strength</text>
+                <text class="gauge-end-label" x="38" y="165">0</text>
+                <text class="gauge-end-label" x="280" y="165">82</text>
+              </svg>
+            </div>
+            <div class="strength-name" id="strengthName">Strength</div>
+            <p class="strength-desc" id="strengthDesc"></p>
+            <div class="strength-scale">
+              <span>Light</span>
+              <span>Medium</span>
+              <span>Heavy</span>
+              <span>Extra Heavy</span>
+            </div>
+          </div>
+
+          <ul class="summary">
+            <li><span>Size</span><span id="sumSize">-</span></li>
+            <li><span>Fabric</span><span id="sumFabric">-</span></li>
+            <li><span>BOPP</span><span id="sumBopp">-</span></li>
+            <li><span>Liner</span><span id="sumLiner">-</span></li>
+            <li><span>MOQ</span><span>10,000 bags</span></li>
+            <li><span>Gusset</span><span id="sumGusset">-</span></li>
+          </ul>
+
+          <div class="actions">
+            <button class="btn btn-wa" type="button" id="whatsappBtn">Send on WhatsApp</button>
+            <a class="btn btn-secondary" href="/calculators/index.html">PP Calculator</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="note">MOQ for BOPP laminated bags is 10,000 bags. Final commercial price can change based on artwork, order quantity, dispatch location, market rate movement and production approval. BOPP design cylinder must be provided by party or charged separately after artwork approval.</div>
+
+    <section class="content-section artwork-panel">
+      <div class="artwork-copy">
+        <h1>BOPP Bag Costing</h1>
+        <p>Estimate BOPP bag cost, weight and price for both-side BOPP laminated packaging using width, length, fabric gram, glossy or matt film, liner, bottom stitching and gusset details.</p>
+        <div class="hero-points">
+          <span>Both-side BOPP fixed</span>
+          <span>MOQ 10,000 bags</span>
+          <span>Buyer provides BOPP design cylinder</span>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="https://www.dwarkeshpolyfab.com/assets/images/products/bopp-calculator.webp" alt="BOPP laminated printed packaging bags manufactured by Dwarkesh Polyfab">
+      </div>
+    </section>
+
+    <section class="seo-section">
+      <div class="seo-image">
+        <img src="https://www.dwarkeshpolyfab.com/assets/images/products/fertilizer-bags.webp" alt="Glossy BOPP bag for wheat, coriander, cattle feed and fertilizer packaging">
+      </div>
+      <div class="seo-copy">
+        <h2>BOPP Bag Cost, Price and Weight Estimator</h2>
+        <p>This BOPP bag cost calculator helps buyers estimate both-side BOPP laminated bags before requesting a final quote from Dwarkesh Polyfab. It is useful for branded wheat bags, cattle feed bags, fertilizer bags, seeds, grains, flour and retail agro packaging where print finish and shelf appeal are important.</p>
+        <h3>What this calculator includes</h3>
+        <p>The estimate includes PP woven fabric, 0.70 coating lamination, 12 micron BOPP film on both sides, selected liner type, bottom stitching option, making charge and normal profit. Gusset selection increases the fabric kg rate because gusset bags consume and process differently.</p>
+        <ul class="seo-list">
+          <li>Glossy BOPP bags</li>
+          <li>Matt BOPP bags</li>
+          <li>Milky liner bags</li>
+          <li>Natural liner bags</li>
+          <li>Wheat packaging bags</li>
+          <li>Cattle feed BOPP bags</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="content-head">
+        <div>
+          <h2>What Goes Inside This BOPP Bag Cost</h2>
+          <p>Each input in the calculator connects to a real production layer. This helps buyers understand why BOPP bag cost changes with size, GSM, liner and gusset.</p>
+        </div>
+      </div>
+      <div class="material-grid">
+        <article class="material-card">
+          <h3>12 Micron BOPP Film</h3>
+          <p>The printed BOPP film is calculated on both sides of the bag. It gives the bag sharp branding, glossy or matt finish and better shelf visibility.</p>
+        </article>
+        <article class="material-card">
+          <h3>Heavy Natural Lamination Coating</h3>
+          <p>The bag uses 0.70 coating in the formula. This coating bonds the BOPP film with PP woven fabric and supports a cleaner laminated surface.</p>
+        </article>
+        <article class="material-card">
+          <h3>PP Woven Fabric</h3>
+          <p>Fabric weight comes from width, length and selected gram. This is the core strength layer below the printed BOPP film.</p>
+        </article>
+        <article class="material-card">
+          <h3>Liner Type</h3>
+          <p>Natural, semi natural and milky liner options are useful when the packed product needs better inner protection, cleaner packing or moisture support.</p>
+        </article>
+        <article class="material-card">
+          <h3>Liner Gram</h3>
+          <p>Liner gram is added directly to total bag weight. A heavier liner increases protection and also increases the per bag estimate.</p>
+        </article>
+        <article class="material-card">
+          <h3>Liner Bottom Stitch</h3>
+          <p>Liner without bottom stitch keeps the liner inside the bag. Liner with bottom stitch adds extra processing because the liner is stitched with the bottom seam.</p>
+        </article>
+      </div>
+      <div class="quality-note">
+        <strong>Fabric quality note:</strong> For BOPP bags, Dwarkesh Polyfab always suggests gold fabric quality. Branded BOPP packaging represents your product in the market, so fabric strength, finish and consistency should not be compromised.
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="content-head">
+        <div>
+          <h2>Why Buyers Choose BOPP Laminated Bags</h2>
+          <p>BOPP bags are not only packing material. They work like a branding tool on the shelf, in warehouses and during dealer handling.</p>
+        </div>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit-card">
+          <h3>Branding Tool</h3>
+          <p>High-quality printed film makes your product name, logo, grade and pack size easy to recognize.</p>
+        </article>
+        <article class="benefit-card">
+          <h3>Clear Product Identity</h3>
+          <p>Buyers can quickly understand what is inside the bag, such as wheat, cattle feed, fertilizer, seeds or grains.</p>
+        </article>
+        <article class="benefit-card">
+          <h3>Better Shelf Appeal</h3>
+          <p>Glossy and matt finish options help retail and wholesale packaging look more professional.</p>
+        </article>
+        <article class="benefit-card">
+          <h3>Dealer Confidence</h3>
+          <p>A clean printed bag improves product trust during transport, stacking and market display.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="content-head">
+        <div>
+          <h2>Visual Guide to BOPP Bag Making</h2>
+          <p>The calculator estimates the same practical layers used in production: woven fabric, lamination coating, BOPP printed film, liner and stitching.</p>
+        </div>
+      </div>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <img src="https://www.dwarkeshpolyfab.com/assets/images/blog/roto-bopp.webp" alt="BOPP roto gravure printing design process for laminated bags">
+          <div>
+            <h3>Roto Gravure BOPP Printing</h3>
+            <p>BOPP designs are printed before lamination. Cylinder planning matters because the design repeat, colors and artwork approval affect production readiness.</p>
+          </div>
+        </article>
+        <div class="formula-list">
+          <div class="formula-step">
+            <span>1</span>
+            <p><strong>Fabric layer</strong>Width, length and GSM decide PP woven fabric weight and basic strength.</p>
+          </div>
+          <div class="formula-step">
+            <span>2</span>
+            <p><strong>Coating layer</strong>Heavy natural lamination coating helps bond BOPP film to woven fabric.</p>
+          </div>
+          <div class="formula-step">
+            <span>3</span>
+            <p><strong>BOPP film</strong>Both-side 12 micron film adds printed branding and finish weight.</p>
+          </div>
+          <div class="formula-step">
+            <span>4</span>
+            <p><strong>Liner and stitching</strong>Liner gram and bottom-stitch selection add protection and processing cost.</p>
+          </div>
+          <div class="formula-step">
+            <span>5</span>
+            <p><strong>Gusset option</strong>Side gusset improves bag shape and filling volume, especially for bulky products.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="content-head">
+        <div>
+          <h2>Gusset Benefits in BOPP Bags</h2>
+          <p>Gusset is useful when the product needs better filling shape, more stable stacking or a stronger retail appearance.</p>
+        </div>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit-card">
+          <h3>Better Filling Shape</h3>
+          <p>Side gusset helps the bag open wider and settle better during filling.</p>
+        </article>
+        <article class="benefit-card">
+          <h3>Improved Stack Look</h3>
+          <p>Gusset bags can look fuller and more balanced when stacked or displayed.</p>
+        </article>
+        <article class="benefit-card">
+          <h3>More Branding Area</h3>
+          <p>The side panel can carry useful design, grade or handling information.</p>
+        </article>
+        <article class="benefit-card">
+          <h3>Useful for Bulky Products</h3>
+          <p>Cattle feed, grains, fertilizer and seed packaging often benefit from better side expansion.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="content-head">
+        <div>
+          <h2>BOPP Bag Cost FAQ</h2>
+          <p>Common questions buyers ask before ordering BOPP laminated bags for wheat, cattle feed, fertilizer, seeds and grain packaging.</p>
+        </div>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-item">
+          <h3>What is the cost of a BOPP bag?</h3>
+          <p>BOPP bag cost depends on size, GSM, BOPP finish, liner gram, bottom stitching, gusset and quantity. Use the calculator for a planning estimate.</p>
+        </article>
+        <article class="faq-item">
+          <h3>What is 12 micron BOPP film?</h3>
+          <p>It is the printed film layer laminated on both sides of the woven bag. It improves print clarity, branding and market presentation.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Glossy or matt BOPP: which is better?</h3>
+          <p>Glossy BOPP gives shine and strong shelf appeal. Matt BOPP gives a premium soft finish. The best option depends on your brand design.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Why use liner in BOPP bags?</h3>
+          <p>Liner helps improve inner protection and product cleanliness, especially for powders, grains, cattle feed, fertilizer and moisture-sensitive goods.</p>
+        </article>
+        <article class="faq-item">
+          <h3>What is liner with bottom stitch?</h3>
+          <p>It means the liner is stitched with the bottom seam. This adds processing and can help keep the liner position more controlled inside the bag.</p>
+        </article>
+        <article class="faq-item">
+          <h3>What is the MOQ for BOPP bags?</h3>
+          <p>The normal MOQ is 10,000 bags, depending on size, artwork, cylinder, color design and production planning.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Who provides the BOPP design cylinder?</h3>
+          <p>The BOPP design cylinder is usually provided by the party or charged separately after artwork approval.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Which fabric quality is suggested?</h3>
+          <p>Gold fabric is suggested for BOPP bags because branded packaging needs better strength, finish and consistency.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+  <script>
+  fetch('../components/footer.html')
+    .then(function (r) { return r.text(); })
+    .then(function (html) { document.getElementById('footer-placeholder').innerHTML = html; });
+  </script>
+
+  <div class="mobile-quote-bar" aria-label="Current BOPP bag estimate">
+    <div class="mobile-quote-values">
+      <div>
+        <span>Weight</span>
+        <strong><span id="mobileWeight">0.00</span> g</strong>
+      </div>
+      <div>
+        <span>Price</span>
+        <strong>Rs. <span id="mobilePrice">0.00</span></strong>
+      </div>
+    </div>
+    <button type="button" id="mobileWhatsappBtn">WhatsApp</button>
+  </div>
+
+  <script src="rates.js"></script>
+  <script src="calculator-core.js"></script>
+  <script>
+    var currentEstimate = null;
+
+    function textOf(id) {
+      var element = document.getElementById(id);
+      return element.options[element.selectedIndex].text;
+    }
+
+    function formInput() {
+      return {
+        width: document.getElementById("width").value,
+        length: document.getElementById("length").value,
+        gsm: document.getElementById("gsm").value,
+        finish: document.getElementById("finish").value,
+        linerType: document.getElementById("linerType").value,
+        linerGram: document.getElementById("linerGram").value,
+        linerStitching: document.getElementById("linerStitching").value,
+        gusset: document.getElementById("gusset").value
+      };
+    }
+
+    var gaugeBaseDrawn = false;
+
+    function pointOnGauge(percent) {
+      var angle = Math.PI + (Math.PI * percent);
+      var radius = 118;
+      return {
+        x: 160 + radius * Math.cos(angle),
+        y: 160 + radius * Math.sin(angle)
+      };
+    }
+
+    function gaugeArc(startPercent, endPercent) {
+      var start = pointOnGauge(startPercent);
+      var end = pointOnGauge(endPercent);
+      var large = endPercent - startPercent > 0.5 ? 1 : 0;
+      return "M " + start.x.toFixed(2) + " " + start.y.toFixed(2) + " A 118 118 0 " + large + " 1 " + end.x.toFixed(2) + " " + end.y.toFixed(2);
+    }
+
+    function drawGaugeBase() {
+      if (gaugeBaseDrawn) return;
+
+      document.getElementById("gaugeTrack").setAttribute("d", gaugeArc(0, 1));
+      document.getElementById("gaugeSegLight").setAttribute("d", gaugeArc(0, 0.35));
+      document.getElementById("gaugeSegMedium").setAttribute("d", gaugeArc(0.35, 0.62));
+      document.getElementById("gaugeSegHeavy").setAttribute("d", gaugeArc(0.62, 0.86));
+
+      var dotOne = pointOnGauge(0.25);
+      var dotTwo = pointOnGauge(0.72);
+      document.getElementById("gaugeDotOne").setAttribute("cx", dotOne.x.toFixed(2));
+      document.getElementById("gaugeDotOne").setAttribute("cy", dotOne.y.toFixed(2));
+      document.getElementById("gaugeDotTwo").setAttribute("cx", dotTwo.x.toFixed(2));
+      document.getElementById("gaugeDotTwo").setAttribute("cy", dotTwo.y.toFixed(2));
+
+      gaugeBaseDrawn = true;
+    }
+
+    function updateStrength(gsm) {
+      var strength = window.DP_CALCULATOR_CORE.getBoppStrength(gsm);
+      drawGaugeBase();
+
+      var needle = pointOnGauge(strength.percent);
+      document.getElementById("gaugeNeedle").setAttribute("x2", (160 + (needle.x - 160) * 0.82).toFixed(2));
+      document.getElementById("gaugeNeedle").setAttribute("y2", (160 + (needle.y - 160) * 0.82).toFixed(2));
+      document.getElementById("gaugeValue").textContent = strength.value;
+      document.getElementById("gaugeMax").textContent = "/ " + strength.max + " strength";
+      document.getElementById("strengthName").textContent = strength.label;
+      document.getElementById("strengthName").style.background = strength.color + "24";
+      document.getElementById("strengthName").style.color = strength.color;
+      document.getElementById("strengthDesc").textContent = strength.description;
+    }
+
+    function updateSummary(input, estimate) {
+      document.getElementById("sumSize").textContent = estimate.width + " x " + estimate.length + " inch";
+      document.getElementById("sumFabric").textContent = input.gsm + " GSM, gold rate";
+      document.getElementById("sumBopp").textContent = "Both Side, " + textOf("finish");
+      document.getElementById("sumLiner").textContent = input.linerType === "none" ? "No Liner" : textOf("linerStitching") + ", " + textOf("linerType") + ", " + input.linerGram + " g";
+      document.getElementById("sumGusset").textContent = textOf("gusset");
+    }
+
+    function updateCalculator() {
+      var linerTypeField = document.getElementById("linerType");
+      var linerGram = document.getElementById("linerGram");
+      var linerStitchingField = document.getElementById("linerStitchingField");
+      var linerStitching = document.getElementById("linerStitching");
+
+      if (linerTypeField.value === "none") {
+        linerGram.disabled = true;
+        linerGram.value = "0";
+        linerStitching.disabled = true;
+        linerStitchingField.style.display = "none";
+      } else {
+        linerGram.disabled = false;
+        linerStitching.disabled = false;
+        linerStitchingField.style.display = "";
+        if (parseFloat(linerGram.value) <= 0) linerGram.value = "18";
+      }
+
+      var input = formInput();
+      var estimate = window.DP_CALCULATOR_CORE.calculateBoppBag(input);
+      currentEstimate = estimate;
+
+      document.getElementById("outWeight").textContent = estimate.totalWeight.toFixed(2);
+      document.getElementById("outPrice").textContent = estimate.finalPrice.toFixed(2);
+      document.getElementById("mobileWeight").textContent = estimate.totalWeight.toFixed(2);
+      document.getElementById("mobilePrice").textContent = estimate.finalPrice.toFixed(2);
+      updateStrength(input.gsm);
+      updateSummary(input, estimate);
+    }
+
+    function sendWhatsApp() {
+      if (!currentEstimate) updateCalculator();
+
+      var message =
+        "Hello Dwarkesh Polyfab,%0A%0A" +
+        "I want a BOPP bag quote based on this calculator estimate:%0A%0A" +
+        "Bag Specification:%0A" +
+        "- Width: " + textOf("width") + "%0A" +
+        "- Length: " + document.getElementById("length").value + " inch%0A" +
+        "- Fabric Gram: " + textOf("gsm") + "%0A" +
+        "- BOPP Finish: Both Side " + textOf("finish") + "%0A" +
+        "- Liner: " + document.getElementById("sumLiner").textContent + "%0A" +
+        "- Gusset: " + textOf("gusset") + "%0A" +
+        "- MOQ: 10,000 bags%0A" +
+        "- BOPP design cylinder: Provided by party%0A%0A" +
+        "Estimated Details:%0A" +
+        "- Weight: " + currentEstimate.totalWeight.toFixed(2) + " g per bag%0A" +
+        "- Estimated Price: Rs. " + currentEstimate.finalPrice.toFixed(2) + " per bag%0A%0A" +
+        "Please confirm final price, MOQ and delivery terms.";
+
+      window.open("https://wa.me/918320525550?text=" + message, "_blank");
+    }
+
+    document.querySelectorAll("input, select").forEach(function (element) {
+      element.addEventListener("input", updateCalculator);
+      element.addEventListener("change", updateCalculator);
+    });
+    document.getElementById("whatsappBtn").addEventListener("click", sendWhatsApp);
+    document.getElementById("mobileWhatsappBtn").addEventListener("click", sendWhatsApp);
+    updateCalculator();
+  </script>
+</body>
+</html>
