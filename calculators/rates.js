@@ -1,16 +1,16 @@
 window.DP_CALCULATOR_RATES = {
   pp: {
     quality: {
-      janta: 115,
-      silver: 122,
-      gold: 128,
-      natural: 170
+      janta: 118,
+      silver: 126,
+      gold: 135,
+      natural: 175
     },
 
     lamination: {
       none: 0,
-      natural: 170,
-      milky: 120
+      natural: 175,
+      milky: 125
     },
 
     printing: {
@@ -35,7 +35,7 @@ window.DP_CALCULATOR_RATES = {
   },
 
   bopp: {
-    fabricBaseRate: 132,
+    fabricBaseRate: 136,
     gsmRateAdjustment: {
       "2.5": 0,
       "3": -1,
@@ -51,15 +51,15 @@ window.DP_CALCULATOR_RATES = {
     },
 
     coatingGram: 0.70,
-    laminationRate: 180,
+    laminationRate: 190,
     filmMicron: 12,
     filmDensity: 0.91,
     boppTrimGram: 0.20,
     threadWeight: 1.00,
 
     boppFinishRates: {
-      glossy: 477,
-      matt: 525
+      glossy: 480,
+      matt: 530
     },
 
     boppSideMultiplier: 2,
