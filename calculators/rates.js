@@ -1,15 +1,15 @@
 window.DP_CALCULATOR_RATES = {
   pp: {
     quality: {
-      janta: 106,
-      silver: 115,
-      gold: 125,
-      natural: 160
+      janta: 103,
+      silver: 110,
+      gold: 120,
+      natural: 155
     },
 
     lamination: {
       none: 0,
-      natural: 160,
+      natural: 170,
       milky: 118
     },
 
