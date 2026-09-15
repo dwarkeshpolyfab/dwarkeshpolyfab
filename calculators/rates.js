@@ -1,16 +1,16 @@
 window.DP_CALCULATOR_RATES = {
   pp: {
     quality: {
-      janta: 115,
-      silver: 120,
-      gold: 131,
-      natural: 180
+      janta: 118,
+      silver: 126,
+      gold: 136,
+      natural: 182
     },
 
     lamination: {
       none: 0,
-      natural: 180,
-      milky: 120
+      natural: 195,
+      milky: 132
     },
 
     printing: {
@@ -58,15 +58,15 @@ window.DP_CALCULATOR_RATES = {
     threadWeight: 1.00,
 
     boppFinishRates: {
-      glossy: 480,
-      matt: 530
+      glossy: 500,
+      matt: 550
     },
 
     boppSideMultiplier: 2,
 
     linerRates: {
       none: 0,
-      natural: 160,
+      natural: 170,
       semiNatural: 140,
       milky: 120
     },
