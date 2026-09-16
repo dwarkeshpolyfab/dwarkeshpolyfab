@@ -1,0 +1,19 @@
+{
+  "layer": "LAYER_B_GENERAL_INDUSTRY",
+  "category": "export",
+  "description": "General export container shipping logistics and packing standards.",
+  "container_load_estimates": {
+    "20ft_fcl": {
+      "capacity_metric_tons": "10 to 12 MT",
+      "bag_quantity_estimate": "~100,000 to 120,000 standard 50kg bags"
+    },
+    "40ft_hc_fcl": {
+      "capacity_metric_tons": "24 to 28 MT",
+      "bag_quantity_estimate": "~220,000 to 250,000 standard 50kg bags"
+    }
+  },
+  "packing_formats": [
+    "Hydraulically compressed bales (250 to 500 bags per bale wrapped in protective film)",
+    "ISPM-15 heat-treated wooden export palletizing with stretch wrapping"
+  ]
+}

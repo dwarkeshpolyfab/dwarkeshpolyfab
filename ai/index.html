@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Dwarkesh GPT | Packaging Assistant | Dwarkesh Polyfab</title>
+  <meta name="description" content="Dwarkesh GPT - Your intelligent B2B assistant for PP woven bags, BOPP laminated packaging, and instant estimations.">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <style>
+    /* ============================================================
+       DWARKESH GPT B2B INDUSTRIAL DESIGN SYSTEM
+       ============================================================ */
+    :root {
+      --dwarkesh-navy: #112a46;
+      --dwarkesh-navy-light: #1b3d63;
+      --dwarkesh-gold: #c9a64b;
+      --dwarkesh-gold-hover: #b89540;
+      --dwarkesh-bg: #f5f7fb;
+      --dwarkesh-surface: #ffffff;
+      --dwarkesh-text: #1f2937;
+      --dwarkesh-muted: #6b7280;
+      --dwarkesh-border: #e5e7eb;
+      --whatsapp-green: #16833f;
+      --whatsapp-hover: #126e34;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--dwarkesh-bg);
+      color: var(--dwarkesh-text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      background: var(--dwarkesh-navy);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+      border-bottom: 3px solid var(--dwarkesh-gold);
+      z-index: 10;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .logo-area img {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+      border-radius: 4px;
+      background: #fff;
+      padding: 2px;
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-name {
+      color: var(--dwarkesh-gold);
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    .brand-sub {
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .header-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      margin-left: 16px;
+      transition: color 0.2s;
+    }
+    .header-links a:hover {
+      color: var(--dwarkesh-gold);
+    }
+    
+    @media (max-width: 600px) {
+      .header-links { display: none; }
+      .site-header { padding: 10px 14px; }
+      .brand-name { font-size: 14px; }
+    }
+
+    /* ===== MAIN LAYOUT ===== */
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--dwarkesh-surface);
+      box-shadow: 0 0 24px rgba(0,0,0,0.04);
+      position: relative;
+    }
+
+    /* ===== WELCOME HERO (STATE A) ===== */
+    .hero-section {
+      padding: 60px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.4s ease, height 0.4s ease;
+      flex: 1;
+      overflow-y: auto;
+    }
+    .hero-section.hidden {
+      display: none;
+    }
+    .hero-logo {
+      height: 70px;
+      margin-bottom: 24px;
+    }
+    .hero-section h1 {
+      color: var(--dwarkesh-navy);
+      font-size: 28px;
+      font-weight: 800;
+      margin: 0 0 12px;
+      line-height: 1.3;
+    }
+    .hero-section p {
+      color: var(--dwarkesh-muted);
+      font-size: 16px;
+      max-width: 500px;
+      margin: 0 0 30px;
+    }
+
+    .quick-actions {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      width: 100%;
+      max-width: 540px;
+    }
+    @media (max-width: 480px) {
+      .quick-actions { grid-template-columns: 1fr; }
+    }
+    .qa-btn {
+      background: var(--dwarkesh-surface);
+      border: 1px solid var(--dwarkesh-border);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      color: var(--dwarkesh-navy);
+      font-size: 14px;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .qa-btn:hover {
+      border-color: var(--dwarkesh-gold);
+      background: #fafafa;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .qa-btn::after {
+      content: "→";
+      color: var(--dwarkesh-gold);
+      font-weight: bold;
+    }
+
+    /* ===== CHAT AREA (STATE B) ===== */
+    .chat-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      scroll-behavior: smooth;
+    }
+    .chat-container::-webkit-scrollbar { width: 6px; }
+    .chat-container::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+
+    .msg-row {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+    }
+    .msg-row.user {
+      justify-content: flex-end;
+    }
+    .msg-row.bot {
+      justify-content: flex-start;
+    }
+    
+    .msg-avatar {
+      width: 32px; height: 32px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center;
+    }
+    .msg-row.bot .msg-avatar {
+      background-image: url('/assets/images/logo.png');
+      border: 1px solid var(--dwarkesh-border);
+      background-color: #fff;
+    }
+    .msg-row.user .msg-avatar {
+      background: var(--dwarkesh-navy);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .msg-bubble {
+      max-width: 85%;
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      font-size: 15px;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+    .msg-row.user .msg-bubble {
+      background: var(--dwarkesh-bg);
+      color: var(--dwarkesh-navy);
+      border: 1px solid var(--dwarkesh-border);
+      border-bottom-right-radius: 2px;
+      font-weight: 500;
+    }
+    .msg-row.bot .msg-bubble {
+      background: var(--dwarkesh-surface);
+      color: var(--dwarkesh-text);
+      border: 1px solid var(--dwarkesh-border);
+      border-bottom-left-radius: 2px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+
+    .msg-bubble p { margin: 0 0 10px; }
+    .msg-bubble p:last-child { margin: 0; }
+    .msg-bubble strong { color: var(--dwarkesh-navy); font-weight: 700; }
+    .msg-bubble ul, .msg-bubble ol { margin: 0 0 10px 20px; padding: 0; }
+    .msg-bubble li { margin-bottom: 4px; }
+    
+    .msg-bubble .table-wrapper {
+      overflow-x: auto;
+      margin: 12px 0;
+      border: 1px solid var(--dwarkesh-border);
+      border-radius: 4px;
+    }
+    .msg-bubble table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .msg-bubble th, .msg-bubble td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--dwarkesh-border);
+      text-align: left;
+    }
+    .msg-bubble th {
+      background: var(--dwarkesh-bg);
+      color: var(--dwarkesh-navy);
+      font-weight: 700;
+    }
+    .msg-bubble tr:last-child td { border-bottom: none; }
+
+    .msg-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .action-link {
+      background: var(--dwarkesh-navy);
+      color: #fff !important;
+    }
+    .action-link:hover {
+      background: var(--dwarkesh-navy-light);
+    }
+    .action-whatsapp {
+      background: var(--whatsapp-green);
+      color: #fff !important;
+    }
+    .action-whatsapp:hover {
+      background: var(--whatsapp-hover);
+    }
+
+    .typing-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--dwarkesh-muted);
+      font-size: 13px;
+      font-style: italic;
+      padding: 8px 0;
+    }
+    .dots { display: flex; gap: 4px; }
+    .dot {
+      width: 6px; height: 6px;
+      background: var(--dwarkesh-gold);
+      border-radius: 50%;
+      animation: pulse 1.4s infinite;
+    }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes pulse {
+      0%, 100% { transform: scale(0.6); opacity: 0.4; }
+      50% { transform: scale(1); opacity: 1; }
+    }
+
+    /* ===== INPUT AREA ===== */
+    .input-section {
+      padding: 16px 24px;
+      background: var(--dwarkesh-surface);
+      border-top: 1px solid var(--dwarkesh-border);
+      flex-shrink: 0;
+    }
+    .input-wrapper {
+      display: flex;
+      gap: 12px;
+      align-items: flex-end;
+      background: var(--dwarkesh-bg);
+      border: 1px solid var(--dwarkesh-border);
+      border-radius: var(--radius-md);
+      padding: 8px 12px;
+      transition: border-color 0.2s;
+    }
+    .input-wrapper:focus-within {
+      border-color: var(--dwarkesh-navy);
+    }
+    #chat-input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      resize: none;
+      min-height: 44px;
+      max-height: 120px;
+      padding: 10px 4px;
+      font-size: 15px;
+      color: var(--dwarkesh-text);
+      font-family: inherit;
+      outline: none;
+    }
+    #chat-input::placeholder { color: #9ca3af; }
+    .send-btn {
+      width: 44px; height: 44px;
+      background: var(--dwarkesh-navy);
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+    .send-btn:hover { background: var(--dwarkesh-gold); }
+    .send-btn:disabled { background: #d1d5db; cursor: not-allowed; }
+    .send-btn svg { width: 20px; height: 20px; fill: none; stroke: #fff; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    
+    .footer-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--dwarkesh-muted);
+      margin-top: 12px;
+    }
+
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="/" class="logo-area">
+      <img src="/assets/images/logo.png" alt="Dwarkesh Polyfab Logo">
+      <div class="brand-text">
+        <span class="brand-name">Dwarkesh Polyfab</span>
+        <span class="brand-sub">Woven Packaging Solutions</span>
+      </div>
+    </a>
+    <nav class="header-links">
+      <a href="/products/index.html">Products</a>
+      <a href="/calculators/index.html">Calculators</a>
+    </nav>
+  </header>
+
+  <!-- APP WORKSPACE -->
+  <main class="app-container">
+    
+    <!-- WELCOME HERO -->
+    <div id="hero-section" class="hero-section">
+      <img src="/assets/images/logo.png" alt="Dwarkesh Logo" class="hero-logo">
+      <h1>Dwarkesh GPT</h1>
+      <p>Your Packaging Assistant. Ask about PP woven bags, BOPP packaging, bag specifications, applications and calculations.</p>
+      
+      <div class="quick-actions">
+        <button class="qa-btn" data-prompt="Tell me about Dwarkesh PP woven bags.">PP Woven Bags</button>
+        <button class="qa-btn" data-prompt="Tell me about Dwarkesh BOPP laminated bags.">BOPP Bags</button>
+        <button class="qa-btn" data-prompt="Is Leno bag available?">Leno Bags</button>
+        <button class="qa-btn" data-prompt="Help me calculate the bag requirements and open the appropriate calculator.">Bag Calculator</button>
+        <button class="qa-btn" data-prompt="What packaging advice do you have for export?">Packaging Advice</button>
+        <button class="qa-btn" data-prompt="I want to discuss a packaging requirement and get a quote.">Get a Quote</button>
+      </div>
+    </div>
+
+    <!-- CHAT MESSAGES -->
+    <div id="chat-container" class="chat-container hidden">
+      <!-- Messages injected here -->
+    </div>
+
+    <!-- COMPOSER -->
+    <div class="input-section">
+      <div class="input-wrapper">
+        <textarea id="chat-input" placeholder="Ask about bags, packaging, GSM, printing or calculations..." rows="1"></textarea>
+        <button id="send-btn" class="send-btn" aria-label="Send message">
+          <svg viewBox="0 0 24 24"><path d="M22 2L11 13" /><path d="M22 2L15 22L11 13L2 9L22 2Z" /></svg>
+        </button>
+      </div>
+      <div class="footer-note">Powered by Dwarkesh Polyfab AI • Engineering-driven packaging expertise</div>
+    </div>
+  </main>
+
+  <script src="chat-engine.js"></script>
+</body>
+</html>

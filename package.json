@@ -1,0 +1,17 @@
+{
+  "name": "dwarkeshpolyfab-ai",
+  "version": "1.0.0",
+  "description": "Dwarkesh GPT Backend API for Dwarkesh Polyfab",
+  "main": "api/chat.js",
+  "scripts": {
+    "start": "node api/chat.js",
+    "test": "node scratch/test-backend.js"
+  },
+  "dependencies": {
+    "openai": "^4.86.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "private": true
+}

@@ -1,0 +1,28 @@
+{
+  "layer": "LAYER_B_GENERAL_INDUSTRY",
+  "category": "technical",
+  "description": "General industry knowledge regarding Polypropylene (PP) polymer science, raffia extrusion, MFI, and UV stabilization.",
+  "notice": "This information represents general industry packaging standards and must NEVER be attributed as specific Dwarkesh Polyfab plant capabilities unless backed by Layer A.",
+  "concepts": {
+    "mfi": {
+      "term": "Melt Flow Index (MFI)",
+      "explanation": "MFI measures the ease of flow of molten polymer. For PP woven raffia tape extrusion, MFI typically ranges from 3.0 to 4.5 g/10min to provide high tensile strength and burst resistance."
+    },
+    "raffia_homopolymer": {
+      "term": "PP Raffia Homopolymer",
+      "explanation": "Polypropylene homopolymer resin designed specifically for tape stretching and weaving into high-strength woven sacks."
+    },
+    "uv_stabilization": {
+      "term": "UV HALS Stabilization",
+      "explanation": "Hindered Amine Light Stabilizers (HALS) are added to PP tape masterbatches to prevent degradation from tropical ultraviolet sunlight during outdoor storage."
+    },
+    "denier": {
+      "term": "Tape Denier",
+      "explanation": "Denier is the weight in grams of 9,000 meters of tape yarn. Higher denier yields stronger, thicker fabric suitable for heavy loads."
+    },
+    "caco3_filler": {
+      "term": "Calcium Carbonate (CaCO3) Filler",
+      "explanation": "CaCO3 masterbatch is blended into PP resin to adjust fabric opacity, reduce static, improve tape weaving stability, and optimize bag cost per quality grade."
+    }
+  }
+}
