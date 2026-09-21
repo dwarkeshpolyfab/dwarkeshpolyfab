@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -138,6 +136,14 @@
   </script>
 
   <style>
+    /* Fix opacity 0 bug from product-page.css */
+    img,
+    img[loading="lazy"],
+    .blog-wrap img {
+      opacity: 1 !important;
+      display: block;
+    }
+
     /* ─── Blog Article Layout ─── */
     .blog-wrap {
       max-width: 920px;
@@ -477,6 +483,7 @@
 
 <body>
 
+
 <!-- HEADER -->
 <div id="header-placeholder" style="position:sticky;top:0;z-index:9999;"></div>
 <script>
@@ -518,7 +525,8 @@ fetch('../components/header.html')
 
   <!-- ── HERO IMAGE ── -->
   <div class="b-hero-box">
-    <img src="../assets/images/blog/ldpe-liner-bags-guide.webp"
+    <img
+      src="../assets/images/blog/ldpe-liner-bags-guide.webp"
       alt="LDPE liner bags and LD liner rolls manufactured at Dwarkesh Polyfab, Morbi Gujarat India"
       width="820" height="490"
       loading="eager" decoding="async">
@@ -554,15 +562,13 @@ fetch('../components/header.html')
   <!-- two-column image grid -->
   <div class="b-img-grid">
     <figure>
-      <img src="../assets/images/blog/ldpe-liner-bags-guide"
-           alt="Custom LDPE liner bags in multiple sizes manufactured for PP woven sacks"
-           loading="lazy">
+      <img src="../assets/images/blog/ldpe-liner-custom.webp"
+           alt="Custom LDPE liner bags in multiple sizes manufactured for PP woven sacks">
       <figcaption>Custom LDPE liner bags in various sizes for PP woven sacks</figcaption>
     </figure>
     <figure>
-<img src="../assets/images/blog/ldpe-liner-custom.webp"
-           alt="LDPE liner rolls in large production run at manufacturing plant"
-           loading="lazy">
+      <img src="../assets/images/blog/ldpe-liner-roll.webp"
+           alt="LDPE liner rolls in large production run at manufacturing plant">
       <figcaption>LDPE liner rolls produced in bulk for industrial packaging buyers</figcaption>
     </figure>
   </div>
@@ -601,8 +607,7 @@ fetch('../components/header.html')
   <!-- inline image: industrial liner -->
   <img class="b-inline-img"
        src="../assets/images/blog/ldpe-liner-industrial.webp"
-       alt="Industrial LDPE liner bags used to protect machinery parts cartons and textiles during transit"
-       loading="lazy">
+       alt="Industrial LDPE liner bags used to protect machinery parts cartons and textiles during transit">
   <p class="b-img-cap">Heavy-duty LDPE liner bags protecting machinery components, textiles and carton goods during industrial storage and transit.</p>
 
   <!-- ══════════ INDUSTRIES ══════════ -->
@@ -765,8 +770,7 @@ fetch('../components/header.html')
       <img
         src="../assets/images/blog/ldpe-custom-printed-bag.webp"
         alt="Custom printed transparent LDPE bag with brand logo and product name — example of printed LD inner bag"
-        style="width:100%;border-radius:10px;border:1px solid #e2e8f0;"
-        loading="lazy">
+        style="width:100%;border-radius:10px;border:1px solid #e2e8f0;">
       <p style="font-size:12.5px;color:#777;text-align:center;margin-top:7px;">Example: Transparent LDPE bag with custom brand printing — logo, product name and weight details printed in flexo colors.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:14px;">
