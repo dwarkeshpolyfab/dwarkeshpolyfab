@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-User-agent: bingbot
-Allow: /
-
 Sitemap: https://www.dwarkeshpolyfab.com/sitemap.xml
+
+# Dwarkesh Polyfab - PP Woven Bags Manufacturer, Morbi Gujarat
+# https://www.dwarkeshpolyfab.com
