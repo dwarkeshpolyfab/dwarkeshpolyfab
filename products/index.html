@@ -8,7 +8,15 @@
   <meta name="description" content="Explore PP woven bags, BOPP laminated bags, printed polybags, rice bags, fertilizer bags, cement valve bags, anti slip bags, jumbo bags and LDPE liner bags manufactured by Dwarkesh Polyfab in Morbi, Gujarat.">
   <meta name="keywords" content="PP woven bags manufacturer, BOPP laminated bags, fertilizer bags, rice packaging bags, cement bags, printed polybags, anti slip bags, jumbo bags, LDPE liner bags, Morbi Gujarat">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.dwarkeshpolyfab.com/products/index.html">
+  <link rel="canonical" href="https://www.dwarkeshpolyfab.com/products/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PP Woven Bags &amp; BOPP Bags Manufacturer in India | Dwarkesh Polyfab">
+  <meta name="twitter:description" content="Explore PP woven bags, BOPP laminated bags, printed polybags, rice bags, fertilizer bags, cement valve bags, anti slip bags, jumbo bags and LDPE liner bags.">
+  <meta name="twitter:image" content="https://www.dwarkeshpolyfab.com/assets/images/products/pp-woven-bags.webp">
+
+  <link rel="dns-prefetch" href="https://wa.me">
+  <link rel="dns-prefetch" href="https://www.clarity.ms">
 
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="shortcut icon" href="/assets/images/favicon.png">
@@ -19,7 +27,7 @@
   <meta property="og:title" content="PP Woven Bags &amp; BOPP Bags Manufacturer in India | Dwarkesh Polyfab">
   <meta property="og:description" content="View Dwarkesh Polyfab's complete range of PP woven bags, BOPP laminated bags, rice bags, fertilizer bags, cement bags, LDPE liner bags and industrial packaging bags.">
   <meta property="og:image" content="https://www.dwarkeshpolyfab.com/assets/images/products/pp-woven-bags.webp">
-  <meta property="og:url" content="https://www.dwarkeshpolyfab.com/products/index.html">
+  <meta property="og:url" content="https://www.dwarkeshpolyfab.com/products/">
   <meta property="og:type" content="website">
 
   <script type="application/ld+json">
@@ -37,7 +45,7 @@
         "@type": "ListItem",
         "position": 2,
         "name": "Products",
-        "item": "https://www.dwarkeshpolyfab.com/products/index.html"
+        "item": "https://www.dwarkeshpolyfab.com/products/"
       }
     ]
   }
@@ -469,6 +477,18 @@
   <div id="wa-float-placeholder"></div>
   <div id="header-placeholder"></div>
 
+  <noscript>
+    <div style="background:#112a46;padding:14px 20px;text-align:center;">
+      <a href="/" style="color:#c9a64b;font-weight:900;font-size:17px;text-decoration:none;letter-spacing:1.8px;">DWARKESH POLYFAB</a>
+      <nav style="margin-top:8px;">
+        <a href="/" style="color:#c8d8e4;font-size:12px;margin:0 8px;text-decoration:none;">HOME</a>
+        <a href="/products/" style="color:#f0d97a;font-size:12px;margin:0 8px;text-decoration:none;font-weight:700;">PRODUCTS</a>
+        <a href="/pages/contact.html" style="color:#c8d8e4;font-size:12px;margin:0 8px;text-decoration:none;">CONTACT</a>
+        <a href="https://wa.me/918320525550" style="color:#86efac;font-size:12px;margin:0 8px;text-decoration:none;">WHATSAPP</a>
+      </nav>
+    </div>
+  </noscript>
+
   <main id="main-content">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
@@ -788,6 +808,17 @@
             document.body.appendChild(newScript);
             oldScript.remove();
           });
+
+          /* Auto-detect active page for nav links */
+          if (placeholderId === 'header-placeholder') {
+            var path = window.location.pathname;
+            target.querySelectorAll('.main-nav a, .mobile-nav a').forEach(function (a) {
+              var href = a.getAttribute('href');
+              if (href && (path === href || (href !== '/' && path.startsWith(href)))) {
+                a.setAttribute('aria-current', 'page');
+              }
+            });
+          }
         })
         .catch(function (err) {
           console.error('Component load error:', err);
@@ -797,6 +828,34 @@
     loadComponent('/components/whatsapp-float.html', 'wa-float-placeholder');
     loadComponent('/components/header.html', 'header-placeholder');
     loadComponent('/components/footer.html', 'footer-placeholder');
+
+    /* ===== Back to Top Button ===== */
+    function initBackToTop() {
+      var btn = document.createElement('button');
+      btn.className = 'back-to-top';
+      btn.setAttribute('aria-label', 'Back to top');
+      btn.setAttribute('type', 'button');
+      btn.innerHTML = '&#8593;';
+      btn.style.cssText = 'display:none;position:fixed;bottom:90px;right:24px;z-index:9998;width:44px;height:44px;border-radius:50%;background:#112a46;color:#f0d97a;border:2px solid #c9a64b;font-size:20px;cursor:pointer;box-shadow:0 4px 12px rgba(17,42,70,0.25);transition:opacity 0.3s,transform 0.3s;';
+
+      document.body.appendChild(btn);
+
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+          btn.style.display = 'flex';
+          btn.style.alignItems = 'center';
+          btn.style.justifyContent = 'center';
+        } else {
+          btn.style.display = 'none';
+        }
+      }, { passive: true });
+    }
+
+    initBackToTop();
   </script>
 </body>
 </html>
