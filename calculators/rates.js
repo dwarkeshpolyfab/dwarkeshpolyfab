@@ -58,8 +58,8 @@ window.DP_CALCULATOR_RATES = {
     threadWeight: 1.00,
 
     boppFinishRates: {
-      glossy: 500,
-      matt: 550
+      glossy: 510,
+      matt: 560
     },
 
     boppSideMultiplier: 2,
