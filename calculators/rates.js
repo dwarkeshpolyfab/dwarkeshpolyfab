@@ -1,15 +1,15 @@
 window.DP_CALCULATOR_RATES = {
   pp: {
     quality: {
-      janta: 120,
-      silver: 128,
-      gold: 138,
-      natural: 184
+      janta: 118,
+      silver: 125,
+      gold: 135,
+      natural: 180
     },
 
     lamination: {
       none: 0,
-      natural: 205,
+      natural: 210,
       milky: 140
     },
 
@@ -51,7 +51,7 @@ window.DP_CALCULATOR_RATES = {
     },
 
     coatingGram: 0.70,
-    laminationRate: 190,
+    laminationRate: 220,
     filmMicron: 12,
     filmDensity: 0.91,
     boppTrimGram: 0.20,
