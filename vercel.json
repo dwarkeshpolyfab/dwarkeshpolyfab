@@ -26,6 +26,62 @@
       "source": "/products/laminated-pp-bags.html",
       "destination": "/products/bopp-laminated-bags.html",
       "permanent": true
+    },
+    {
+      "source": "/blog/Complete%20guide%20to%20FIBC%20jumbo%20bags.html",
+      "destination": "/blog/fibc-jumbo-bag.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/Complete guide to FIBC jumbo bags.html",
+      "destination": "/blog/fibc-jumbo-bag.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-10-pp-bag-manufractures-in-india.html",
+      "destination": "/blog/top-10-pp-bag-manufactures-in-india.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-10-pp-bag-manufactures-in-html",
+      "destination": "/blog/top-10-pp-bag-manufactures-in-india.html",
+      "permanent": true
+    },
+    {
+      "source": "/bag-price.html",
+      "destination": "/blog/pp-bag-price.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/crude-oil-to-process-guide.html",
+      "destination": "/blog/crude-oil-to-plastic-process.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/crude-oil-to-process.html",
+      "destination": "/blog/crude-oil-to-plastic-process.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/rice-packaging-guide/",
+      "destination": "/blog/rice-packaging-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/25-kg-onetime-use-bag.html",
+      "destination": "/blog/one-time-use-25kg-pp-bag.html",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/components/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }
