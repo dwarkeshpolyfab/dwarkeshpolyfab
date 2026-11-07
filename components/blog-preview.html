@@ -1,0 +1,218 @@
+<!-- ================================================ -->
+<!-- BLOG PREVIEW - components/blog-preview.html    -->
+<!-- Dwarkesh Polyfab                               -->
+<!-- ================================================ -->
+
+<section class="blog-preview-section">
+  <div class="blog-preview-inner">
+
+    <!-- HEADING -->
+    <div class="section-heading">
+      <h2>Latest Packaging Insights</h2>
+      <p>Explore expert guides, product insights and industry updates from Dwarkesh Polyfab.</p>
+    </div>
+
+    <!-- BLOG GRID -->
+    <div class="blog-card-grid">
+
+      <!-- BLOG 1 -->
+      <a href="/blog/capsacks-packaging-bags.html" class="blog-post-card">
+        <div class="blog-img-box">
+          <img src="/assets/images/blog/capsacks-1.webp" alt="Capsacks Bags Manufacturer Morbi Gujarat" loading="lazy" />
+          <div class="blog-post-overlay">Read Article →</div>
+        </div>
+        <div class="blog-post-info">
+          <span class="blog-post-tag">Industrial Packaging</span>
+          <h3>Capsacks Bags for Bulk Lightweight Packaging</h3>
+          <p>Ideal for plastic products, toys and large volume packaging solutions.</p>
+          <div class="blog-post-meta">
+            <span class="blog-read-time">⏱ 4 min read</span>
+            <span class="blog-read-link">Read More →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- BLOG 2 -->
+      <a href="/blog/biomass-packaging-bags.html" class="blog-post-card">
+        <div class="blog-img-box">
+          <img src="/assets/images/blog/biomass-bags.webp" alt="Biomass Packaging Bags Manufacturer" loading="lazy" />
+          <div class="blog-post-overlay">Read Article →</div>
+        </div>
+        <div class="blog-post-info">
+          <span class="blog-post-tag">Green Energy</span>
+          <h3>Best Bags for Biomass &amp; Biofuel Pellets</h3>
+          <p>Strong and moisture-resistant bags for 25kg &amp; 50kg pellet packaging.</p>
+          <div class="blog-post-meta">
+            <span class="blog-read-time">⏱ 5 min read</span>
+            <span class="blog-read-link">Read More →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- BLOG 3 -->
+      <a href="/blog/pp-bags-war-impact-2026.html" class="blog-post-card">
+        <div class="blog-img-box">
+          <img src="/assets/images/blog/crude-oil-impact.webp" alt="PP Bags Market Impact War Oil Prices" loading="lazy" />
+          <div class="blog-post-overlay">Read Article →</div>
+        </div>
+        <div class="blog-post-info">
+          <span class="blog-post-tag">Market Insight</span>
+          <h3>How War &amp; Oil Prices Affect PP Bag Costs</h3>
+          <p>Understand how global events impact pricing and supply chain.</p>
+          <div class="blog-post-meta">
+            <span class="blog-read-time">⏱ 3 min read</span>
+            <span class="blog-read-link">Read More →</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- VIEW ALL BUTTON -->
+    <div class="blog-preview-cta">
+      <a href="/blog/" class="btn-view-all-products">View All Articles →</a>
+      <p class="products-cta-text">Capsacks · Biomass Bags · Market Insights · Buyers Guide &amp; More</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.blog-preview-section {
+  background: #f5f7fb;
+  padding: 70px 50px;
+}
+
+.blog-preview-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.blog-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* CARD — same as .product-card */
+.blog-post-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.blog-post-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(17,42,70,0.12);
+  border-color: #c9a64b;
+}
+
+/* IMAGE BOX — same as .product-img-box */
+.blog-img-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-img-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.blog-post-card:hover .blog-img-box img {
+  transform: scale(1.05);
+}
+
+/* OVERLAY — same as .product-overlay */
+.blog-post-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(17,42,70,0.82);
+  color: #c9a64b;
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blog-post-card:hover .blog-post-overlay { opacity: 1; }
+
+/* CARD BODY — same as .product-info */
+.blog-post-info { padding: 18px; }
+
+.blog-post-tag {
+  display: inline-block;
+  background: #112a46;
+  color: #c9a64b;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.blog-post-info h3 {
+  font-size: 15px;
+  color: #112a46;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+
+.blog-post-info p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.blog-post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.blog-read-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.blog-read-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: #c9a64b;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.blog-preview-cta {
+  text-align: center;
+  margin-top: 45px;
+}
+
+@media (max-width: 900px) {
+  .blog-card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .blog-preview-section { padding: 40px 20px; }
+  .blog-card-grid { grid-template-columns: 1fr; }
+}
+</style>

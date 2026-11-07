@@ -1,0 +1,195 @@
+<!-- components/header.html - Dwarkesh Polyfab optimized header -->
+
+<style>
+  .wa-icon-only {
+    width: 52px;
+    height: 42px;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+    border-radius: 8px;
+    color: #ffffff;
+  }
+
+  .wa-icon-only .wa-svg {
+    width: 25px;
+    height: 25px;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .main-nav a[aria-current="page"],
+  .mobile-nav a[aria-current="page"] {
+    color: #f0d97a;
+  }
+
+  .main-nav a[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+
+  @media (max-width: 768px) {
+    .wa-icon-only {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border-radius: 8px;
+    }
+
+    .wa-icon-only .wa-svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    .mobile-nav {
+      box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+    }
+
+    .mobile-nav a {
+      min-height: 48px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .header-inner {
+      padding: 0 10px;
+    }
+
+    .logo-area {
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-name {
+      font-size: 12.5px;
+      letter-spacing: 1px;
+    }
+
+    .brand-tagline {
+      font-size: 7px;
+      letter-spacing: 2px;
+    }
+
+    .logo-area img {
+      width: 34px;
+      height: 34px;
+    }
+
+    .wa-icon-only {
+      width: 42px;
+      height: 42px;
+    }
+
+    .hamburger {
+      width: 38px;
+      height: 38px;
+    }
+  }
+</style>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo-area" aria-label="Dwarkesh Polyfab Home">
+      <img
+        src="/assets/images/logo.png"
+        alt="Dwarkesh Polyfab Logo"
+        width="40"
+        height="40"
+        decoding="async"
+      >
+      <div class="brand-divider" aria-hidden="true"></div>
+      <div class="brand-text">
+        <span class="brand-name">Dwarkesh Polyfab</span>
+        <span class="brand-tagline">Woven Packaging Solution</span>
+      </div>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/products/">Products</a>
+      <a href="/calculators/index.html">Calculators</a>
+      <a href="/industries/index.html">Industries</a>
+      <a href="/blog/index.html">Blog</a>
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/contact.html">Contact</a>
+    </nav>
+
+    <div class="header-contact">
+      <a
+        class="wa-btn wa-icon-only"
+        href="https://wa.me/918320525550"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat with Dwarkesh Polyfab on WhatsApp"
+      >
+        <svg class="wa-svg" width="25" height="25" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            fill="#ffffff"
+            d="M12 2.5a9.4 9.4 0 0 0-8 14.4L2.9 21l4.2-1.1A9.4 9.4 0 1 0 12 2.5Zm0 1.8a7.6 7.6 0 1 1-3.9 14.1l-.3-.2-2.3.6.6-2.2-.2-.3A7.6 7.6 0 0 1 12 4.3Zm-3.1 4c-.2 0-.5.1-.7.4-.2.3-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.6 4 3.5 2 .8 2.4.6 2.8.6.4 0 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.7-.4l-1.5-.7c-.3-.1-.5-.1-.7.2l-.5.7c-.2.2-.4.3-.7.1-.4-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.7-1.6c-.2-.4-.4-.4-.6-.4h-.4Z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+
+    <button
+      class="hamburger"
+      id="hamburger"
+      type="button"
+      aria-label="Open Menu"
+      aria-controls="mobile-nav"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/products/">Products</a>
+    <a href="/calculators/index.html">Calculator</a>
+    <a href="/industries/index.html">Industries</a>
+    <a href="/blog/index.html">Blog</a>
+    <a href="/pages/about.html">About Us</a>
+    <a href="/pages/contact.html">Contact</a>
+  </nav>
+</header>
+
+<script>
+  (function () {
+    var btn = document.getElementById('hamburger');
+    var nav = document.getElementById('mobile-nav');
+    var currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+
+    document.querySelectorAll('.main-nav a, .mobile-nav a').forEach(function (link) {
+      var linkPath = new URL(link.getAttribute('href'), window.location.origin).pathname.replace(/\/$/, '') || '/';
+
+      if (linkPath === currentPath) {
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', function () {
+      var isOpen = btn.classList.toggle('open');
+      nav.classList.toggle('open');
+
+      btn.setAttribute('aria-label', isOpen ? 'Close Menu' : 'Open Menu');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        btn.classList.remove('open');
+        nav.classList.remove('open');
+        btn.setAttribute('aria-label', 'Open Menu');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>

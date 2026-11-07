@@ -1,0 +1,31 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "dwarkeshpolyfab.com"
+        }
+      ],
+      "destination": "https://www.dwarkeshpolyfab.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "dwarkeshpolyfab.com"
+        }
+      ],
+      "destination": "https://www.dwarkeshpolyfab.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/products/laminated-pp-bags.html",
+      "destination": "/products/bopp-laminated-bags.html",
+      "permanent": true
+    }
+  ]
+}
