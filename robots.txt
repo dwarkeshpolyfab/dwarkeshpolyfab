@@ -2,7 +2,14 @@ User-agent: *
 Allow: /
 Disallow: /components/
 
+User-agent: Bingbot
+Allow: /
+Disallow: /components/
+Crawl-delay: 1
+
 Sitemap: https://www.dwarkeshpolyfab.com/sitemap.xml
+
+Host: https://www.dwarkeshpolyfab.com
 
 # Dwarkesh Polyfab - PP Woven Bags & BOPP Laminated Bags Manufacturer, Morbi Gujarat
 # https://www.dwarkeshpolyfab.com

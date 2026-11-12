@@ -82,6 +82,19 @@
           "value": "noindex, nofollow"
         }
       ]
+    },
+    {
+      "source": "/9c8b7a6e5d4f3a2b1c0e9d8f7a6b5c4d.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
     }
   ]
 }
