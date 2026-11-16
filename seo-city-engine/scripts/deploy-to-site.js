@@ -662,21 +662,30 @@ Please share proforma quotation, technical datasheet, and delivery timeline.`;
     }
 
     /* Specification Table */
+    .tbl-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 14px 0;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
     .spec-tbl {
       width: 100%;
+      min-width: 440px;
       border-collapse: collapse;
-      margin: 14px 0;
-      font-size: 13.5px;
+      margin: 0;
+      font-size: 13px;
     }
     .spec-tbl th {
       background: var(--primary-blue);
       color: #ffffff;
       text-align: left;
-      padding: 12px 14px;
+      padding: 10px 12px;
       font-weight: 600;
     }
     .spec-tbl td {
-      padding: 10px 14px;
+      padding: 9px 12px;
       border-bottom: 1px solid var(--border-color);
     }
     .spec-tbl tr:nth-child(even) { background-color: #fafbfc; }
@@ -834,12 +843,239 @@ Please share proforma quotation, technical datasheet, and delivery timeline.`;
       border-color: #112a46;
     }
 
+    /* RESPONSIVE & MOBILE DESIGN (Clean, compact, content-friendly) */
     @media (max-width: 992px) {
       .rb-search-bar { grid-template-columns: 1fr; }
       .hero-strip-inner { grid-template-columns: 1fr; }
       .content-grid-wrap { grid-template-columns: 1fr; }
+      .log-grid { grid-template-columns: 1fr 1fr; }
+      .calc-results-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      body { font-size: 13px; line-height: 1.55; }
+
+      /* Search & Route Console */
+      .rb-console-container { padding: 14px 12px 16px; }
+      .rb-console-tagline { font-size: 9.5px; letter-spacing: 0.8px; margin-bottom: 8px; }
+      .rb-search-bar {
+        padding: 6px;
+        gap: 6px;
+        border-radius: 8px;
+      }
+      .rb-cell {
+        padding: 6px 10px;
+        border-right: none;
+        border-bottom: 1px solid #f1f5f9;
+      }
+      .rb-cell:last-of-type { border-bottom: none; }
+      .rb-cell label { font-size: 10px; margin-bottom: 2px; }
+      .rb-cell select, .rb-cell input { font-size: 12.5px; }
+      .origin-val { font-size: 12px; }
+      .rb-calc-btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        justify-content: center;
+        padding: 10px 14px;
+        font-size: 12px;
+        border-radius: 6px;
+      }
+
+      /* Live Route Tracker Bar */
+      .rb-tracker-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        margin-top: 10px;
+        font-size: 11px;
+      }
+      .rb-tracker-route {
+        font-size: 11px;
+        line-height: 1.45;
+        flex-wrap: wrap;
+      }
+      .rb-tracker-route strong { font-size: 11.5px; }
+      .rb-url-pill {
+        font-size: 9.5px;
+        padding: 3px 8px;
+        word-break: break-all;
+      }
+
+      /* Breadcrumbs */
+      .p-breadcrumbs {
+        padding: 0 12px;
+        margin-top: 10px;
+        font-size: 11px;
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* Hero Section */
+      .hero-strip { padding: 16px 12px 20px; }
+      .hero-strip-inner { gap: 16px; }
+      .badge-origin-trust { font-size: 9.5px; padding: 3px 8px; margin-bottom: 8px; }
+      .hero-h1 {
+        font-size: 18px;
+        line-height: 1.35;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .hero-intro {
+        font-size: 12px;
+        line-height: 1.55;
+        margin-bottom: 12px;
+      }
+      .hero-kpis {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        margin-bottom: 14px;
+      }
+      .kpi-row { font-size: 11.5px; gap: 6px; }
+      .btn-wa-direct {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 14px;
+        font-size: 13px;
+        border-radius: 6px;
+      }
+      .hero-img-box {
+        padding: 8px;
+        border-radius: 8px;
+      }
+      .hero-img-box img {
+        height: 170px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+      .hero-img-title { font-size: 11.5px; margin-top: 6px; }
+
+      /* Content Grid & Cards */
+      .content-grid-wrap {
+        margin: 14px auto;
+        padding: 0 10px;
+        gap: 14px;
+      }
+      .c-card {
+        padding: 14px 12px;
+        margin-bottom: 14px;
+        border-radius: 8px;
+      }
+      .c-card-title {
+        font-size: 15px;
+        line-height: 1.35;
+        margin-bottom: 10px;
+        padding-bottom: 6px;
+        gap: 6px;
+      }
+      .c-card p {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+      }
+      .c-card ul {
+        padding-left: 16px;
+        margin-bottom: 10px;
+      }
+      .c-card li {
+        font-size: 11.5px;
+        line-height: 1.55;
+        margin-bottom: 4px;
+      }
+
+      /* Transparency Notice */
+      .transparency-box {
+        padding: 10px 12px;
+        border-radius: 6px;
+        border-left-width: 4px;
+        margin-bottom: 12px;
+      }
+      .transparency-box h3 { font-size: 12px; margin-bottom: 4px; }
+      .transparency-box p { font-size: 11px; line-height: 1.5; }
+
+      /* Logistics Grid */
+      .log-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        margin: 10px 0;
+      }
+      .log-item {
+        padding: 8px 10px;
+        border-radius: 6px;
+      }
+      .log-item .label { font-size: 9px; margin-bottom: 2px; }
+      .log-item .val { font-size: 12.5px; }
+
+      /* Landed Cost Calculator */
+      .calc-card {
+        padding: 12px 10px;
+        border-radius: 8px;
+        margin: 12px 0;
+      }
+      .calc-inputs-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+      .calc-inp-group label { font-size: 10.5px; margin-bottom: 3px; }
+      .calc-inp-group input, .calc-inp-group select {
+        padding: 7px 9px;
+        font-size: 12px;
+        border-radius: 5px;
+      }
+      .calc-results-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 8px 4px;
+        gap: 4px;
+        margin-bottom: 10px;
+      }
+      .calc-res-item .res-lbl { font-size: 8px; margin-bottom: 2px; }
+      .calc-res-item .res-val { font-size: 12px; }
+      .calc-res-item.highlight .res-val { font-size: 13px; }
+      .btn-calc-quote {
+        padding: 10px 12px;
+        font-size: 12px;
+        border-radius: 6px;
+      }
+
+      /* Table inside wrap */
+      .spec-tbl { font-size: 11px; min-width: 380px; }
+      .spec-tbl th { padding: 6px 8px; font-size: 11px; }
+      .spec-tbl td { padding: 5px 8px; font-size: 11px; }
+
+      /* FAQ Accordion */
+      .faq-q { padding: 8px 10px; font-size: 12px; line-height: 1.35; }
+      .faq-a { padding: 8px 10px; font-size: 11px; line-height: 1.5; }
+
+      /* Sidebar Widgets */
+      .sidebar-widget {
+        padding: 12px 10px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+      }
+      .sidebar-widget-title {
+        font-size: 13px;
+        margin-bottom: 8px;
+        padding-bottom: 5px;
+      }
+      .city-chip-grid { gap: 5px; }
+      .city-chip-btn {
+        padding: 5px 7px;
+        font-size: 10px;
+        border-radius: 4px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-h1 { font-size: 17px; }
+      .hero-img-box img { height: 150px; }
       .log-grid { grid-template-columns: 1fr; }
-      .calc-results-grid { grid-template-columns: 1fr; }
+      .calc-results-grid { grid-template-columns: 1fr; gap: 6px; }
+      .calc-res-item { padding: 6px; background: #f8fafc; border-radius: 4px; }
     }
   </style>
 </head>
@@ -1034,18 +1270,20 @@ Please share proforma quotation, technical datasheet, and delivery timeline.`;
       <!-- Technical Specifications -->
       <div class="c-card">
         <h2 class="c-card-title">📦 ${product.product_name} Technical Specifications</h2>
-        <table class="spec-tbl">
-          <tr><th>Specification</th><th>Factory Details</th></tr>
-          <tr><td>Material Grade</td><td>${product.materials}</td></tr>
-          <tr><td>GSM Range</td><td>${product.gsm_range}</td></tr>
-          <tr><td>Standard Capacities</td><td>${(product.capacity_options || []).join(', ')}</td></tr>
-          <tr><td>Lamination Options</td><td>${Array.isArray(product.lamination_options) ? product.lamination_options.join(', ') : product.lamination_options}</td></tr>
-          <tr><td>Printing Capabilities</td><td>${product.printing_colors}</td></tr>
-          <tr><td>Stitching &amp; Finishing</td><td>${product.stitching_type}</td></tr>
-          <tr><td>Liner Specification</td><td>${product.liner_options ? (Array.isArray(product.liner_options) ? product.liner_options.join(', ') : product.liner_options) : 'Standard / Custom'}</td></tr>
-          <tr><td>Minimum Order Quantity (MOQ)</td><td>${product.moq}</td></tr>
-          <tr><td>UV Protection</td><td>${product.uv_treatment}</td></tr>
-        </table>
+        <div class="tbl-wrap">
+          <table class="spec-tbl">
+            <tr><th>Specification</th><th>Factory Details</th></tr>
+            <tr><td>Material Grade</td><td>${product.materials}</td></tr>
+            <tr><td>GSM Range</td><td>${product.gsm_range}</td></tr>
+            <tr><td>Standard Capacities</td><td>${(product.capacity_options || []).join(', ')}</td></tr>
+            <tr><td>Lamination Options</td><td>${Array.isArray(product.lamination_options) ? product.lamination_options.join(', ') : product.lamination_options}</td></tr>
+            <tr><td>Printing Capabilities</td><td>${product.printing_colors}</td></tr>
+            <tr><td>Stitching &amp; Finishing</td><td>${product.stitching_type}</td></tr>
+            <tr><td>Liner Specification</td><td>${product.liner_options ? (Array.isArray(product.liner_options) ? product.liner_options.join(', ') : product.liner_options) : 'Standard / Custom'}</td></tr>
+            <tr><td>Minimum Order Quantity (MOQ)</td><td>${product.moq}</td></tr>
+            <tr><td>UV Protection</td><td>${product.uv_treatment}</td></tr>
+          </table>
+        </div>
       </div>
 
       <!-- Local Industrial Applications -->
@@ -1106,7 +1344,7 @@ Please share proforma quotation, technical datasheet, and delivery timeline.`;
           <a href="tel:+918320525550" style="color:inherit;text-decoration:none;">📱 +91 8320525550</a>
         </p>
         <p style="font-size:13px;font-weight:600;color:#64748b;margin-top:4px;">
-          ✉️ info@dwarkeshpolyfab.com
+          ✉️ <a href="mailto:dwarkeshpolyfab@gmail.com" style="color:inherit;text-decoration:none;">dwarkeshpolyfab@gmail.com</a>
         </p>
       </div>
     </aside>
@@ -1217,15 +1455,20 @@ Please share proforma quotation, technical datasheet, and delivery timeline.`;
 
 // 1. Ensure target directory structure exists
 if (!fs.existsSync(targetManufacturersDir)) fs.mkdirSync(targetManufacturersDir, { recursive: true });
+const engineDir = path.join(siteRoot, 'seo-city-engine');
+const outputManufacturersDir = path.join(engineDir, 'output', 'manufacturers');
+if (!fs.existsSync(outputManufacturersDir)) fs.mkdirSync(outputManufacturersDir, { recursive: true });
 
-// 2. Generate Central Hub in site root (manufacturers/index.html)
+// 2. Generate Central Hub in site root (manufacturers/index.html) and output
 const hubProduct = products[0]; // PP Woven Bags
 const hubCity = cities.find(c => c.city_slug === 'mumbai') || cities[0];
 const hubHtml = generatePageHtml(hubProduct, hubCity, true, '../');
 fs.writeFileSync(path.join(targetManufacturersDir, 'index.html'), hubHtml, 'utf8');
+fs.writeFileSync(path.join(engineDir, 'output', 'index.html'), hubHtml, 'utf8');
+fs.writeFileSync(path.join(outputManufacturersDir, 'index.html'), hubHtml, 'utf8');
 console.log('✓ Generated Central Hub: manufacturers/index.html');
 
-// 3. Generate ALL physical route files for all products and all cities in site root
+// 3. Generate ALL physical route files for all products and all cities in site root & output
 console.log(`Starting compilation of ${products.length * cities.length} route pages into manufacturers/...`);
 const startTime = Date.now();
 let count = 0;
@@ -1233,11 +1476,15 @@ let count = 0;
 for (const prod of products) {
   const prodDir = path.join(targetManufacturersDir, prod.product_slug);
   if (!fs.existsSync(prodDir)) fs.mkdirSync(prodDir, { recursive: true });
+  const outputProdDir = path.join(outputManufacturersDir, prod.product_slug);
+  if (!fs.existsSync(outputProdDir)) fs.mkdirSync(outputProdDir, { recursive: true });
 
   for (const city of cities) {
     const routeHtml = generatePageHtml(prod, city, false, '../../');
     const routeFilePath = path.join(prodDir, `${city.city_slug}.html`);
     fs.writeFileSync(routeFilePath, routeHtml, 'utf8');
+    const outputRouteFilePath = path.join(outputProdDir, `${city.city_slug}.html`);
+    fs.writeFileSync(outputRouteFilePath, routeHtml, 'utf8');
     count++;
   }
 }

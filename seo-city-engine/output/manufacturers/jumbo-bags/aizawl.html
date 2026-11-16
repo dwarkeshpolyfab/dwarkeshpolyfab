@@ -17,14 +17,14 @@
   <meta property="og:site_name" content="Dwarkesh Polyfab">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../../../../assets/images/favicon.png">
+  <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
 
   <!-- Fonts & Main Site CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../../assets/css/style.css">
-  <link rel="stylesheet" href="../../../../assets/css/product-page.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/product-page.css">
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -242,7 +242,7 @@
       gap: 6px;
     }
 
-    /* BAG COSTING CALCULATOR BUTTON (Replaced Search Button) */
+    /* BAG COSTING CALCULATOR BUTTON */
     .rb-calc-btn {
       background: linear-gradient(135deg, #112a46 0%, #1a3d65 100%);
       color: #ffffff;
@@ -494,21 +494,30 @@
     }
 
     /* Specification Table */
+    .tbl-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 14px 0;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
     .spec-tbl {
       width: 100%;
+      min-width: 440px;
       border-collapse: collapse;
-      margin: 14px 0;
-      font-size: 13.5px;
+      margin: 0;
+      font-size: 13px;
     }
     .spec-tbl th {
       background: var(--primary-blue);
       color: #ffffff;
       text-align: left;
-      padding: 12px 14px;
+      padding: 10px 12px;
       font-weight: 600;
     }
     .spec-tbl td {
-      padding: 10px 14px;
+      padding: 9px 12px;
       border-bottom: 1px solid var(--border-color);
     }
     .spec-tbl tr:nth-child(even) { background-color: #fafbfc; }
@@ -666,12 +675,239 @@
       border-color: #112a46;
     }
 
+    /* RESPONSIVE & MOBILE DESIGN (Clean, compact, content-friendly) */
     @media (max-width: 992px) {
       .rb-search-bar { grid-template-columns: 1fr; }
       .hero-strip-inner { grid-template-columns: 1fr; }
       .content-grid-wrap { grid-template-columns: 1fr; }
+      .log-grid { grid-template-columns: 1fr 1fr; }
+      .calc-results-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      body { font-size: 13px; line-height: 1.55; }
+
+      /* Search & Route Console */
+      .rb-console-container { padding: 14px 12px 16px; }
+      .rb-console-tagline { font-size: 9.5px; letter-spacing: 0.8px; margin-bottom: 8px; }
+      .rb-search-bar {
+        padding: 6px;
+        gap: 6px;
+        border-radius: 8px;
+      }
+      .rb-cell {
+        padding: 6px 10px;
+        border-right: none;
+        border-bottom: 1px solid #f1f5f9;
+      }
+      .rb-cell:last-of-type { border-bottom: none; }
+      .rb-cell label { font-size: 10px; margin-bottom: 2px; }
+      .rb-cell select, .rb-cell input { font-size: 12.5px; }
+      .origin-val { font-size: 12px; }
+      .rb-calc-btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        justify-content: center;
+        padding: 10px 14px;
+        font-size: 12px;
+        border-radius: 6px;
+      }
+
+      /* Live Route Tracker Bar */
+      .rb-tracker-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        margin-top: 10px;
+        font-size: 11px;
+      }
+      .rb-tracker-route {
+        font-size: 11px;
+        line-height: 1.45;
+        flex-wrap: wrap;
+      }
+      .rb-tracker-route strong { font-size: 11.5px; }
+      .rb-url-pill {
+        font-size: 9.5px;
+        padding: 3px 8px;
+        word-break: break-all;
+      }
+
+      /* Breadcrumbs */
+      .p-breadcrumbs {
+        padding: 0 12px;
+        margin-top: 10px;
+        font-size: 11px;
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* Hero Section */
+      .hero-strip { padding: 16px 12px 20px; }
+      .hero-strip-inner { gap: 16px; }
+      .badge-origin-trust { font-size: 9.5px; padding: 3px 8px; margin-bottom: 8px; }
+      .hero-h1 {
+        font-size: 18px;
+        line-height: 1.35;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .hero-intro {
+        font-size: 12px;
+        line-height: 1.55;
+        margin-bottom: 12px;
+      }
+      .hero-kpis {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        margin-bottom: 14px;
+      }
+      .kpi-row { font-size: 11.5px; gap: 6px; }
+      .btn-wa-direct {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 14px;
+        font-size: 13px;
+        border-radius: 6px;
+      }
+      .hero-img-box {
+        padding: 8px;
+        border-radius: 8px;
+      }
+      .hero-img-box img {
+        height: 170px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+      .hero-img-title { font-size: 11.5px; margin-top: 6px; }
+
+      /* Content Grid & Cards */
+      .content-grid-wrap {
+        margin: 14px auto;
+        padding: 0 10px;
+        gap: 14px;
+      }
+      .c-card {
+        padding: 14px 12px;
+        margin-bottom: 14px;
+        border-radius: 8px;
+      }
+      .c-card-title {
+        font-size: 15px;
+        line-height: 1.35;
+        margin-bottom: 10px;
+        padding-bottom: 6px;
+        gap: 6px;
+      }
+      .c-card p {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+      }
+      .c-card ul {
+        padding-left: 16px;
+        margin-bottom: 10px;
+      }
+      .c-card li {
+        font-size: 11.5px;
+        line-height: 1.55;
+        margin-bottom: 4px;
+      }
+
+      /* Transparency Notice */
+      .transparency-box {
+        padding: 10px 12px;
+        border-radius: 6px;
+        border-left-width: 4px;
+        margin-bottom: 12px;
+      }
+      .transparency-box h3 { font-size: 12px; margin-bottom: 4px; }
+      .transparency-box p { font-size: 11px; line-height: 1.5; }
+
+      /* Logistics Grid */
+      .log-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        margin: 10px 0;
+      }
+      .log-item {
+        padding: 8px 10px;
+        border-radius: 6px;
+      }
+      .log-item .label { font-size: 9px; margin-bottom: 2px; }
+      .log-item .val { font-size: 12.5px; }
+
+      /* Landed Cost Calculator */
+      .calc-card {
+        padding: 12px 10px;
+        border-radius: 8px;
+        margin: 12px 0;
+      }
+      .calc-inputs-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+      .calc-inp-group label { font-size: 10.5px; margin-bottom: 3px; }
+      .calc-inp-group input, .calc-inp-group select {
+        padding: 7px 9px;
+        font-size: 12px;
+        border-radius: 5px;
+      }
+      .calc-results-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 8px 4px;
+        gap: 4px;
+        margin-bottom: 10px;
+      }
+      .calc-res-item .res-lbl { font-size: 8px; margin-bottom: 2px; }
+      .calc-res-item .res-val { font-size: 12px; }
+      .calc-res-item.highlight .res-val { font-size: 13px; }
+      .btn-calc-quote {
+        padding: 10px 12px;
+        font-size: 12px;
+        border-radius: 6px;
+      }
+
+      /* Table inside wrap */
+      .spec-tbl { font-size: 11px; min-width: 380px; }
+      .spec-tbl th { padding: 6px 8px; font-size: 11px; }
+      .spec-tbl td { padding: 5px 8px; font-size: 11px; }
+
+      /* FAQ Accordion */
+      .faq-q { padding: 8px 10px; font-size: 12px; line-height: 1.35; }
+      .faq-a { padding: 8px 10px; font-size: 11px; line-height: 1.5; }
+
+      /* Sidebar Widgets */
+      .sidebar-widget {
+        padding: 12px 10px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+      }
+      .sidebar-widget-title {
+        font-size: 13px;
+        margin-bottom: 8px;
+        padding-bottom: 5px;
+      }
+      .city-chip-grid { gap: 5px; }
+      .city-chip-btn {
+        padding: 5px 7px;
+        font-size: 10px;
+        border-radius: 4px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-h1 { font-size: 17px; }
+      .hero-img-box img { height: 150px; }
       .log-grid { grid-template-columns: 1fr; }
-      .calc-results-grid { grid-template-columns: 1fr; }
+      .calc-results-grid { grid-template-columns: 1fr; gap: 6px; }
+      .calc-res-item { padding: 6px; background: #f8fafc; border-radius: 4px; }
     }
   </style>
 </head>
@@ -772,9 +1008,9 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="../../../../index.html" class="logo-area" aria-label="Dwarkesh Polyfab Home">
+    <a href="../../index.html" class="logo-area" aria-label="Dwarkesh Polyfab Home">
       <img
-        src="../../../../assets/images/logo.png"
+        src="../../assets/images/logo.png"
         alt="Dwarkesh Polyfab Logo"
         width="40"
         height="40"
@@ -788,13 +1024,13 @@
     </a>
 
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="../../../../index.html">Home</a>
-      <a href="../../../../products/index.html">Products</a>
-      <a href="../../../../calculators/index.html">Calculators</a>
-      <a href="../../../../industries/index.html">Industries</a>
-      <a href="../../../../blog/index.html">Blog</a>
-      <a href="../../../../pages/about.html">About</a>
-      <a href="../../../../pages/contact.html">Contact</a>
+      <a href="../../index.html">Home</a>
+      <a href="../../products/index.html">Products</a>
+      <a href="../../calculators/index.html">Calculators</a>
+      <a href="../../industries/index.html">Industries</a>
+      <a href="../../blog/index.html">Blog</a>
+      <a href="../../pages/about.html">About</a>
+      <a href="../../pages/contact.html">Contact</a>
     </nav>
 
     <div class="header-contact">
@@ -829,13 +1065,13 @@
   </div>
 
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-    <a href="../../../../index.html">Home</a>
-    <a href="../../../../products/index.html">Products</a>
-    <a href="../../../../calculators/index.html">Calculator</a>
-    <a href="../../../../industries/index.html">Industries</a>
-    <a href="../../../../blog/index.html">Blog</a>
-    <a href="../../../../pages/about.html">About Us</a>
-    <a href="../../../../pages/contact.html">Contact</a>
+    <a href="../../index.html">Home</a>
+    <a href="../../products/index.html">Products</a>
+    <a href="../../calculators/index.html">Calculator</a>
+    <a href="../../industries/index.html">Industries</a>
+    <a href="../../blog/index.html">Blog</a>
+    <a href="../../pages/about.html">About Us</a>
+    <a href="../../pages/contact.html">Contact</a>
   </nav>
 </header>
 
@@ -1295,8 +1531,8 @@
           <input type="number" id="rb-qty-input" value="25000" min="5000" step="5000">
         </div>
 
-        <!-- Action Button: Bag Costing Calculator (Replaces Redundant Search Button) -->
-        <a href="../../../../calculators/index.html" class="rb-calc-btn" title="Open Custom Bag Costing & GSM Calculator">
+        <!-- Action Button: Bag Costing Calculator -->
+        <a href="../../calculators/index.html" class="rb-calc-btn" title="Open Custom Bag Costing & GSM Calculator">
           🧮 Bag Costing Calculator
         </a>
       </div>
@@ -1315,11 +1551,11 @@
 
   <!-- BREADCRUMBS -->
   <nav class="p-breadcrumbs" aria-label="Breadcrumb">
-    <a href="../../../../index.html">Home</a>
+    <a href="../../index.html">Home</a>
     <span>/</span>
-    <a href="../../../../seo-city-engine/output/index.html">Manufacturers</a>
+    <a href="../../manufacturers/index.html">Manufacturers</a>
     <span>/</span>
-    <a href="../../../../products/jumbo-bags.html">FIBC Jumbo Bags</a>
+    <a href="../../products/jumbo-bags.html">FIBC Jumbo Bags</a>
     <span>/</span>
     <span style="color:#112a46;font-weight:600;">Aizawl Supply</span>
   </nav>
@@ -1353,7 +1589,7 @@
       </div>
 
       <div class="hero-img-box">
-        <img id="page-product-img" src="../../../../assets/images/products/jumbo-bags.webp" alt="FIBC Jumbo Bags Manufacturer Aizawl">
+        <img id="page-product-img" src="../../assets/images/products/jumbo-bags.webp" alt="FIBC Jumbo Bags Manufacturer Aizawl">
         <div class="hero-img-title">Jumbo Bags (FIBC Bulk Bags) (Morbi Factory Stock)</div>
       </div>
     </div>
@@ -1445,18 +1681,20 @@
       <!-- Technical Specifications -->
       <div class="c-card">
         <h2 class="c-card-title">📦 Jumbo Bags (FIBC Bulk Bags) Technical Specifications</h2>
-        <table class="spec-tbl">
-          <tr><th>Specification</th><th>Factory Details</th></tr>
-          <tr><td>Material Grade</td><td>UV Stabilized Virgin High-Tenacity Polypropylene</td></tr>
-          <tr><td>GSM Range</td><td>130 GSM to 220 GSM Heavy-Duty Fabric</td></tr>
-          <tr><td>Standard Capacities</td><td>500 KG, 1,000 KG (1 Ton), 1,500 KG, 2,000 KG (2 Ton)</td></tr>
-          <tr><td>Lamination Options</td><td>Uncoated Breathable, Coated Dust-Proof</td></tr>
-          <tr><td>Printing Capabilities</td><td>1 to 4 Colors Brand & Handling Icon Printing</td></tr>
-          <tr><td>Stitching &amp; Finishing</td><td>Heavy Duty Double Needle Chain Stitch with Dust-Proof Sift-Proof Cord</td></tr>
-          <tr><td>Liner Specification</td><td>Bottle-Shape LDPE Liner, Form-Fit Gusseted Liner, Conductive / Antistatic Liner</td></tr>
-          <tr><td>Minimum Order Quantity (MOQ)</td><td>500 Bags</td></tr>
-          <tr><td>UV Protection</td><td>UV Stabilized up to 300 hours (ISO 21898 standard)</td></tr>
-        </table>
+        <div class="tbl-wrap">
+          <table class="spec-tbl">
+            <tr><th>Specification</th><th>Factory Details</th></tr>
+            <tr><td>Material Grade</td><td>UV Stabilized Virgin High-Tenacity Polypropylene</td></tr>
+            <tr><td>GSM Range</td><td>130 GSM to 220 GSM Heavy-Duty Fabric</td></tr>
+            <tr><td>Standard Capacities</td><td>500 KG, 1,000 KG (1 Ton), 1,500 KG, 2,000 KG (2 Ton)</td></tr>
+            <tr><td>Lamination Options</td><td>Uncoated Breathable, Coated Dust-Proof</td></tr>
+            <tr><td>Printing Capabilities</td><td>1 to 4 Colors Brand & Handling Icon Printing</td></tr>
+            <tr><td>Stitching &amp; Finishing</td><td>Heavy Duty Double Needle Chain Stitch with Dust-Proof Sift-Proof Cord</td></tr>
+            <tr><td>Liner Specification</td><td>Bottle-Shape LDPE Liner, Form-Fit Gusseted Liner, Conductive / Antistatic Liner</td></tr>
+            <tr><td>Minimum Order Quantity (MOQ)</td><td>500 Bags</td></tr>
+            <tr><td>UV Protection</td><td>UV Stabilized up to 300 hours (ISO 21898 standard)</td></tr>
+          </table>
+        </div>
       </div>
 
       <!-- Local Industrial Applications -->
@@ -1544,7 +1782,7 @@
           <a href="tel:+918320525550" style="color:inherit;text-decoration:none;">📱 +91 8320525550</a>
         </p>
         <p style="font-size:13px;font-weight:600;color:#64748b;margin-top:4px;">
-          ✉️ info@dwarkeshpolyfab.com
+          ✉️ <a href="mailto:dwarkeshpolyfab@gmail.com" style="color:inherit;text-decoration:none;">dwarkeshpolyfab@gmail.com</a>
         </p>
       </div>
     </aside>
@@ -1850,7 +2088,7 @@
     <div class="footer-col footer-brand">
       <div class="footer-brand-top">
         <img
-          src="../../../../assets/images/logo.png"
+          src="../../assets/images/logo.png"
           alt="Dwarkesh Polyfab Logo"
           class="footer-logo"
           width="40"
@@ -1891,14 +2129,14 @@
     <div class="footer-col">
       <h3 class="footer-col-title">Our Products</h3>
       <ul class="footer-links">
-        <li><a href="../../../../products/pp-woven-bags.html">PP Woven Bags</a></li>
-        <li><a href="../../../../products/bopp-laminated-bags.html">BOPP Laminated Bags</a></li>
-        <li><a href="../../../../products/printed-pp-bags.html">Printed Polybags</a></li>
-        <li><a href="../../../../products/rice-packaging-bags.html">Rice Packaging Bags</a></li>
-        <li><a href="../../../../products/fertilizer-bags.html">Fertilizer Bags</a></li>
-        <li><a href="../../../../products/cement-bags.html">Cement Valve Bags</a></li>
-        <li><a href="../../../../products/anti-slip-bags.html">Anti Slip Bags</a></li>
-        <li><a href="../../../../products/jumbo-bags.html">PP Jumbo Bags</a></li>
+        <li><a href="../../products/pp-woven-bags.html">PP Woven Bags</a></li>
+        <li><a href="../../products/bopp-laminated-bags.html">BOPP Laminated Bags</a></li>
+        <li><a href="../../products/printed-pp-bags.html">Printed Polybags</a></li>
+        <li><a href="../../products/rice-packaging-bags.html">Rice Packaging Bags</a></li>
+        <li><a href="../../products/fertilizer-bags.html">Fertilizer Bags</a></li>
+        <li><a href="../../products/cement-bags.html">Cement Valve Bags</a></li>
+        <li><a href="../../products/anti-slip-bags.html">Anti Slip Bags</a></li>
+        <li><a href="../../products/jumbo-bags.html">PP Jumbo Bags</a></li>
       </ul>
     </div>
 
@@ -1917,14 +2155,14 @@
     <div class="footer-col">
       <h3 class="footer-col-title">Quick Links</h3>
       <ul class="footer-links">
-        <li><a href="../../../../index.html">Home</a></li>
-        <li><a href="../../../../products/index.html">All Products</a></li>
-        <li><a href="../../../../calculators/index.html">Bag Calculator</a></li>
-        <li><a href="../../../../industries/index.html">Industries</a></li>
-        <li><a href="../../../../blog/index.html">Blog</a></li>
-        <li><a href="../../../../pages/about.html">About Us</a></li>
-        <li><a href="../../../../pages/contact.html">Contact Us</a></li>
-        <li><a href="../../../../pages/manufacturer-data.html">Manufacturer Data</a></li>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../products/index.html">All Products</a></li>
+        <li><a href="../../calculators/index.html">Bag Calculator</a></li>
+        <li><a href="../../industries/index.html">Industries</a></li>
+        <li><a href="../../blog/index.html">Blog</a></li>
+        <li><a href="../../pages/about.html">About Us</a></li>
+        <li><a href="../../pages/contact.html">Contact Us</a></li>
+        <li><a href="../../pages/manufacturer-data.html">Manufacturer Data</a></li>
       </ul>
     </div>
 
@@ -1949,7 +2187,7 @@
         </li>
         <li>
           <span class="fc-label">Calc</span>
-          <a href="../../../../calculators/index.html">Bag Price Calculator</a>
+          <a href="../../calculators/index.html">Bag Price Calculator</a>
         </li>
       </ul>
     </div>
@@ -1997,10 +2235,10 @@
         if (isFileProto) {
           // Relative file navigation for offline local disk testing
           var locPath = window.location.pathname.replace(/\\/g, '/');
-          if (locPath.indexOf('/manufacturers/') !== -1) {
+          if (locPath.indexOf('/manufacturers/') !== -1 && !isHub) {
             destinationUrl = '../' + targetProd + '/' + targetCity + '.html';
           } else {
-            destinationUrl = './manufacturers/' + targetProd + '/' + targetCity + '.html';
+            destinationUrl = './' + targetProd + '/' + targetCity + '.html';
           }
         } else {
           // Standard web server navigation with search parameters
@@ -2014,11 +2252,9 @@
         window.location.href = destinationUrl;
       }
 
-      // Automatically navigate whenever Destination City or Product selection changes
       selectCity.addEventListener('change', executeRouteNavigation);
       selectProd.addEventListener('change', executeRouteNavigation);
 
-      // In-page live landed cost calculator on quantity change
       function recalculateCosts(newQty) {
         var qty = parseInt(newQty, 10);
         if (isNaN(qty) || qty < 1000) qty = 25000;
