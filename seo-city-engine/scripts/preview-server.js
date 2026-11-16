@@ -28,12 +28,12 @@ const server = http.createServer((req, res) => {
   // Route mapping:
   let filePath = '';
 
-  if (reqUrl === '/' || reqUrl === '/index.html' || reqUrl === '/manufacturers' || reqUrl === '/manufacturers/') {
-    filePath = path.join(engineOutput, 'index.html');
-  } else if (reqUrl.startsWith('/manufacturers/')) {
-    filePath = path.join(engineOutput, reqUrl);
+  // Direct file serving from site root
+  if (reqUrl === '/' || reqUrl === '') {
+    filePath = path.join(siteRoot, 'index.html');
+  } else if (reqUrl === '/manufacturers' || reqUrl === '/manufacturers/') {
+    filePath = path.join(siteRoot, 'manufacturers', 'index.html');
   } else {
-    // Serve static assets from site root
     filePath = path.join(siteRoot, reqUrl);
   }
 
