@@ -1,0 +1,610 @@
+[
+  {
+    "product_id": "pp-woven-bags",
+    "product_name": "PP Woven Bags",
+    "clean_name": "PP Woven Bags",
+    "product_slug": "pp-woven-bags",
+    "category": "Industrial Bulk Packaging",
+    "description": "High tensile strength virgin polypropylene circular woven bags designed for heavy-duty bulk packaging of grains, pulses, flour, animal feed, chemicals, and construction materials.",
+    "capacity_options": [
+      "10 KG",
+      "20 KG",
+      "25 KG",
+      "50 KG",
+      "Custom Bulk"
+    ],
+    "gsm_range": "60 GSM to 130 GSM",
+    "standard_sizes": [
+      "12x18 inch",
+      "15x24 inch",
+      "18x28 inch",
+      "22x32 inch",
+      "24x36 inch"
+    ],
+    "materials": "100% Virgin Polypropylene (PP)",
+    "lamination_options": [
+      "Unlaminated (Plain)",
+      "PP Extrusion Laminated (Milky / Natural)"
+    ],
+    "printing_colors": "1 to 6 Colors High-Precision Flexographic Printing",
+    "liner_options": [
+      "Without Liner",
+      "Loose Inserted LDPE Liner",
+      "Bottom-Stitched Liner"
+    ],
+    "stitching_type": "Heavy-Duty Single / Double Fold Chain Stitch with Safety Thread",
+    "bag_construction": "Circular Tubular Woven Fabric, Top Hemmed / Heat Cut, Bottom Folded",
+    "antislip_treatment": "Available via Anti-Slip Weave Pattern or Coating",
+    "uv_treatment": "Optional UV Stabilization (100 to 300 hours) for outdoor storage",
+    "applications": [
+      "Food Grains & Pulses",
+      "Sugar & Salt",
+      "Animal & Poultry Feed",
+      "Fertilizer & Agro Chemicals",
+      "Sand & Cement"
+    ],
+    "moq": "10,000 Bags",
+    "customisation_availability": "Fully Customizable (Size, GSM, Fabric Color, Printing, Gusset)",
+    "image_url": "/assets/images/products/pp-woven-bags.webp",
+    "est_weight_kg": 0.08,
+    "est_base_price": 10.5
+  },
+  {
+    "product_id": "bopp-laminated-bags",
+    "product_name": "BOPP Laminated Bags",
+    "clean_name": "BOPP Laminated Bags",
+    "product_slug": "bopp-laminated-bags",
+    "category": "Premium Consumer Packaging",
+    "description": "Ultra-durable woven polypropylene bags laminated with Biaxially Oriented Polypropylene (BOPP) film, providing photographic rotogravure printing, 100% moisture barrier, and premium shelf appeal.",
+    "capacity_options": [
+      "5 KG",
+      "10 KG",
+      "20 KG",
+      "25 KG",
+      "40 KG",
+      "50 KG"
+    ],
+    "gsm_range": "65 GSM to 140 GSM (Total weight including film & coating)",
+    "standard_sizes": [
+      "11x21 inch",
+      "13x26 inch",
+      "15x29 inch",
+      "17x31 inch",
+      "19x35 inch"
+    ],
+    "materials": "Virgin PP Woven Base + Extrusion Lamination Layer + 12µ/15µ BOPP Film",
+    "lamination_options": [
+      "Glossy BOPP Finish",
+      "Matt Luxury Finish",
+      "Metallic BOPP",
+      "Window / Clear View"
+    ],
+    "printing_colors": "Up to 8 Colors High-Definition Rotogravure Printing (Photographic Quality)",
+    "liner_options": [
+      "Self-Barrier (Laminated)",
+      "Optional LDPE Liner for fine chemicals"
+    ],
+    "stitching_type": "Single / Double Fold Bottom Stitch, Optional Top Easy-Open Tape",
+    "bag_construction": "Tubular or Side-Gusseted with D-Cut / Plastic Handle",
+    "antislip_treatment": "Anti-Skid Matt Lamination or Micro-Embossed Fabric",
+    "uv_treatment": "UV Stabilized Base Fabric on Request",
+    "applications": [
+      "Basmati Rice Packaging",
+      "Tile Adhesives & Wall Putty",
+      "Pet Food & Bird Feed",
+      "Lawn Seeds & Agro Seeds",
+      "Organic Fertilizers"
+    ],
+    "moq": "10,000 Bags",
+    "customisation_availability": "Complete Customization (Glossy/Matt, Gusset Size, Handle, Window)",
+    "image_url": "/assets/images/products/bopp-laminated-bags.webp",
+    "est_weight_kg": 0.11,
+    "est_base_price": 14.5
+  },
+  {
+    "product_id": "leno-bags",
+    "product_name": "Leno Bags (Mesh Packaging)",
+    "clean_name": "Leno Bags",
+    "product_slug": "leno-bags",
+    "category": "Agricultural Produce Packaging",
+    "description": "Lightweight, permeable open-mesh tubular bags woven with crossed warp yarns, designed to maximize ventilation, prevent produce sweating, and showcase fresh agricultural commodities.",
+    "capacity_options": [
+      "5 KG",
+      "10 KG",
+      "25 KG",
+      "50 KG"
+    ],
+    "gsm_range": "32 GSM to 65 GSM",
+    "standard_sizes": [
+      "12x18 inch (5kg)",
+      "16x22 inch (10kg)",
+      "20x31 inch (25kg)",
+      "24x36 inch (50kg)"
+    ],
+    "materials": "Virgin Polypropylene (PP) / High Density Polyethylene (HDPE)",
+    "lamination_options": [
+      "Non-Laminated Open Mesh for Aeration"
+    ],
+    "printing_colors": "Continuous Center Monofilament Woven Label Strip or Stitched Tag",
+    "liner_options": [
+      "Not Applicable (Permeability required for produce breathing)"
+    ],
+    "stitching_type": "Reinforced Bottom Lock Stitch with Pre-Threaded Drawstring Closure",
+    "bag_construction": "Leno Weave (Locked warp-twist yarn structure for tear-proof stability)",
+    "antislip_treatment": "Inherent High-Friction Open-Mesh Texture",
+    "uv_treatment": "UV Stabilized against sunlight exposure during mandi handling and cold storage",
+    "applications": [
+      "Potatoes",
+      "Onions",
+      "Garlic",
+      "Citrus / Oranges",
+      "Ginger",
+      "Cabbage & Vegetables"
+    ],
+    "moq": "25,000 Bags",
+    "customisation_availability": "Custom Colors, Sizes, Weight Densities, and Woven Label Bands",
+    "image_url": "/assets/images/products/leno-bags.webp",
+    "est_weight_kg": 0.065,
+    "est_base_price": 8.2
+  },
+  {
+    "product_id": "anti-slip-bags",
+    "product_name": "Anti-Slip PP Bags",
+    "clean_name": "Anti-Slip PP Bags",
+    "product_slug": "anti-slip-bags",
+    "category": "High-Stacking Logistics Packaging",
+    "description": "Specialized woven polypropylene bags engineered with micro-patterned anti-skid weave or non-slip coating to eliminate stack slippage, pallet collapse, and container transit damage.",
+    "capacity_options": [
+      "25 KG",
+      "50 KG"
+    ],
+    "gsm_range": "75 GSM to 130 GSM",
+    "standard_sizes": [
+      "16x26 inch",
+      "18x30 inch",
+      "22x34 inch"
+    ],
+    "materials": "Virgin Polypropylene with High Co-Efficient of Friction (COF) Treatment",
+    "lamination_options": [
+      "Anti-Slip Breathable Woven",
+      "Anti-Skid Matte BOPP Laminated"
+    ],
+    "printing_colors": "1 to 6 Colors Flexographic or Rotogravure Printing",
+    "liner_options": [
+      "Without Liner",
+      "Inserted LDPE Liner for powders and hygroscopic chemicals"
+    ],
+    "stitching_type": "Heavy Duty Multi-Thread Chain Stitch with Filler Cord",
+    "bag_construction": "Tubular Circular Woven or Side Gusseted with Anti-Slip Ridges",
+    "antislip_treatment": "Integrated Anti-Skid Weft Threads (Up to 35-degree tilt stack stability)",
+    "uv_treatment": "Standard UV Stabilization (up to 250 hours)",
+    "applications": [
+      "Export Container Pallets",
+      "Fine Chemicals & Resins",
+      "Cement & Tile Adhesives",
+      "Flour & Starch Bulk Stacks",
+      "Automated Warehouse Racking"
+    ],
+    "moq": "15,000 Bags",
+    "customisation_availability": "Custom Anti-Skid Rating, Size, GSM, and Brand Artwork",
+    "image_url": "/assets/images/products/anti-slip-bags.webp",
+    "est_weight_kg": 0.09,
+    "est_base_price": 11.8
+  },
+  {
+    "product_id": "ldpe-liner-bags",
+    "product_name": "LDPE Liner PP Bags",
+    "clean_name": "LDPE Liner Bags",
+    "product_slug": "ldpe-liner-bags",
+    "category": "Moisture-Barrier Chemical Packaging",
+    "description": "Dual-barrier packaging solution combining a high-strength woven outer polypropylene bag with an impermeable virgin Low-Density Polyethylene (LDPE) inner liner for hygroscopic materials.",
+    "capacity_options": [
+      "20 KG",
+      "25 KG",
+      "50 KG"
+    ],
+    "gsm_range": "Outer: 65-110 GSM | Inner Liner: 25µ to 80µ (Micron)",
+    "standard_sizes": [
+      "15x24 inch",
+      "18x28 inch",
+      "22x34 inch",
+      "24x36 inch"
+    ],
+    "materials": "Outer Virgin PP Woven Fabric + Inner 100% Virgin LDPE/LLDPE Co-Extruded Film",
+    "lamination_options": [
+      "Plain Outer + Liner",
+      "Laminated Outer + Liner (Double Barrier)"
+    ],
+    "printing_colors": "1 to 6 Colors Flexographic Printing on Outer Bag",
+    "liner_options": [
+      "Bottom Stitched Liner",
+      "Loose Inserted Liner with Top Overhang",
+      "Tack-Glued Inner Liner"
+    ],
+    "stitching_type": "Chain Stitch with Anti-Leakage Filler Cord / Dust-Proof Stitching",
+    "bag_construction": "Gusseted or Flat Circular with Extended Top Liner for Heat-Sealing",
+    "antislip_treatment": "Optional Outer Weave Texture",
+    "uv_treatment": "UV Stabilized Outer Fabric on Request",
+    "applications": [
+      "Dyes & Pigments",
+      "Fertilizers (Urea, DAP, Potash)",
+      "Milk Powder & Food Additives",
+      "Hygroscopic Chemicals",
+      "Detergent & Soda Ash"
+    ],
+    "moq": "10,000 Bags",
+    "customisation_availability": "Liner Micron Thickness, Liner Color (Natural/Milky), Outer GSM, and Bottom Stitching",
+    "image_url": "/assets/images/products/ldpe-liner-bags.webp",
+    "est_weight_kg": 0.095,
+    "est_base_price": 12.5
+  },
+  {
+    "product_id": "rice-packaging-bags",
+    "product_name": "Rice Packaging Bags",
+    "clean_name": "Rice Packaging Bags",
+    "product_slug": "rice-packaging-bags",
+    "category": "Food Grain & Agro Commodity Packaging",
+    "description": "Specialized food-grade packaging bags manufactured for basmati and non-basmati rice mills, export traders, and consumer food brands. Available in high-gloss BOPP and breathable plain woven grades.",
+    "capacity_options": [
+      "5 KG",
+      "10 KG",
+      "20 KG",
+      "25 KG",
+      "50 KG"
+    ],
+    "gsm_range": "60 GSM to 135 GSM",
+    "standard_sizes": [
+      "11x21 inch",
+      "13x26 inch",
+      "16x28 inch",
+      "18x30 inch",
+      "22x34 inch"
+    ],
+    "materials": "Food-Grade Virgin Polypropylene + Optional BOPP Film",
+    "lamination_options": [
+      "Ultra-Gloss BOPP",
+      "Silky Matt BOPP",
+      "Unlaminated Breathable"
+    ],
+    "printing_colors": "Up to 8 Colors Photographic Rotogravure or 4-Color Flexo",
+    "liner_options": [
+      "Without Liner",
+      "Optional Micro-Perforated Liner for aroma retention"
+    ],
+    "stitching_type": "Double Chain Stitch with Easy-Open Pull Thread",
+    "bag_construction": "Side Gusseted for brick-stacking with Top Plastic Handle or D-Cut",
+    "antislip_treatment": "Anti-Skid Coating on Matt Variants",
+    "uv_treatment": "Available on Request",
+    "applications": [
+      "Basmati Rice Export",
+      "Non-Basmati Commercial Rice",
+      "Parboiled / Sella Rice",
+      "Organic Brown Rice"
+    ],
+    "moq": "10,000 Bags",
+    "customisation_availability": "Transparent Window Strips, Carrying Handles, Metallic Inks, Custom Gussets",
+    "image_url": "/assets/images/products/rice-packaging-bags.webp",
+    "est_weight_kg": 0.085,
+    "est_base_price": 11.2
+  },
+  {
+    "product_id": "tile-adhesive-bopp-bags",
+    "product_name": "Tile Adhesive BOPP Bags",
+    "clean_name": "Tile Adhesive BOPP Bags",
+    "product_slug": "tile-adhesive-bopp-bags",
+    "category": "Construction Chemical Packaging",
+    "description": "Heavy-duty puncture-resistant BOPP laminated bags developed in our Morbi plant (the ceramic tile hub of India) to pack polymer-modified tile adhesives, grouts, and wall putty.",
+    "capacity_options": [
+      "20 KG",
+      "25 KG",
+      "40 KG"
+    ],
+    "gsm_range": "75 GSM to 120 GSM",
+    "standard_sizes": [
+      "14x22 inch",
+      "15x24 inch",
+      "16x26 inch"
+    ],
+    "materials": "High-Denier Virgin PP Base + Multi-Layer Lamination",
+    "lamination_options": [
+      "Matt Finish with Anti-Slip",
+      "Glossy BOPP"
+    ],
+    "printing_colors": "Up to 8 Colors Photographic Rotogravure",
+    "liner_options": [
+      "Extruded Moisture Barrier Built-In",
+      "Optional LDPE Liner"
+    ],
+    "stitching_type": "Reinforced Bottom Stitch with Seal Tape",
+    "bag_construction": "Side Gusseted for Block Packaging & Easy Stacking",
+    "antislip_treatment": "Standard on all Tile Adhesive Bags to prevent warehouse stack sliding",
+    "uv_treatment": "UV Stabilized for outdoor construction site storage",
+    "applications": [
+      "Tile Adhesives & Mortar",
+      "Wall Putty & White Cement",
+      "Epoxy Grouts",
+      "Waterproofing Compounds"
+    ],
+    "moq": "10,000 Bags",
+    "customisation_availability": "Gusset Width, Micro-Venting Perforations, Premium Matt Finishing",
+    "image_url": "/assets/images/products/tile-adhesive-bopp-bags.webp",
+    "est_weight_kg": 0.095,
+    "est_base_price": 13.5
+  },
+  {
+    "product_id": "cement-bags",
+    "product_name": "Cement Packaging Bags",
+    "clean_name": "Cement Packaging Bags",
+    "product_slug": "cement-bags",
+    "category": "Building Materials Packaging",
+    "description": "High burst-strength valve and block-bottom PP woven bags designed for automated high-speed rotary cement and dry mortar packing lines with nano-perforation air release.",
+    "capacity_options": [
+      "25 KG",
+      "50 KG"
+    ],
+    "gsm_range": "65 GSM to 85 GSM",
+    "standard_sizes": [
+      "18x26 inch",
+      "20x28 inch",
+      "22x30 inch"
+    ],
+    "materials": "100% Virgin High-Tenacity Polypropylene (PP)",
+    "lamination_options": [
+      "BOPP Laminated",
+      "PP Extrusion Coated",
+      "Micro-Perforated"
+    ],
+    "printing_colors": "1 to 6 Colors High-Contrast Flexo or Rotogravure",
+    "liner_options": [
+      "Extrusion Barrier Film",
+      "Ultrasonic Sealed Bottom"
+    ],
+    "stitching_type": "Block Bottom Self-Closing Valve or Stitched Open Mouth",
+    "bag_construction": "Pinhole Micro-Perforated for instantaneous air venting during rotary filling",
+    "antislip_treatment": "High Friction Surface Coating",
+    "uv_treatment": "UV Protected for construction site exposure",
+    "applications": [
+      "Ordinary Portland Cement (OPC)",
+      "Portland Pozzolana Cement (PPC)",
+      "White Cement",
+      "Dry Mortar & Plaster",
+      "Fly Ash"
+    ],
+    "moq": "20,000 Bags",
+    "customisation_availability": "Valve Dimensions, Bag GSM, Brand Flexo Printing, Color Matching",
+    "image_url": "/assets/images/products/cement-bags.webp",
+    "est_weight_kg": 0.075,
+    "est_base_price": 9.8
+  },
+  {
+    "product_id": "fertilizer-bags",
+    "product_name": "Fertilizer Packaging Bags",
+    "clean_name": "Fertilizer Packaging Bags",
+    "product_slug": "fertilizer-bags",
+    "category": "Agrochemical Packaging",
+    "description": "Corrosion-proof, heavy-duty laminated PP woven bags engineered to pack chemical fertilizers, urea, potash, and micronutrients with zero chemical reaction or moisture absorption.",
+    "capacity_options": [
+      "25 KG",
+      "50 KG"
+    ],
+    "gsm_range": "75 GSM to 110 GSM",
+    "standard_sizes": [
+      "18x30 inch",
+      "21x36 inch",
+      "24x36 inch"
+    ],
+    "materials": "Virgin Polypropylene with High Chemical Resistance & Acid Barrier",
+    "lamination_options": [
+      "Heavy Extrusion Laminated",
+      "BOPP Film Laminated"
+    ],
+    "printing_colors": "1 to 6 Colors Precision Flexographic Printing",
+    "liner_options": [
+      "Heavy Duty Inserted LDPE Liner (50 to 80 Micron)",
+      "Bottom-Stitched Liner"
+    ],
+    "stitching_type": "Double Chain Stitch with Moisture-Resistant Filler Cord",
+    "bag_construction": "Tubular Circular Woven or Gusseted",
+    "antislip_treatment": "Available for safe warehousing up to 25 layers high",
+    "uv_treatment": "Standard UV Treatment (200+ hours)",
+    "applications": [
+      "Urea & DAP",
+      "NPK Complex Fertilizers",
+      "Muriate of Potash (MOP)",
+      "Organic Bio-Fertilizers",
+      "Zinc & Micronutrients"
+    ],
+    "moq": "15,000 Bags",
+    "customisation_availability": "Liner Micron, Bag GSM, Custom Government Marking & Fertilizer Slogan Printing",
+    "image_url": "/assets/images/products/fertilizer-bags.webp",
+    "est_weight_kg": 0.095,
+    "est_base_price": 12.2
+  },
+  {
+    "product_id": "jumbo-bags",
+    "product_name": "Jumbo Bags (FIBC Bulk Bags)",
+    "clean_name": "FIBC Jumbo Bags",
+    "product_slug": "jumbo-bags",
+    "category": "Heavy Industrial Bulk Containers",
+    "description": "Flexible Intermediate Bulk Containers (FIBC) manufactured to transport and store 500 KG to 2,000 KG of bulk materials, equipped with lifting loops, top filling spouts, and bottom discharge valves.",
+    "capacity_options": [
+      "500 KG",
+      "1,000 KG (1 Ton)",
+      "1,500 KG",
+      "2,000 KG (2 Ton)"
+    ],
+    "gsm_range": "130 GSM to 220 GSM Heavy-Duty Fabric",
+    "standard_sizes": [
+      "90x90x100 cm",
+      "95x95x120 cm",
+      "100x100x140 cm"
+    ],
+    "materials": "UV Stabilized Virgin High-Tenacity Polypropylene",
+    "lamination_options": [
+      "Uncoated Breathable",
+      "Coated Dust-Proof"
+    ],
+    "printing_colors": "1 to 4 Colors Brand & Handling Icon Printing",
+    "liner_options": [
+      "Bottle-Shape LDPE Liner",
+      "Form-Fit Gusseted Liner",
+      "Conductive / Antistatic Liner"
+    ],
+    "stitching_type": "Heavy Duty Double Needle Chain Stitch with Dust-Proof Sift-Proof Cord",
+    "bag_construction": "U-Panel, 4-Panel, or Circular with Cross-Corner or Corner Lifting Loops (SWL 5:1)",
+    "antislip_treatment": "Inherent High-Denier Stable Weft",
+    "uv_treatment": "UV Stabilized up to 300 hours (ISO 21898 standard)",
+    "applications": [
+      "Mining Minerals & Quartz",
+      "Bulk Chemicals & Polymers",
+      "Agricultural Grain Exports",
+      "Construction Aggregates",
+      "Cement Clinker"
+    ],
+    "moq": "500 Bags",
+    "customisation_availability": "Loop Height, Filling Spout, Discharge Valve, Document Pocket, Safety Factor (5:1 or 6:1)",
+    "image_url": "/assets/images/products/jumbo-bags.webp",
+    "est_weight_kg": 1.85,
+    "est_base_price": 320
+  },
+  {
+    "product_id": "multicolour-pp-woven-bags",
+    "product_name": "Multicolour PP Woven Bags",
+    "clean_name": "Multicolour PP Bags",
+    "product_slug": "multicolour-pp-woven-bags",
+    "category": "High-Impact Brand Packaging",
+    "description": "High-definition multicolor printed polypropylene bags engineered for premium retail shelf presence, combining vibrant photographic graphics with industrial tear-resistance.",
+    "capacity_options": [
+      "10 KG",
+      "20 KG",
+      "25 KG",
+      "50 KG"
+    ],
+    "gsm_range": "65 GSM to 130 GSM",
+    "standard_sizes": [
+      "13x26 inch",
+      "16x28 inch",
+      "18x30 inch",
+      "22x34 inch"
+    ],
+    "materials": "100% Virgin PP Woven Fabric + Rotogravure Multi-Color Layer",
+    "lamination_options": [
+      "High Gloss",
+      "Silk Touch Matt",
+      "Clear Window"
+    ],
+    "printing_colors": "Up to 8 Colors Photographic Rotogravure Printing",
+    "liner_options": [
+      "Optional LDPE Liner"
+    ],
+    "stitching_type": "Single/Double Fold Bottom Chain Stitch with Easy-Open Pull Thread",
+    "bag_construction": "Gusseted with D-Cut Carrying Handle or Top Plastic Handle",
+    "antislip_treatment": "Available on Matt & Embossed Grades",
+    "uv_treatment": "Available on Request",
+    "applications": [
+      "Branded Atta & Wheat Flour",
+      "Animal & Cattle Feed",
+      "Seeds & Pulses",
+      "Specialty Chemicals",
+      "Consumer Retail Packaging"
+    ],
+    "moq": "10,000 Bags",
+    "customisation_availability": "Artwork Printing Cylinders, Metallic Inks, Custom Gussets, Handle Types",
+    "image_url": "/assets/images/products/multicolour-pp-woven-bags.webp",
+    "est_weight_kg": 0.09,
+    "est_base_price": 12.8
+  },
+  {
+    "product_id": "printed-pp-bags",
+    "product_name": "Printed Polybags (Flexo Printed)",
+    "clean_name": "Printed Polybags",
+    "product_slug": "printed-pp-bags",
+    "category": "Standard Commercial Packaging",
+    "description": "Cost-effective custom flexographic printed PP woven bags, providing clear brand logos, batch numbers, net weight markings, and handling instructions on front and back.",
+    "capacity_options": [
+      "10 KG",
+      "25 KG",
+      "50 KG"
+    ],
+    "gsm_range": "55 GSM to 110 GSM",
+    "standard_sizes": [
+      "14x22 inch",
+      "16x26 inch",
+      "18x28 inch",
+      "22x32 inch",
+      "24x36 inch"
+    ],
+    "materials": "100% Virgin Circular Polypropylene Fabric",
+    "lamination_options": [
+      "Unlaminated Breathable",
+      "Laminated Coated"
+    ],
+    "printing_colors": "1 to 4 Colors High-Contrast Flexographic Inks (Both Sides)",
+    "liner_options": [
+      "Without Liner",
+      "Inserted LDPE Liner"
+    ],
+    "stitching_type": "Single / Double Fold Chain Stitch",
+    "bag_construction": "Top Hemmed or Heat Cut with Bottom Folded & Stitched",
+    "antislip_treatment": "Standard Weave Friction",
+    "uv_treatment": "Optional UV Stabilization",
+    "applications": [
+      "Animal Feed Mills",
+      "Grain & Pulses Wholesale",
+      "Salt & Sugar",
+      "Plastic Masterbatch & Polymers",
+      "Fertilizers"
+    ],
+    "moq": "10,000 Bags",
+    "customisation_availability": "Printing Plate Setup, Bag Color (White, Yellow, Green, Blue), Size, GSM",
+    "image_url": "/assets/images/products/printed-pp-bags.webp",
+    "est_weight_kg": 0.08,
+    "est_base_price": 10.2
+  },
+  {
+    "product_id": "DP-PROD-013",
+    "product_name": "Laminated PP Woven Bags",
+    "clean_name": "Laminated PP Bags",
+    "product_slug": "laminated-pp-bags",
+    "category": "Laminated Bags",
+    "description": "Extrusion coated laminated PP woven bags for moisture-sensitive products like sugar, grains, chemicals, and fertilizers. Features ultra-low moisture permeability and enhanced burst resistance.",
+    "capacity_options": [
+      "25 kg",
+      "50 kg"
+    ],
+    "gsm_range": "65 GSM - 110 GSM (Fabric + 15-25 GSM Extrusion Coating)",
+    "standard_sizes": [
+      "18 x 28 inches",
+      "21 x 37 inches",
+      "24 x 36 inches",
+      "Custom"
+    ],
+    "materials": "100% Virgin Polypropylene (PP) with Extrusion LDPE/PP Lamination",
+    "lamination_options": [
+      "Glossy Lamination",
+      "Matte Lamination",
+      "Sand Finish"
+    ],
+    "printing_colors": "Up to 6 Colors High-Precision Flexographic Printing",
+    "liner_options": [
+      "Without Liner (Self-Moisture Barrier)",
+      "Optional LDPE Insert Liner"
+    ],
+    "stitching_type": "Single / Double Fold Bottom Stitching with High-Tenacity Thread",
+    "bag_construction": "Tubular Circular Woven Fabric with Direct Extrusion Coating",
+    "antislip_treatment": "Optional Anti-Skid Coating for Warehouse Stacking",
+    "uv_treatment": "200 to 1200 Hours UV Stabilization Available",
+    "applications": [
+      "Sugar Packaging",
+      "Animal Feed",
+      "Chemical Powders",
+      "Cement & Construction",
+      "Grain Milling"
+    ],
+    "moq": "10,000 Bags",
+    "customisation_availability": "Full Custom Size, Micron, Printing, and Gusset Available",
+    "image_url": "/assets/images/products/pp-woven-bags.png",
+    "est_weight_kg": 0.085,
+    "est_base_price": 11.2
+  }
+]
