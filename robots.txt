@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 Disallow: /components/
 
@@ -8,7 +8,6 @@ Disallow: /components/
 Crawl-delay: 1
 
 Sitemap: https://www.dwarkeshpolyfab.com/sitemap.xml
-Sitemap: https://www.dwarkeshpolyfab.com/sitemap-routes.xml
 
 Host: https://www.dwarkeshpolyfab.com
 
