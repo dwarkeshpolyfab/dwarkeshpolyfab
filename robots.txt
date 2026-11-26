@@ -5,11 +5,38 @@ Disallow: /components/
 User-agent: Bingbot
 Allow: /
 Disallow: /components/
-Crawl-delay: 1
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /components/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /components/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /components/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /components/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /components/
+
+User-agent: Applebot
+Allow: /
+Disallow: /components/
 
 Sitemap: https://www.dwarkeshpolyfab.com/sitemap.xml
 
 Host: https://www.dwarkeshpolyfab.com
 
-# Dwarkesh Polyfab - PP Woven Bags & BOPP Laminated Bags Manufacturer, Morbi Gujarat
+# AI Discovery / LLM Knowledge Base
+# https://www.dwarkeshpolyfab.com/llms.txt
+# https://www.dwarkeshpolyfab.com/llms-full.txt
+
+# Dwarkesh Polyfab - PP Woven Bags & BOPP Laminated Bags Manufacturer, Morbi Gujarat India
 # https://www.dwarkeshpolyfab.com
