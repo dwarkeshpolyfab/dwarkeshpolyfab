@@ -122,8 +122,18 @@ function generatePageHtml(product, city, isHubPage, relativeRoot) {
     .replace(/href="\/pages\/manufacturer-data\.html"/g, `href="${relativeRoot}pages/manufacturer-data.html"`)
     .replace(/src="\/assets\/images\//g, `src="${relativeRoot}assets/images/`);
 
-  const pageTitle = `${cleanName} Manufacturer for ${cityName} ${stateName} | Morbi Factory Direct | Dwarkesh Polyfab`;
-  const metaDesc = `Direct factory ${cleanName} supply for ${cityName} & ${stateName}. Factory dispatch from Morbi plant (${city.approx_distance_from_morbi_km} KM, est. freight ₹${city.freight_rate_per_kg.toFixed(2)}/kg). Transit: ${city.estimated_transit_days}. Call +91 8320525550.`;
+  let pageTitle;
+  let metaDesc;
+  if (isHubPage) {
+    pageTitle = 'PP & BOPP Bags Manufacturers India (318 Cities) | Morbi';
+    metaDesc = 'Direct Morbi factory PP woven, BOPP, rice, fertilizer & leno bag supply to 318 Indian cities. Check freight cost, calculators & WhatsApp rates.';
+  } else {
+    const t1 = `${cleanName} Manufacturer in ${cityName} | Morbi Factory`;
+    const t2 = `${cleanName} in ${cityName} (${city.state_code}) | Morbi Factory`;
+    const t3 = `${cleanName} in ${cityName} | Morbi`;
+    pageTitle = t1.length <= 64 ? t1 : (t2.length <= 64 ? t2 : t3.slice(0, 64));
+    metaDesc = `Direct Morbi factory ${cleanName} for ${cityName} (${city.state_code}). Distance ${city.approx_distance_from_morbi_km}KM, freight ₹${city.freight_rate_per_kg.toFixed(2)}/kg, transit ${city.estimated_transit_days}. WhatsApp rate.`;
+  }
   const canonicalUrl = isHubPage
     ? 'https://www.dwarkeshpolyfab.com/manufacturers/index.html'
     : `https://www.dwarkeshpolyfab.com/manufacturers/${product.product_slug}/${city.city_slug}.html`;
@@ -1077,12 +1087,229 @@ Please share proforma quotation, technical datasheet, and delivery timeline.`;
       .calc-results-grid { grid-template-columns: 1fr; gap: 6px; }
       .calc-res-item { padding: 6px; background: #f8fafc; border-radius: 4px; }
     }
+
+    /* HUB GATEWAY STYLES: Welcome Ribbon, Trust Explorer Cards, Delayed Modal & Mobile Dock */
+    .hub-welcome-ribbon {
+      background: linear-gradient(90deg, #fffbeb 0%, #fef3c7 100%);
+      border-bottom: 1.5px solid #e5b842;
+      padding: 10px 18px;
+      font-size: 13px;
+      color: #112a46;
+    }
+    .hub-ribbon-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .hub-ribbon-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .hub-rbtn {
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .hub-rbtn-navy { background: #112a46; color: #facc15; border: 1px solid #112a46; }
+    .hub-rbtn-outline { background: #ffffff; color: #112a46; border: 1px solid #112a46; }
+    .hub-rbtn-hide { background: transparent; color: #64748b; border: 1px solid #cbd5e1; font-family: inherit; }
+
+    .hub-trust-wrap {
+      max-width: 1240px;
+      margin: 22px auto 0;
+      padding: 0 20px;
+    }
+    .hub-trust-card {
+      background: linear-gradient(135deg, #112a46 0%, #1a3d65 100%);
+      border-radius: 12px;
+      padding: 22px 24px;
+      color: #ffffff;
+      border: 1.5px solid var(--gold-accent);
+    }
+    .hub-trust-card h2 {
+      color: #facc15;
+      font-size: 18px;
+      margin: 0 0 6px;
+      font-weight: 800;
+    }
+    .hub-trust-card > p {
+      color: #cbd5e1;
+      font-size: 13px;
+      margin: 0 0 16px;
+    }
+    .hub-explorer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .hub-exp-item {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(212,175,55,0.35);
+      border-radius: 9px;
+      padding: 14px;
+      text-decoration: none;
+      color: #ffffff;
+      transition: transform 0.2s, background 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .hub-exp-item:hover {
+      background: rgba(255,255,255,0.14);
+      transform: translateY(-2px);
+    }
+    .hub-exp-item strong { color: #facc15; font-size: 14px; display: block; margin-bottom: 4px; }
+    .hub-exp-item span { font-size: 12px; color: #cbd5e1; line-height: 1.45; }
+
+    /* Non-intrusive delayed popup modal (hub only) */
+    .hub-modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.62);
+      z-index: 99999;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .hub-modal-backdrop.open { display: flex; }
+    .hub-modal-box {
+      background: #ffffff;
+      border-radius: 14px;
+      max-width: 470px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+      border: 2px solid #d4af37;
+    }
+    .hub-modal-head {
+      background: linear-gradient(135deg, #112a46 0%, #1a3d65 100%);
+      color: #ffffff;
+      padding: 20px 22px;
+      position: relative;
+    }
+    .hub-modal-head h3 { margin: 0 0 4px; color: #facc15; font-size: 18px; }
+    .hub-modal-head p { margin: 0; color: #cbd5e1; font-size: 12.5px; }
+    .hub-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: #ffffff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .hub-modal-body { padding: 18px 22px 22px; }
+    .hub-modal-links { display: grid; gap: 10px; margin-bottom: 14px; }
+    .hub-modal-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13.5px;
+    }
+    .hub-modal-btn.primary { background: #112a46; color: #facc15; }
+    .hub-modal-btn.calc { background: #f0fdf4; color: #166534; border: 1px solid #86efac; }
+    .hub-modal-btn.guide { background: #f8fafc; color: #1e293b; border: 1px solid #cbd5e1; }
+    .hub-modal-dismiss {
+      width: 100%;
+      padding: 9px;
+      border-radius: 7px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      color: #475569;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    /* Mobile sticky quick-nav dock (hub only) */
+    .hub-mobile-dock {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #112a46;
+      border-top: 2px solid #d4af37;
+      z-index: 9998;
+      padding: 6px 8px;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.22);
+    }
+    .hub-dock-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr) auto;
+      gap: 4px;
+      align-items: center;
+    }
+    .hub-dock-link {
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 5px 2px;
+      border-radius: 5px;
+    }
+    .hub-dock-link.wa { background: #16833f; color: #ffffff; }
+    .hub-dock-hide {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 14px;
+      padding: 4px 6px;
+      cursor: pointer;
+    }
+    @media (max-width: 992px) {
+      .hub-explorer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .hub-mobile-dock { display: block; }
+      .hub-explorer-grid { grid-template-columns: 1fr; }
+      .hub-trust-wrap { padding: 0 10px; }
+      .hub-trust-card { padding: 14px 12px; }
+    }
   </style>
 </head>
 <body>
 
   <!-- ATTACHED REAL WEBSITE HEADER (components/header.html) -->
   ${pageHeader}
+
+  ${isHubPage ? `
+  <!-- DISMISSIBLE TOP WELCOME RIBBON (Hub Gateway) -->
+  <div id="hub-welcome-ribbon" class="hub-welcome-ribbon">
+    <div class="hub-ribbon-inner">
+      <div>🏭 <strong>Dwarkesh Polyfab Factory Hub (Morbi, Gujarat):</strong> Explore our full plant story, instant costing tools &amp; all 13 bag lines.</div>
+      <div class="hub-ribbon-actions">
+        <a href="${relativeRoot}index.html" class="hub-rbtn hub-rbtn-navy">🏠 Visit Homepage</a>
+        <a href="${relativeRoot}calculators/index.html" class="hub-rbtn hub-rbtn-outline">🧮 Bag Calculator</a>
+        <a href="${relativeRoot}products/index.html" class="hub-rbtn hub-rbtn-outline">📦 All Products</a>
+        <button type="button" id="hub-ribbon-hide" class="hub-rbtn hub-rbtn-hide">✕ Hide</button>
+      </div>
+    </div>
+  </div>
+  ` : ''}
 
   <!-- REDBUS SEARCH BAR TOP CONSOLE -->
   <section class="rb-console-container">
@@ -1154,10 +1381,14 @@ Please share proforma quotation, technical datasheet, and delivery timeline.`;
     <div class="hero-strip-inner">
       <div>
         <div class="badge-origin-trust">
-          🏭 Factory in Morbi, Gujarat • Bulk Direct Dispatch to ${cityName}
+          ${isHubPage
+            ? '🏭 Morbi, Gujarat Factory Hub • Direct Bulk Dispatch to 318 Indian Cities'
+            : `🏭 Factory in Morbi, Gujarat • Bulk Direct Dispatch to ${cityName}`}
         </div>
         <h1 class="hero-h1">
-          ${cleanName} Manufacturer for <span>${cityName}, ${stateName}</span>
+          ${isHubPage
+            ? 'Pan-India PP Woven &amp; BOPP Bags Manufacturer — <span>318 Cities Direct Dispatch</span>'
+            : `${cleanName} Manufacturer for <span>${cityName}, ${stateName}</span>`}
         </h1>
         <p class="hero-intro">
           Dwarkesh Polyfab delivers factory-direct, virgin-grade ${product.product_name} directly from our manufacturing plant in Morbi, Gujarat to industrial clusters, processing mills, and logistics hubs across ${cityName}.
@@ -1183,6 +1414,30 @@ Please share proforma quotation, technical datasheet, and delivery timeline.`;
       </div>
     </div>
   </section>
+
+  ${isHubPage ? `
+  <!-- EXPLORE FULL WEBSITE & TOOLS (Builds Buyer Trust & Increases Session Depth) -->
+  <section class="hub-trust-wrap">
+    <div class="hub-trust-card">
+      <h2>🏭 Explore Dwarkesh Polyfab — Full Website, Calculators &amp; Buyer Tools</h2>
+      <p>Verify our Morbi factory infrastructure, calculate exact bag weight &amp; manufacturing rates online, and explore our full product &amp; freight guides:</p>
+      <div class="hub-explorer-grid">
+        <a href="${relativeRoot}index.html" class="hub-exp-item">
+          <div><strong>🏠 Visit Full Homepage</strong><span>Explore our Morbi manufacturing unit, production lines, certifications &amp; export track record.</span></div>
+        </a>
+        <a href="${relativeRoot}calculators/index.html" class="hub-exp-item">
+          <div><strong>🧮 PP Bag Price Calculator</strong><span>Calculate exact gram weight, GSM, lamination, liner cost &amp; rate per bag instantly.</span></div>
+        </a>
+        <a href="${relativeRoot}calculators/bopp-bag-calculator.html" class="hub-exp-item">
+          <div><strong>✨ BOPP Laminated Calculator</strong><span>Instant pricing for 8-color glossy &amp; matte BOPP laminated woven sacks (5kg–50kg).</span></div>
+        </a>
+        <a href="${relativeRoot}blog/pan-india-pp-woven-bags-manufacturer-freight-cost-guide.html" class="hub-exp-item">
+          <div><strong>📖 Pan-India Freight Guide</strong><span>See why direct Morbi factory procurement saves 12%–18% over regional middlemen.</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+  ` : ''}
 
   <!-- MAIN CONTENT GRID -->
   <div class="content-grid-wrap">
@@ -1353,6 +1608,47 @@ Please share proforma quotation, technical datasheet, and delivery timeline.`;
   <!-- ATTACHED REAL WEBSITE FOOTER (components/footer.html) -->
   ${pageFooter}
 
+  ${isHubPage ? `
+  <!-- NON-INTRUSIVE DISCOVERY POPUP (Delayed 12s or 50% scroll, Dismissible, Session-Remembered) -->
+  <div id="hub-discovery-modal" class="hub-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="hub-modal-title">
+    <div class="hub-modal-box">
+      <div class="hub-modal-head">
+        <button type="button" id="hub-modal-x" class="hub-modal-close" aria-label="Hide popup">✕</button>
+        <h3 id="hub-modal-title">🏭 Looking for Our Full Factory &amp; Calculators?</h3>
+        <p>Explore Dwarkesh Polyfab's Homepage, Bag Weight Calculators &amp; all 13 product catalogs.</p>
+      </div>
+      <div class="hub-modal-body">
+        <div class="hub-modal-links">
+          <a href="${relativeRoot}index.html" class="hub-modal-btn primary">
+            <span>🏠 Forward to Full Homepage</span><span>→</span>
+          </a>
+          <a href="${relativeRoot}calculators/index.html" class="hub-modal-btn calc">
+            <span>🧮 Open PP Bag Weight &amp; Price Calculator</span><span>→</span>
+          </a>
+          <a href="${relativeRoot}products/index.html" class="hub-modal-btn guide">
+            <span>📦 Browse All 13 Product Categories</span><span>→</span>
+          </a>
+          <a href="${relativeRoot}blog/index.html" class="hub-modal-btn guide">
+            <span>📖 Buyer &amp; Freight Cost Guides</span><span>→</span>
+          </a>
+        </div>
+        <button type="button" id="hub-modal-hide" class="hub-modal-dismiss">Hide &amp; Stay on Route Finder</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY MOBILE QUICK-NAV DOCK -->
+  <nav id="hub-mobile-dock" class="hub-mobile-dock" aria-label="Quick site navigation">
+    <div class="hub-dock-grid">
+      <a href="${relativeRoot}index.html" class="hub-dock-link">🏠<br>Home</a>
+      <a href="${relativeRoot}calculators/index.html" class="hub-dock-link">🧮<br>Calc</a>
+      <a href="${relativeRoot}products/index.html" class="hub-dock-link">📦<br>Products</a>
+      <a href="${waUrl}" target="_blank" rel="noopener" class="hub-dock-link wa">💬<br>Quote</a>
+      <button type="button" id="hub-dock-hide" class="hub-dock-hide" aria-label="Hide bar">✕</button>
+    </div>
+  </nav>
+  ` : ''}
+
   <!-- REDBUS AUTOMATIC NAVIGATION JAVASCRIPT -->
   <script>
     (function() {
@@ -1447,6 +1743,60 @@ Please share proforma quotation, technical datasheet, and delivery timeline.`;
         });
       }
 
+      if (isHubPage) {
+        var ribbon = document.getElementById('hub-welcome-ribbon');
+        var ribbonHide = document.getElementById('hub-ribbon-hide');
+        if (ribbon && sessionStorage.getItem('dp_hub_ribbon_hidden') === '1') {
+          ribbon.style.display = 'none';
+        }
+        if (ribbonHide && ribbon) {
+          ribbonHide.addEventListener('click', function() {
+            ribbon.style.display = 'none';
+            sessionStorage.setItem('dp_hub_ribbon_hidden', '1');
+          });
+        }
+
+        var dock = document.getElementById('hub-mobile-dock');
+        var dockHide = document.getElementById('hub-dock-hide');
+        if (dock && sessionStorage.getItem('dp_hub_dock_hidden') === '1') {
+          dock.style.display = 'none';
+        }
+        if (dockHide && dock) {
+          dockHide.addEventListener('click', function() {
+            dock.style.display = 'none';
+            sessionStorage.setItem('dp_hub_dock_hidden', '1');
+          });
+        }
+
+        var modal = document.getElementById('hub-discovery-modal');
+        var modalX = document.getElementById('hub-modal-x');
+        var modalHide = document.getElementById('hub-modal-hide');
+        function closeHubModal() {
+          if (modal) modal.classList.remove('open');
+          sessionStorage.setItem('dp_hub_modal_seen', '1');
+        }
+        if (modal && !sessionStorage.getItem('dp_hub_modal_seen')) {
+          var timerId = setTimeout(function() {
+            if (!sessionStorage.getItem('dp_hub_modal_seen')) {
+              modal.classList.add('open');
+            }
+          }, 12000);
+          window.addEventListener('scroll', function onHubScroll() {
+            var scrolled = window.scrollY / Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+            if (scrolled > 0.5 && !sessionStorage.getItem('dp_hub_modal_seen')) {
+              clearTimeout(timerId);
+              modal.classList.add('open');
+              window.removeEventListener('scroll', onHubScroll);
+            }
+          });
+          if (modalX) modalX.addEventListener('click', closeHubModal);
+          if (modalHide) modalHide.addEventListener('click', closeHubModal);
+          modal.addEventListener('click', function(e) {
+            if (e.target === modal) closeHubModal();
+          });
+        }
+      }
+
     })();
   </script>
 </body>
@@ -1492,40 +1842,25 @@ for (const prod of products) {
 const duration = ((Date.now() - startTime) / 1000).toFixed(2);
 console.log(`✓ Successfully compiled ${count} physical route HTML pages into manufacturers/ in ${duration}s!`);
 
-// 4. Generate Sitemaps
-console.log('Generating production sitemaps...');
-const sitemapRoutesPath = path.join(siteRoot, 'sitemap-routes.xml');
-let sitemapRoutesXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
-
+// 4. Generate Split Production Sitemaps (4 files <= 220KB each for fast GSC fetch)
+console.log('Generating split manufacturer sitemaps...');
+const todayStr = new Date().toISOString().slice(0, 10);
+const allRouteUrls = [];
 for (const prod of products) {
   for (const city of cities) {
-    sitemapRoutesXml += `  <url>\n    <loc>https://www.dwarkeshpolyfab.com/manufacturers/${prod.product_slug}/${city.city_slug}.html</loc>\n    <lastmod>2026-11-16</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
+    allRouteUrls.push(`https://www.dwarkeshpolyfab.com/manufacturers/${prod.product_slug}/${city.city_slug}.html`);
   }
 }
-sitemapRoutesXml += `</urlset>\n`;
-fs.writeFileSync(sitemapRoutesPath, sitemapRoutesXml, 'utf8');
-console.log(`✓ Successfully generated sitemap-routes.xml with ${count} URLs!`);
 
-// 5. Update main sitemap.xml
-const sitemapMainPath = path.join(siteRoot, 'sitemap.xml');
-let mainSitemapContent = fs.readFileSync(sitemapMainPath, 'utf8');
-
-// Ensure new blog and manufacturers hub are in sitemap.xml
-const newBlogUrl = 'https://www.dwarkeshpolyfab.com/blog/pan-india-pp-woven-bags-manufacturer-freight-cost-guide.html';
-const hubUrl = 'https://www.dwarkeshpolyfab.com/manufacturers/index.html';
-
-if (!mainSitemapContent.includes(newBlogUrl)) {
-  const newEntries = `  <url>\n    <loc>${newBlogUrl}</loc>\n    <lastmod>2026-11-16</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n  <url>\n    <loc>${hubUrl}</loc>\n    <lastmod>2026-11-16</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n</urlset>`;
-  mainSitemapContent = mainSitemapContent.replace('</urlset>', newEntries);
-  fs.writeFileSync(sitemapMainPath, mainSitemapContent, 'utf8');
-  console.log('✓ Added new blog & manufacturers hub to sitemap.xml');
+const numChunks = 4;
+const chunkSize = Math.ceil(allRouteUrls.length / numChunks);
+for (let i = 0; i < numChunks; i++) {
+  const chunk = allRouteUrls.slice(i * chunkSize, (i + 1) * chunkSize);
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+  for (const u of chunk) {
+    xml += `  <url>\n    <loc>${u}</loc>\n    <lastmod>${todayStr}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
+  }
+  xml += `</urlset>\n`;
+  fs.writeFileSync(path.join(siteRoot, `sitemap-manufacturers-${i + 1}.xml`), xml, 'utf8');
 }
-
-// 6. Update robots.txt to declare sitemap-routes.xml
-const robotsPath = path.join(siteRoot, 'robots.txt');
-let robotsContent = fs.readFileSync(robotsPath, 'utf8');
-if (!robotsContent.includes('sitemap-routes.xml')) {
-  robotsContent = robotsContent.replace('Sitemap: https://www.dwarkeshpolyfab.com/sitemap.xml', 'Sitemap: https://www.dwarkeshpolyfab.com/sitemap.xml\nSitemap: https://www.dwarkeshpolyfab.com/sitemap-routes.xml');
-  fs.writeFileSync(robotsPath, robotsContent, 'utf8');
-  console.log('✓ Updated robots.txt with sitemap-routes.xml');
-}
+console.log(`✓ Updated sitemap-manufacturers-1..4.xml (${allRouteUrls.length} URLs, keeping sitemap.xml index & robots.txt intact)!`);
